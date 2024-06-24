@@ -60,6 +60,11 @@ public class Main {
             }
 
         }
+
+        System.out.println();
+        for (int axis = 0; axis < 6; axis++){
+            System.out.println("Permutation: " + axis + ", " + Arrays.toString(axes[axis]));
+        }
     }
 
 }

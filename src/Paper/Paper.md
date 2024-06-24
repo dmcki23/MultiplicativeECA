@@ -11,7 +11,7 @@ tags:
 authors:
     - name: Daniel W. McKinley
 date: 17 June 2024
-bibliography: /paper.bib
+bibliography: paper.bib
 ---
 
 # Summary

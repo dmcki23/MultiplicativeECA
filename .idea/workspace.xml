@@ -4,16 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="debugging image paths">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="changed the paper a little, got rid of two scratch paper classes">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/draft-pdf.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Paper/draft-pdf.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Paper/paper.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECAioTruthTables.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/Paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/Paper.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/PaperImages/bitPermutations.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/PaperImages/bitPermutations.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/bitPermutations.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/bitPermutations.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PrimeCellularAutomata.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/ControlPanel.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/FiftyFour.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/FiftyFourComplex.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/FiftyFourText.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/Mathematica.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/MultiplicationsDiagram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/bitPermutations.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/cdTablesLengthScreenshot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/octonionSplitScreenshot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/quaternionsSplitScreenshot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/recursionDiagram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/unitVectorChart.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +30,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="8c4e710a-21bc-427b-b67c-adde29d8bc7b" />
@@ -38,14 +47,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/danmc/IdeaProjects/MultiplicativeECA/src/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging master",
+    "onboarding.tips.debug.path": "C:/Users/danmc/IdeaProjects/MultiplicativeECA/src/Main.java"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\danmc\IdeaProjects\MultiplicativeECA\src\Paper\PaperImages" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -96,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719185912103</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="changed the paper a little, got rid of two scratch paper classes">
+      <option name="closed" value="true" />
+      <created>1719246552780</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719246552780</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,6 +136,7 @@
     <MESSAGE value="initial comming" />
     <MESSAGE value="initial commit" />
     <MESSAGE value="debugging image paths" />
-    <option name="LAST_COMMIT_MESSAGE" value="debugging image paths" />
+    <MESSAGE value="changed the paper a little, got rid of two scratch paper classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the paper a little, got rid of two scratch paper classes" />
   </component>
 </project>

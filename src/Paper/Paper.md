@@ -16,7 +16,7 @@ bibliography: paper.bib
 
 # Summary
 
-Elementary cellular automata (ECA) is a set of simple binary programs that produce complex output and quaternions are frequently used in 3D graphics. Both are well-studied subjects, this Java library puts them together in a new way. This project changes additive cellular automata into multiplicative automata [@Wolfram,page 861] via permutations, hypercomplex numbers, and pointer arrays. Valid solutions extend the binary ECA to complex numbers, produce a vector field, make an algebraic polynomial, and generate some interesting fractals. 
+Elementary cellular automata (ECA) is a set of simple binary programs that produce complex output and quaternions are frequently used in 3D graphics. Both are well-studied subjects, this Java library puts them together in a new way. This project changes additive cellular automata into multiplicative automata \cite[p.861]{Wolfram} via permutations, hypercomplex numbers, and pointer arrays. Valid solutions extend the binary ECA to complex numbers, produce a vector field, make an algebraic polynomial, and generate some interesting fractals. 
 
 # Statement of Need
 
@@ -27,7 +27,7 @@ Elementary cellular automata (ECA) is a set of simple binary programs that produ
 The negative sign bit is the highest place bit in a unit vector.\
 ![Unit Vector Chart](unitVectorChart.jpg)
 
-The Cayley-Dickson (CD) and Fano support classes are discussed in greater detail in the readme and the documentation, they along with the Galois class provide sets of multiplication tables to be compared with cellular automata. The CD multiplication implementation permutes the steps of splitting and recombining hypercomplex numbers to increase the scope of the CD equation, $(a,b)x(c,d)=(ac-d*b,da+bc*)$, where * is the conjugate. It verifies itself by producing the symmetric group of its degree when interacting with other CD multiplications. The Fano library octonions produce a linear match to the CD octonions, and John Baez's octonions [@Baez].\
+The Cayley-Dickson (CD) and Fano support classes are discussed in greater detail in the readme and the documentation, they along with the Galois class provide sets of multiplication tables to be compared with cellular automata. The CD multiplication implementation permutes the steps of splitting and recombining hypercomplex numbers to increase the scope of the CD equation, $(a,b)x(c,d)=(ac-d*b,da+bc*)$, where * is the conjugate. It verifies itself by producing the symmetric group of its degree when interacting with other CD multiplications. The Fano library octonions produce a linear match to the CD octonions, and John Baez's octonions \cite{Baez}.\
 
 The main algorithm uses a set of permutations operating on cellular automata input, each permuted neighborhood becoming a factor, with four kinds of multiplications. \
 ![The four kinds of multiplication used](MultiplicationsDiagram.jpg)
@@ -53,3 +53,5 @@ Solution's diagonal through the numFactors-dim multiplication table, loaded with
 ![Fifty four permuted diagonal plotted in Mathematica](Mathematica.jpg)\
 
 # References
+
+\bibliography{paper.bib}

@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="changed the paper a little, got rid of two scratch paper classes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/Paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/Paper.md" afterDir="false" />
-    </list>
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="debugging the openjournal pdf compiler" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -200,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719251440332</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="debugging the openjournal pdf compiler">
+      <option name="closed" value="true" />
+      <created>1719251491258</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1719251491258</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -219,6 +224,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="debugging image paths" />
     <MESSAGE value="changed the paper a little, got rid of two scratch paper classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed the paper a little, got rid of two scratch paper classes" />
+    <MESSAGE value="debugging the openjournal pdf compiler" />
+    <option name="LAST_COMMIT_MESSAGE" value="debugging the openjournal pdf compiler" />
   </component>
 </project>

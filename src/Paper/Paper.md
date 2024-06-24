@@ -73,5 +73,3 @@ Solution's diagonal through the numFactors-dim multiplication table, loaded with
 
 # References
 
-[@Wolfram]
-[@Baez]

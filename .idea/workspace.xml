@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="changed the paper a little, got rid of two scratch paper classes">
-      <change afterPath="$PROJECT_DIR$/.github/workflows/draft-pdf.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Paper/draft-pdf.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Paper/paper.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/draft-pdf.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/draft-pdf.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/ControlPanel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/FiftyFour.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/FiftyFourComplex.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/FiftyFourText.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/Mathematica.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/MultiplicationsDiagram.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/bitPermutations.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/cdTablesLengthScreenshot.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/octonionSplitScreenshot.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/quaternionsSplitScreenshot.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/recursionDiagram.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/unitVectorChart.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +36,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Merging master",
+    "git-widget-placeholder": "master",
     "onboarding.tips.debug.path": "C:/Users/danmc/IdeaProjects/MultiplicativeECA/src/Main.java"
   }
 }]]></component>
@@ -118,7 +103,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719246552780</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="changed the paper a little, got rid of two scratch paper classes">
+      <option name="closed" value="true" />
+      <created>1719248392000</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719248392000</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

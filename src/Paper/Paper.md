@@ -54,4 +54,4 @@ Solution's diagonal through the numFactors-dim multiplication table, loaded with
 
 # References
 
-\bibliography{paper.bib}
+\bibliography{paper.bib} 

@@ -76,7 +76,6 @@ public class SwingOutputPanel extends JPanel {
 
         //frame.setLayout(new GridLayout());
         frame.setTitle("OutputPanel");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1030, 1335);
         frame.setLocation(150,150);
         frame.add(this);

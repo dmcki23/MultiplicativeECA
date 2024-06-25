@@ -5,7 +5,7 @@ it is not in package format, so it is easier to use classes seperated from the G
 everything is public, so you can call it from Mathematica, if it's not public, you can see it with Methods[] but not use it
 to-do: even numbered rows with 0-4 values, as complex numbers, kcycles, prime number automata, 2D automata, implement negative input - results in complex numbers in postProcessing
 unsure whether to swap the row, column order in some of the function calls, because the algorithm uses row, column and Swing components use column, row. as-is for now
-
+//todo
 Installation instructions:
 Option 1. Run the available jar file
 Option 2. Open the source code in you favorite IDE and build and run

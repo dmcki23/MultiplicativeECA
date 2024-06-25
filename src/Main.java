@@ -43,7 +43,7 @@ public class Main {
 //        //ric.runCollectionNormalizations();
                HTMLdashboard htmLdashboard = new HTMLdashboard();
 //
-//        //htmLdashboard.generateIndexFilesWithNormalizations();
+        //htmLdashboard.generateIndexFilesWithNormalizations();
 //        //RuleImageCollection ric = new RuleImageCollection();
 //       // ric.runCollectionNormalizationsLogic();
         //htmLdashboard.generateIndexFilesWithNormalizationsLogic();
@@ -65,6 +65,11 @@ public class Main {
         for (int axis = 0; axis < 6; axis++){
             System.out.println("Permutation: " + axis + ", " + Arrays.toString(axes[axis]));
         }
+        //htmLdashboard.generateDirectory("");
+        //htmLdashboard.generateIndexFilesWithNormalizationsLogic();
+        //htmLdashboard.generateIndexFilesWithNormalizations();
+        SwingDashboard swingDashboard = new SwingDashboard();
     }
+
 
 }

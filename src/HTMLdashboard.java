@@ -1,6 +1,7 @@
+import java.io.File;
 import java.io.PrintWriter;
 /**
- * This outputs the HTML for the imageData solution display
+ * This outputs the HTML for the imageData solution database
  */
 public class HTMLdashboard {
     /**
@@ -178,7 +179,6 @@ public class HTMLdashboard {
         try {
             PrintWriter printWriter = new PrintWriter("imageData\\mainIndex.html");
             printWriter.print(generateGenericOpener());
-            printWriter.write("<a href=\"MarkdownTest.html\">MarkdownTest</a>\n");
             printWriter.write(generateLogicMenu());
             printWriter.print(generateMainSquare(true));
             printWriter.print(generateLRBW(true));
@@ -193,7 +193,6 @@ public class HTMLdashboard {
                 PrintWriter printWriter = new PrintWriter("imageData\\ECA_" + n + "\\ECA_" + n + "_index.html");
                 printWriter.println(generateGenericOpener());
                 printWriter.println("<a href=\"..\\MainIndex.html\">Main</a>");
-                printWriter.println("<a href=\"..\\MarkdownTest.html\">Paper</a>");
                 printWriter.write(generateSpecificRule(n));
                 printWriter.print("</body>\n");
                 printWriter.print("</html>\n");
@@ -210,7 +209,6 @@ public class HTMLdashboard {
         try {
             PrintWriter printWriter = new PrintWriter("imageData\\mainIndex.html");
             printWriter.print(generateGenericOpener());
-            printWriter.print("<a href=\"MarkdownTest.html\">Paper</a>\n");
             printWriter.print(generateLogicMenu());
             printWriter.print(generateMainSquare(true));
             printWriter.print(generateLRBW(true));
@@ -225,7 +223,6 @@ public class HTMLdashboard {
                 PrintWriter printWriter = new PrintWriter("imageData\\ECA_" + n + "\\ECA_" + n + "_index.html");
                 printWriter.print(generateGenericOpener());
                 printWriter.print("<a href=\"..\\mainIndex.html\">Main</a><br>");
-                printWriter.print("<a href=\"..\\MarkdownTest.html\">Paper</a><br><br>");
                 printWriter.print(generateNormalizationsIndex(n));
                 printWriter.print("<br><br><img src = \"image_singlebit.jpg\"><br>Single bit initial input</img><br>\n");
                 printWriter.print("<br><br><img src = \"image_randombinary.jpg\"><br>Random binary input</img><br>\n");
@@ -233,7 +230,7 @@ public class HTMLdashboard {
                 printWriter.print("</html>\n");
                 printWriter.close();
                 for (int normalization = 0; normalization < 8; normalization++) {
-                    printWriter = new PrintWriter("imageData\\ECA_" + n + "\\Normalization_" + normalization + "\\Normalization_" + normalization + "ECA_" + n + "_index.html");
+                    printWriter = new PrintWriter("imageData\\ECA_" + n + "\\Normalization_" + normalization + "\\ECA_" + n + "_index.html");
                     printWriter.print(generateGenericOpener());
                     printWriter.print("<a href=\"..\\ECA_" + n + "_index.html\">Rule</a><br><br>");
                     printWriter.print(generateNormalizationsNormalizations(n));
@@ -254,7 +251,6 @@ public class HTMLdashboard {
         try {
             PrintWriter printWriter = new PrintWriter("imageData\\mainIndex.html");
             printWriter.print(generateGenericOpener());
-            printWriter.print("<a href=\"MarkdownTest.html\">Paper</a>\n");
             printWriter.print(generateLogicMenu());
             printWriter.print(generateMainSquare(true));
             printWriter.print(generateLRBW(true));
@@ -266,10 +262,9 @@ public class HTMLdashboard {
         }
         for (int n = 0; n < 16; n++) {
             try {
-                PrintWriter printWriter = new PrintWriter("imageData\\Logic_" + n + "\\Logic_" + n + "_index.html");
+                PrintWriter printWriter = new PrintWriter("imageData\\Logic_" + n + "\\logic_" + n + "_index.html");
                 printWriter.print(generateGenericOpener());
                 printWriter.print("<a href=\"..\\mainIndex.html\">Main</a><br>");
-                printWriter.print("<a href=\"..\\MarkdownTest.html\">Paper</a><br><br>");
                 printWriter.print(generateNormalizationsIndex(n));
                 printWriter.print("<br><br><img src = \"Normalization_0\\logic"+n+"_singlebit.jpg\">Single bit initial input</img><br>\n");
                 printWriter.print("<br><br><img src = \"Normalization_0\\logic"+n+"_randombinary.jpg\">Random binary input</img><br>\n");
@@ -277,7 +272,7 @@ public class HTMLdashboard {
                 printWriter.print("</html>\n");
                 printWriter.close();
                 for (int normalization = 0; normalization < 8; normalization++) {
-                    printWriter = new PrintWriter("imageData\\Logic_" + n + "\\Normalization_" + normalization + "\\Normalization_" + normalization + "Logic_" + n + "_index.html");
+                    printWriter = new PrintWriter("imageData\\logic_" + n + "\\Normalization_" + normalization + "\\logic_" + n + "_index.html");
                     printWriter.print(generateGenericOpener());
                     printWriter.print("<br><br><a href=\"..\\logic_" + n + "_index.html\">Rule</a><br><br>");
                     printWriter.print(generateNormalizationsNormalizationsLogic(n));
@@ -298,14 +293,14 @@ public class HTMLdashboard {
      */
     public String generateNormalizationsIndex(int n) {
         String out = generateGenericOpener();
-        out += "<a href=\"..\\ECA_" + n + "\\Normalization_0\\Normalization_0ECA_" + n + "_index.html\">Normalization 0</a><br>\n";
-        out += "<a href=\"..\\ECA_" + n + "\\Normalization_1\\Normalization_1ECA_" + n + "_index.html\">Normalization 1</a><br>\n";
-        out += "<a href=\"..\\ECA_" + n + "\\Normalization_2\\Normalization_2ECA_" + n + "_index.html\">Normalization 2</a><br>\n";
-        out += "<a href=\"..\\ECA_" + n + "\\Normalization_3\\Normalization_3ECA_" + n + "_index.html\">Normalization 3</a><br>\n";
-        out += "<a href=\"..\\ECA_" + n + "\\Normalization_4\\Normalization_4ECA_" + n + "_index.html\">Normalization 4</a><br>\n";
-        out += "<a href=\"..\\ECA_" + n + "\\Normalization_5\\Normalization_5ECA_" + n + "_index.html\">Normalization 5</a><br>\n";
-        out += "<a href=\"..\\ECA_" + n + "\\Normalization_6\\Normalization_6ECA_" + n + "_index.html\">Normalization 6</a><br>\n";
-        out += "<a href=\"..\\ECA_" + n + "\\Normalization_7\\Normalization_7ECA_" + n + "_index.html\">Normalization 7</a><br>\n";
+        out += "<a href=\"..\\ECA_" + n + "\\Normalization_0\\ECA_" + n + "_index.html\">Normalization 0</a><br>\n";
+        out += "<a href=\"..\\ECA_" + n + "\\Normalization_1\\ECA_" + n + "_index.html\">Normalization 1</a><br>\n";
+        out += "<a href=\"..\\ECA_" + n + "\\Normalization_2\\ECA_" + n + "_index.html\">Normalization 2</a><br>\n";
+        out += "<a href=\"..\\ECA_" + n + "\\Normalization_3\\ECA_" + n + "_index.html\">Normalization 3</a><br>\n";
+        out += "<a href=\"..\\ECA_" + n + "\\Normalization_4\\ECA_" + n + "_index.html\">Normalization 4</a><br>\n";
+        out += "<a href=\"..\\ECA_" + n + "\\Normalization_5\\ECA_" + n + "_index.html\">Normalization 5</a><br>\n";
+        out += "<a href=\"..\\ECA_" + n + "\\Normalization_6\\ECA_" + n + "_index.html\">Normalization 6</a><br>\n";
+        out += "<a href=\"..\\ECA_" + n + "\\Normalization_7\\ECA_" + n + "_index.html\">Normalization 7</a><br>\n";
         return out;
     }
     /**
@@ -315,14 +310,14 @@ public class HTMLdashboard {
      */
     public String generateNormalizationsIndexLogic(int n) {
         String out = generateGenericOpener();
-        out += "<a href=\"..\\Logic_" + n + "\\Normalization_0\\Normalization_0Logic_" + n + "_index.html\">Normalization 0</a><br>\n";
-        out += "<a href=\"..\\Logic_" + n + "\\Normalization_1\\Normalization_1Logic_" + n + "_index.html\">Normalization 1</a><br>\n";
-        out += "<a href=\"..\\Logic_" + n + "\\Normalization_2\\Normalization_2Logic_" + n + "_index.html\">Normalization 2</a><br>\n";
-        out += "<a href=\"..\\Logic_" + n + "\\Normalization_3\\Normalization_3Logic_" + n + "_index.html\">Normalization 3</a><br>\n";
-        out += "<a href=\"..\\Logic_" + n + "\\Normalization_4\\Normalization_4Logic_" + n + "_index.html\">Normalization 4</a><br>\n";
-        out += "<a href=\"..\\Logic_" + n + "\\Normalization_5\\Normalization_5Logic_" + n + "_index.html\">Normalization 5</a><br>\n";
-        out += "<a href=\"..\\Logic_" + n + "\\Normalization_6\\Normalization_6Logic_" + n + "_index.html\">Normalization 6</a><br>\n";
-        out += "<a href=\"..\\Logic_" + n + "\\Normalization_7\\Normalization_7Logic_" + n + "_index.html\">Normalization 7</a><br>\n";
+        out += "<a href=\"..\\Logic_" + n + "\\Normalization_0\\logic_" + n + "_index.html\">Normalization 0</a><br>\n";
+        out += "<a href=\"..\\Logic_" + n + "\\Normalization_1\\logic_" + n + "_index.html\">Normalization 1</a><br>\n";
+        out += "<a href=\"..\\Logic_" + n + "\\Normalization_2\\logic_" + n + "_index.html\">Normalization 2</a><br>\n";
+        out += "<a href=\"..\\Logic_" + n + "\\Normalization_3\\logic_" + n + "_index.html\">Normalization 3</a><br>\n";
+        out += "<a href=\"..\\Logic_" + n + "\\Normalization_4\\logic_" + n + "_index.html\">Normalization 4</a><br>\n";
+        out += "<a href=\"..\\Logic_" + n + "\\Normalization_5\\logic_" + n + "_index.html\">Normalization 5</a><br>\n";
+        out += "<a href=\"..\\Logic_" + n + "\\Normalization_6\\logic_" + n + "_index.html\">Normalization 6</a><br>\n";
+        out += "<a href=\"..\\Logic_" + n + "\\Normalization_7\\logic_" + n + "_index.html\">Normalization 7</a><br>\n";
         return out;
     }
     /**
@@ -332,14 +327,14 @@ public class HTMLdashboard {
      */
     public String generateNormalizationsNormalizations(int n) {
         String out = generateGenericOpener();
-        out += "<a href=\"..\\Normalization_0\\Normalization_0ECA_" + n + "_index.html\">Normalization 0</a><br>\n";
-        out += "<a href=\"..\\Normalization_1\\Normalization_1ECA_" + n + "_index.html\">Normalization 1</a><br>\n";
-        out += "<a href=\"..\\Normalization_2\\Normalization_2ECA_" + n + "_index.html\">Normalization 2</a><br>\n";
-        out += "<a href=\"..\\Normalization_3\\Normalization_3ECA_" + n + "_index.html\">Normalization 3</a><br>\n";
-        out += "<a href=\"..\\Normalization_4\\Normalization_4ECA_" + n + "_index.html\">Normalization 4</a><br>\n";
-        out += "<a href=\"..\\Normalization_5\\Normalization_5ECA_" + n + "_index.html\">Normalization 5</a><br>\n";
-        out += "<a href=\"..\\Normalization_6\\Normalization_6ECA_" + n + "_index.html\">Normalization 6</a><br>\n";
-        out += "<a href=\"..\\Normalization_7\\Normalization_7ECA_" + n + "_index.html\">Normalization 7</a><br>\n";
+        out += "<a href=\"..\\Normalization_0\\ECA_" + n + "_index.html\">Normalization 0</a><br>\n";
+        out += "<a href=\"..\\Normalization_1\\ECA_" + n + "_index.html\">Normalization 1</a><br>\n";
+        out += "<a href=\"..\\Normalization_2\\ECA_" + n + "_index.html\">Normalization 2</a><br>\n";
+        out += "<a href=\"..\\Normalization_3\\ECA_" + n + "_index.html\">Normalization 3</a><br>\n";
+        out += "<a href=\"..\\Normalization_4\\ECA_" + n + "_index.html\">Normalization 4</a><br>\n";
+        out += "<a href=\"..\\Normalization_5\\ECA_" + n + "_index.html\">Normalization 5</a><br>\n";
+        out += "<a href=\"..\\Normalization_6\\ECA_" + n + "_index.html\">Normalization 6</a><br>\n";
+        out += "<a href=\"..\\Normalization_7\\ECA_" + n + "_index.html\">Normalization 7</a><br>\n";
         return out;
     }
     /**
@@ -349,14 +344,14 @@ public class HTMLdashboard {
      */
     public String generateNormalizationsNormalizationsLogic(int n) {
         String out = generateGenericOpener();
-        out += "<a href=\"..\\Normalization_0\\Normalization_0Logic_" + n + "_index.html\">Normalization 0</a><br>\n";
-        out += "<a href=\"..\\Normalization_1\\Normalization_1Logic_" + n + "_index.html\">Normalization 1</a><br>\n";
-        out += "<a href=\"..\\Normalization_2\\Normalization_2Logic_" + n + "_index.html\">Normalization 2</a><br>\n";
-        out += "<a href=\"..\\Normalization_3\\Normalization_3Logic_" + n + "_index.html\">Normalization 3</a><br>\n";
-        out += "<a href=\"..\\Normalization_4\\Normalization_4Logic_" + n + "_index.html\">Normalization 4</a><br>\n";
-        out += "<a href=\"..\\Normalization_5\\Normalization_5Logic_" + n + "_index.html\">Normalization 5</a><br>\n";
-        out += "<a href=\"..\\Normalization_6\\Normalization_6Logic_" + n + "_index.html\">Normalization 6</a><br>\n";
-        out += "<a href=\"..\\Normalization_7\\Normalization_7Logic_" + n + "_index.html\">Normalization 7</a><br>\n";
+        out += "<a href=\"..\\Normalization_0\\logic_" + n + "_index.html\">Normalization 0</a><br>\n";
+        out += "<a href=\"..\\Normalization_1\\logic_" + n + "_index.html\">Normalization 1</a><br>\n";
+        out += "<a href=\"..\\Normalization_2\\logic_" + n + "_index.html\">Normalization 2</a><br>\n";
+        out += "<a href=\"..\\Normalization_3\\logic_" + n + "_index.html\">Normalization 3</a><br>\n";
+        out += "<a href=\"..\\Normalization_4\\logic_" + n + "_index.html\">Normalization 4</a><br>\n";
+        out += "<a href=\"..\\Normalization_5\\logic_" + n + "_index.html\">Normalization 5</a><br>\n";
+        out += "<a href=\"..\\Normalization_6\\logic_" + n + "_index.html\">Normalization 6</a><br>\n";
+        out += "<a href=\"..\\Normalization_7\\logic_" + n + "_index.html\">Normalization 7</a><br>\n";
         return out;
     }
     /**
@@ -368,7 +363,6 @@ public class HTMLdashboard {
                 PrintWriter printWriter = new PrintWriter("imageData\\Logic_" + n + "\\logic_" + n + "_index.html");
                 printWriter.println(generateGenericOpener());
                 printWriter.println("<a href=\"..\\MainIndex.html\">Main</a>");
-                printWriter.println("<a href=\"..\\MarkdownTest.html\">Paper</a>");
                 printWriter.write(generateSpecificRuleLogic(n));
                 printWriter.print("</body>\n");
                 printWriter.print("</html>\n");
@@ -398,5 +392,29 @@ public class HTMLdashboard {
         out += "</p>";
         out += "</p>\n";
         return out;
+    }
+    public void generateDirectory(String directoryName){
+            File file = new File("imageData\\directory.txt");
+            file.mkdirs();
+            File[] ecaFiles = new File[256];
+            File[] logicFiles = new File[16];
+            File[] normalizationFiles = new File[8];
+            for (int n = 0; n < 256; n++) {
+                ecaFiles[n] = new File("imageData\\ECA_"+n+"\\directory.txt");
+                ecaFiles[n].mkdirs();
+                for (int norm = 0; norm < 8; norm++){
+                    normalizationFiles[norm] = new File("imageData\\ECA_"+n+"\\Normalization_"+norm+"\\directory.txt");
+                    normalizationFiles[norm].mkdirs();
+                }
+            }
+        for (int n = 0; n < 16; n++) {
+            logicFiles[n] = new File("imageData\\Logic_"+n+"\\directory.txt");
+            logicFiles[n].mkdirs();
+            for (int norm = 0; norm < 8; norm++){
+                normalizationFiles[norm] = new File("imageData\\Logic_"+n+"\\Normalization_"+norm+"\\directory.txt");
+                normalizationFiles[norm].mkdirs();
+            }
+        }
+
     }
 }

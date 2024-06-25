@@ -337,7 +337,10 @@ public class SwingDashboard extends JPanel {
                 degree = (int) degreeBox.getSelectedItem();
                 whichSolutionBox.removeAllItems();
                 ecam.specific.maxSolutions = 10000;
-                ecam.deep.deepECASearch(degree, 1, numFactors, whichMultTable.getSelectedIndex());
+                String outstring = (ecam.deep.deepECASearch(degree, 1, numFactors, whichMultTable.getSelectedIndex()));
+                stp.jTextArea.setText(outstring);
+                stp.repaint();
+
                 whichSolutionBox.removeAllItems();
             }
         });
@@ -498,7 +501,8 @@ public class SwingDashboard extends JPanel {
                 ecam.specific.maxSolutions = 10000;
                 System.out.println("\n\n\n\n\n\n\n\n\n\n----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                 numLogicFactors = logicFactorsBox.getSelectedIndex() + 2;
-                ecam.deep.deepLogicSearch(numLogicFactors, logicTableBox.getSelectedIndex());
+                String outstring = ecam.deep.deepLogicSearch(numLogicFactors, logicTableBox.getSelectedIndex());
+                stp.jTextArea.setText(outstring);
             }
         });
         //

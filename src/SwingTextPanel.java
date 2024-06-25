@@ -28,9 +28,9 @@ public class SwingTextPanel extends JPanel {
     public SwingTextPanel(ECAasMultiplication inECAM){
         ecam = inECAM;
         jFrame = new JFrame();
-        jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         jFrame.setSize(500,500);
         jFrame.setLocation(0,0);
+        jFrame.setTitle("Text output");
 
         jTextArea = new JTextArea("",60,60);
         jTextArea.setWrapStyleWord(true);

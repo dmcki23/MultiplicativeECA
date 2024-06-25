@@ -111,7 +111,7 @@ public class ECAMpostProcessing {
     public ECAMpostProcessing() {
         gridSize = 4000;
         normalizeUnit = true;
-        wolframIsNegOne = true;
+        wolframIsNegOne = false;
         avoidDivZero = true;
     }
     /**

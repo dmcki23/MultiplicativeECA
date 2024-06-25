@@ -97,7 +97,6 @@ public class SwingComplexLayers extends JPanel {
 
         //frame.setLayout(new GridLayout());
         frame.setTitle(titleString);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1030, 850);
         frame.setLocation(250,250);
         frame.add(this);

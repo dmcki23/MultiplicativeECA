@@ -59,7 +59,7 @@ public class ECAMdeep {
      * @param numFactors number of factors to permute
      * @param whichTable which set of multiplication tables to use, @see whichMultTableNames
      */
-    public void deepLogicSearch(int numFactors, int whichTable) {
+    public String deepLogicSearch(int numFactors, int whichTable) {
         int[][][] tables = new int[1][4][4];
         GaloisFields galois = new GaloisFields();
         if (whichTable == 0) {
@@ -96,6 +96,11 @@ public class ECAMdeep {
         for (int gate = 0; gate < 16; gate++){
             System.out.println("Gate: " + gate + "\t Total solutions: " + logicSolutionTotals[gate] + "\t Identities: " + identities[gate] + "\t  Non-tirivial identities: " + nonTrivialIdentities[gate] + "\t Repeats: " + hasRepeats[gate] + "\t No repeats: "+ noRepeats[gate]);
         }
+        String outstring = "";
+        for (int gate = 0; gate < 16; gate++){
+            outstring +=("Gate: " + gate + "\t Total solutions: " + logicSolutionTotals[gate] + "\t Identities: " + identities[gate] + "\t  Non-tirivial identities: " + nonTrivialIdentities[gate] + "\t Repeats: " + hasRepeats[gate] + "\t No repeats: "+ noRepeats[gate])+"\n";
+        }
+        return outstring;
     }
     /**
      * This function searches every 0-255 ECA rule with the given parameters for valid solutions and cross-references and displays the results, similar to wideShallow() but focused on ECA rather than general binary array Wolfram codes
@@ -108,7 +113,7 @@ public class ECAMdeep {
      * @param numFactors     number of factors to use in calculation
      * @param whichMultTable which multiplication table option
      */
-    public void deepECASearch(int degree, int numRows, int numFactors, int whichMultTable) {
+    public String deepECASearch(int degree, int numRows, int numFactors, int whichMultTable) {
         //aggregate solution bins
         int numBits = (2*numRows+1);
         ecaSolutions = new ValidSolution[256][1];
@@ -210,6 +215,96 @@ public class ECAMdeep {
             System.out.println(outstring);
             outstring = "";
         }
+
+
+
+
+
+
+
+
+
+
+            outstring = "";
+            outstring += "\n" + ("Total Solutions grouped by left right black white rule symmetry");
+            for (int group = 0; group < 88; group++) {
+                outstring += "\n" + ("Group " + group + ": " + ecam.beca.equivRules[group][0] + " " + ecam.beca.equivRules[group][1] + " " + ecam.beca.equivRules[group][2] + " " + ecam.beca.equivRules[group][3]);
+                outstring += "\n" + (ecaSolutionTotals[ecam.beca.equivRules[group][0]] + " " + ecaSolutionTotals[ecam.beca.equivRules[group][1]] + " " + ecaSolutionTotals[ecam.beca.equivRules[group][2]] + " " + ecaSolutionTotals[ecam.beca.equivRules[group][3]]);
+                outstring += "\n"  ;
+            }
+
+            outstring += "\n";
+            outstring += "\n" + ("ECA 0-255 solution totals arranged in a 16x16 grid");
+            for (int row = 0; row < 16; row++) {
+                for (int column = 0; column < 16; column++) {
+                    outstring += "n: " + (16*row+column) + ": " + ecaSolutionTotals[row * 16 + column] + "\t";
+                }
+                outstring += "\n";
+
+            }
+            outstring += "\n";
+            hasIdentity = new int[256];
+            hasRepeats = new int[256];
+            noRepeats = new int[256];
+            hasNonTrivialIdentity = new int[256];
+            for (int n = 0; n < 256; n++){
+                for (int sol = 0; sol < ecaSolutionTotals[n]; sol++){
+                    if (ecaSolutions[n][sol].noRepeats) noRepeats[n] ++;
+                    if (!ecaSolutions[n][sol].noRepeats) hasRepeats[n]++;
+                    if (ecaSolutions[n][sol].nonTrivialIdentity) hasNonTrivialIdentity[n]++;
+                    if(ecaSolutions[n][sol].identity) hasIdentity[n]++;
+                }
+            }
+
+            outstring += "\n" + ("ECA rules with a multiplication result with no repeated indexes");
+            for (int row = 0; row < 16; row++) {
+                for (int column = 0; column < 16; column++) {
+                    outstring += "n: " + (16*row+column) + ": " +noRepeats[row * 16 + column] + "\n";
+                }
+            }
+            outstring += "\n" + ("ECA rules with a multiplication result that has repeated indexes");
+            for (int row = 0; row < 16; row++) {
+                for (int column = 0; column < 16; column++) {
+                    outstring += "n: " + (16*row+column)+": " + hasRepeats[row * 16 + column] + "\n";
+                }
+                outstring += "\n";
+            }
+            outstring += "\n";
+            outstring += "\n" + ("Has identity");
+            for (int row = 0; row < 16; row++) {
+                for (int column = 0; column < 16; column++) {
+                    outstring += "n: " + (16*row+column)+": " + hasIdentity[row * 16 + column] + "\n";
+                }
+                outstring += "\n";
+            }
+            outstring += "\n";
+            outstring += "\n" + ("ECA rules' non trivial identity arrays, {0 = not exist, 1 = exist} as a multiplication result");
+            outstring += "\n" + ("a non trivial identity is an ");
+            outstring += "\n" + ("ECApathPermutation solution");
+            outstring += "\n" + ("(1) with the unit identity array [0,1,2,3,4,5,6,7..k]");
+            outstring += "\n" + ("as the result of the multiplications, in the numFactors column of the factor array");
+            outstring += "\n" + ("(2) with a non-zero set of permutations used on the indexes");
+            outstring += "\n" + ("");
+            for (int row = 0; row < 16; row++) {
+                for (int column = 0; column < 16; column++) {
+                    outstring += hasNonTrivialIdentity[16 * row + column] + "\n";
+                }
+                outstring += "\n";
+            }
+            outstring += "\n" + ("ECA rule has solution, {0 = no solutions, 1 = has solution(s)}, arranged in a 16 by 16 grid");
+            outstring += "\n" + ("Easy to check if a set of parameters, multiplicationTables numFactors, has a solution in every rule ");
+            outstring += "\n";
+            for (int row = 0; row < 16; row++) {
+                for (int column = 0; column < 16; column++) {
+                    if (ecaSolutionTotals[16 * row + column] > 0) {
+                        outstring += "1";
+                    } else {
+                        outstring += " ";
+                    }
+                }
+                outstring+= "\n";
+            }
+            return outstring;
     }
 
 

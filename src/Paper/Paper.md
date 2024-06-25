@@ -16,7 +16,7 @@ bibliography: paper.bib
 
 # Summary
 
-Elementary cellular automata (ECA) are a set of simple binary programs that produce complex output and quaternions are frequently used in 3D graphics. Both are well-studied subjects, this Java library puts them together in a new way. This project changes additive cellular automata into multiplicative automata [@Wolfram,p. 861] via permutations, hypercomplex numbers, and pointer arrays. Valid solutions extend the binary ECA to complex numbers, produce a vector field, make an algebraic polynomial, and generate some very interesting behavior. 
+Elementary cellular automata (ECA) are a set of simple binary programs in the form of truth tables called Wolfram codes that produce complex output when done repeatedly in parallel, and quaternions are frequently used to represent 3D space and its rotations in computer graphics. Both are well-studied subjects, this Java library puts them together in a new way. This project changes additive cellular automata into multiplicative automata [@Wolfram,p. 861] via permutations, hypercomplex numbers, and pointer arrays. Valid solutions extend the binary ECA to complex numbers, produce a vector field, make an algebraic polynomial, and generate some very interesting fractals. 
 
 # Statement of Need
 

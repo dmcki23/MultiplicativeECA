@@ -96,7 +96,7 @@ public class SwingPolynomialTestOutput extends JPanel {
         JFrame jFrame = new JFrame();
         jFrame.setSize(1100, 830);
         jFrame.setLocation(50, 50);
-        jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        jFrame.setTitle("Non-neg real layers");
         layerBox = new JComboBox();
         layerLabel = new JLabel("Vector field by unit vector or binary neighborhood permutations as factors");
         if (solution != null) redoLayerBox();

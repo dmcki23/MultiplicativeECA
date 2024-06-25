@@ -4,20 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="debugging the openjournal pdf compiler">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/MultiplicativeECA.xml" afterDir="false" />
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="adjusted some screenshots, did spell check on every class, renamed validSolutionCoefficientCalculation() to multiplicativeSolutionOutput()">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/MultiplicativeECA_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/MultiplicativeECA.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MultiplicativeECA/Paper/paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MultiplicativeECA/Paper/paper.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ECAMdeep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMdeep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ECAMpostProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMpostProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECAMspecific.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMspecific.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECAasMultiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAasMultiplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/MultiplicationsDiagram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/MultiplicationsDiagram.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTMLdashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTMLdashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Paper/Paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/Paper.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/unitVectorChart.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/unitVectorChart.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RuleImageCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RuleImageCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SwingComplexLayers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingComplexLayers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SwingComplexOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingComplexOutput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SwingDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingDashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SwingOutputPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingOutputPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SwingPolynomialTestOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingPolynomialTestOutput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SwingPrimeOutput.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SwingTextPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingTextPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/readme.txt" afterDir="false" />
     </list>
@@ -51,10 +54,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/danmc/IdeaProjects/MultiplicativeECA",
     "onboarding.tips.debug.path": "C:/Users/danmc/IdeaProjects/MultiplicativeECA/src/Main.java",
     "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
@@ -266,7 +270,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719253887191</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="adjusted some screenshots, did spell check on every class, renamed validSolutionCoefficientCalculation() to multiplicativeSolutionOutput()">
+      <option name="closed" value="true" />
+      <created>1719278154328</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1719278154328</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -286,6 +298,7 @@
     <MESSAGE value="debugging image paths" />
     <MESSAGE value="changed the paper a little, got rid of two scratch paper classes" />
     <MESSAGE value="debugging the openjournal pdf compiler" />
-    <option name="LAST_COMMIT_MESSAGE" value="debugging the openjournal pdf compiler" />
+    <MESSAGE value="adjusted some screenshots, did spell check on every class, renamed validSolutionCoefficientCalculation() to multiplicativeSolutionOutput()" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjusted some screenshots, did spell check on every class, renamed validSolutionCoefficientCalculation() to multiplicativeSolutionOutput()" />
   </component>
 </project>

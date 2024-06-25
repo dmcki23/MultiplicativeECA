@@ -127,7 +127,7 @@ public class ECAMpostProcessing {
      * @param columns     user supplied number of columns to calculate
      * @return a 2d double array of the solution applied to the given rule using random input
      */
-    public double[][] validSolutionCoefficientCalculation(ValidSolution solution, int[] binaryInput, double[] doubleInput, int rows, int columns) {
+    public double[][] multiplicativeSolutionOutput(ValidSolution solution, int[] binaryInput, double[] doubleInput, int rows, int columns) {
         //useNorm = !useNorm;
         int[] rule = solution.wolframCode;
         int places = solution.numBits;
@@ -253,8 +253,7 @@ public class ECAMpostProcessing {
         return field;
     }
     /**
-     * Uses a solution found in ECAasMultiplication and applies the same permutation group multiplication to a neighborhood of non-negative real numbers in addition to the standard binary Wolfram calculation. The partialProduct[][] table is a class field set
-     * externally from this function. The partialProduct[][] table is a closed group of size numBits x numBits, typically Galois addition or multiplication, and is used in the first set of multiplications, Multiplication B in the paper screenshot. Multiplication C is the other part of this function.
+     * Uses a solution found in ECAasMultiplication and applies the same permutations and constructions to a neighborhood of complex numbers.  Multiplication B in the paper screenshot. Multiplication C is the other part of this function. Uses the solution's polynomial from generatePolynomial() to multiply, the partial product table was applied there.
      * <p>
      * Complex
      *
@@ -264,7 +263,7 @@ public class ECAMpostProcessing {
      * @param columns      user supplied number of columns to calculate
      * @return a 2d double array of the solution applied to the given rule using random input
      */
-    public Complex[][] validSolutionCoefficientCalculation(ValidSolution solution, Complex[] complexInput, int rows, int columns) {
+    public Complex[][] multiplicativeSolutionOutput(ValidSolution solution, Complex[] complexInput, int rows, int columns) {
         int[] rule = solution.wolframCode;
         int places = solution.numBits;
         int numFactors = solution.numFactors;
@@ -302,21 +301,26 @@ public class ECAMpostProcessing {
         double[][] mults = new double[numFactors][places];
         Complex[] complexNext = new Complex[places];
         Complex[][] complexMults = new Complex[numFactors][places];
-        //main loops
+        //for every cell in the calculation field
         mainLoop:
         for (int row = 1; row <= rows; row++) {
             for (int column = places + row; column < gridSize - places - row; column++) {
-                //if (ruleField[row][column] == 0) continue;
+                //initialize factor array
                 complexMults = new Complex[numFactors + 1][places];
                 for (int factor = 0; factor <= numFactors; factor++) {
                     for (int place = 0; place < places; place++) {
                         complexMults[factor][place] = new Complex();
                     }
                 }
+                //load first permutation of the cell's neighborhood as a factor
                 for (int place = 0; place < places; place++) {
                     complexMults[0][place] = complexField[row - 1][column - places / 2 + perms[permutationGroup[0]][place]];
                 }
-                //multiplication loop
+                //
+                //
+                //
+                //
+                //multiplication loop, uses the polynomial, Multiplication A
                 for (int place = 0; place < places; place++) {
                     for (int term = 0; term < solution.polynomial[0].length; term++) {
                         if (solution.polynomial[places][term][place] == 0) continue;
@@ -330,11 +334,13 @@ public class ECAMpostProcessing {
                     }
                 }
                 Complex[] neighborhood = new Complex[places];
+                //the permutation composition product, Multiplication C, is applied to the result neighborhood
                 for (int place = 0; place < places; place++) {
                     neighborhood[place] = complexMults[numFactors][perms[solution.permGroupProductInverse][place]];
                     complexVectorField[place][row][column] = new Complex(complexMults[numFactors][perms[solution.permGroupProductInverse][place]].real,complexMults[numFactors][perms[solution.permGroupProductInverse][place]].imaginary);
                 }
                 complexField[row][column] = localNormalize(neighborhood);
+                //this is the additive automata using the signs of the neighborhood's components to moderate the output
                 Complex tots = new Complex(0, 0);
                 for (int place = 0; place < places; place++) {
                     double a = 0;
@@ -352,8 +358,6 @@ public class ECAMpostProcessing {
                     tots.real += Math.pow(2, place) * a;
                     tots.imaginary += Math.pow(2, place) * b;
                 }
-//                if (solution.wolframCode[(int) tots.real] == 0) complexField[row][column].real = 0;
-//                if (solution.wolframCode[(int) tots.imaginary] == 0) complexField[row][column].imaginary = 0;
                 if (wolframIsNegOne) {
                     if (solution.wolframCode[(int) tots.real] == 0) complexField[row][column].real *= -1;
                     if (solution.wolframCode[(int) tots.imaginary] == 0) complexField[row][column].imaginary *= -1;
@@ -361,6 +365,11 @@ public class ECAMpostProcessing {
                     if (solution.wolframCode[(int) tots.real] == 0) complexField[row][column].real = 0;
                     if (solution.wolframCode[(int) tots.imaginary] == 0) complexField[row][column].imaginary = 0;
                 }
+                //
+                //
+                //
+                //
+                //Multiplication C, does B's normalization before the multiplication, which is the same construction as the binary unit vectors from A
                 Complex[] nFirstFactors = new Complex[solution.numFactors];
                 Complex nFirstResult = new Complex();
                 for (int factor = 0; factor < solution.numFactors; factor++) {
@@ -383,6 +392,7 @@ public class ECAMpostProcessing {
                     nFirstResult.imaginary = nFirstResult.imaginary / radius;
                 }
                 neighborhoodNormalizeFirst[row][column] = nFirstResult;
+                //additive automata operating on the negative signs of the components of the neighborhood, moderating the complex output
                 tots = new Complex(0, 0);
                 for (int place = 0; place < places; place++) {
                     double a = 0;
@@ -411,72 +421,13 @@ public class ECAMpostProcessing {
                 }
             }
         }
-//        //console display stuff
-//        System.out.println("partialProductTable ");
-//        System.out.println(Arrays.deepToString(partialProductTable));
-//        System.out.println("ECA field");
-//        outstring = "";
-//        for (int row = 0; row < 40; row++) {
-//            for (int column = (gridSize / 2) - columns / 2; column < (gridSize / 2) + columns / 2; column++) {
-//                outstring += ruleField[row][column];
-//            }
-//            System.out.println(outstring);
-//            outstring = "";
-//        }
-//        System.out.println("ECA field with real positive integer coefficients multiplied out by the quaternion permutation multiplication solution ");
-//        outstring = "";
-//        for (int row = 0; row < 40; row++) {
-//            for (int column = (gridSize / 2) - columns / 2; column < (gridSize / 2) + columns / 2; column++) {
-//                outstring += String.format("%3.2f", field[row][column]) + "\t";
-//                //outstring += field[row][column] + "\t";
-//            }
-//            System.out.println(outstring);
-//            outstring = "";
-//        }
-//        System.out.println("Complex rulefield");
-//        for (int row = 0; row < 20; row++) {
-//            System.out.println("Row: " + row + "\t" + Arrays.toString(Arrays.copyOfRange(ruleField[row], gridSize / 2 - 20, gridSize / 2 + 20)));
-//        }
-//        int[][] outField = new int[rows][columns];
-//        for (int row = 0; row < rows; row++) {
-//            for (int column = 1400 - columns / 2; column < 1400 + columns / 2; column++) {
-//                outField[row][column + columns / 2 - 1400] = ruleField[row][column];
-//            }
-//        }
-//        double[][] outCoeff = new double[rows][columns];
-//        for (int row = 0; row < rows; row++) {
-//            for (int column = 1400 - columns / 2; column < 1400 + columns / 2; column++) {
-//                outCoeff[row][column + columns / 2 - 1400] = field[row][column];
-//            }
-//        }
-//        coefficientField = new double[rows][columns];
-//        ruleOutput = new int[rows][columns];
-//        for (int row = 0; row < rows; row++) {
-//            for (int column = 0; column < columns; column++) {
-//                coefficientField[row][column] = field[row][(gridSize / 2) - columns / 2 + column];
-//                ruleOutput[row][column] = ruleField[row][(gridSize / 2) - columns / 2 + column];
-//            }
-//        }
         Complex[][] complexOut = new Complex[rows][columns];
         for (int row = 0; row < rows; row++) {
             for (int column = 0; column < columns; column++) {
                 complexOut[row][column] = complexField[row][(gridSize / 2) - columns / 2 + column];
             }
         }
-//        System.out.println("Real Part");
-//        for (int row = 0; row < 20; row++) {
-//            for (int column = gridSize / 2 - 20; column < gridSize / 2 + 20; column++) {
-//                System.out.print(String.format("%3.2f", complexField[row][column].real) + " ");
-//            }
-//            System.out.print("\n");
-//        }
-//        System.out.println("Imaginary Part");
-//        for (int row = 0; row < 20; row++) {
-//            for (int column = gridSize / 2 - 20; column < gridSize / 2 + 20; column++) {
-//                System.out.print(String.format("%3.2f", complexField[row][column].imaginary) + " ");
-//            }
-//            System.out.print("\n");
-//        }
+
         return complexOut;
     }
     /**
@@ -500,19 +451,7 @@ public class ECAMpostProcessing {
      */
     public double localNormalize(double[] in) {
         double out = 0;
-        /*
-//        if (useNorm) {
-//            for (int spot = 0; spot < in.length; spot++) {
-//                out += in[spot] * in[spot];
-//            }
-//            out = Math.sqrt(out);
-//        } else {
-//            for (int spot = 0; spot < in.length; spot++) {
-//                out += (int) Math.pow(2, spot) * in[spot];
-//            }
-//        //}
-*
-         */
+
         for (int spot = 0; spot < in.length; spot++) {
             out += (int) Math.pow(2, spot) * in[spot];
         }
@@ -520,8 +459,7 @@ public class ECAMpostProcessing {
         return out;
     }
     /**
-     * Result of neighborhood permutation multiplications, already factor-wise normalized by geometric mean,
-     * here normalized neighborhood-wise this time, either by the norm of the neighborhood, or the weighted sum n-th root normalization,
+     * Normalizes the neighborhood of the result of permutation multiplications to a single output cell, with two options
      * depending on the boolean useNorm
      *
      * @param in double array with length places,
@@ -543,23 +481,7 @@ public class ECAMpostProcessing {
             out.imaginary = out.imaginary / radius;
         }
         return out;
-//        Complex out = new Complex(0,0);
-//        double[] average = new double[2];
-//        for (int spot = 0; spot < in.length; spot++){
-//            average[0] += in[spot].real;
-//            average[1] += in[spot].imaginary;
-//        }
-//        average[0] = average[0]/in.length;
-//        average[1] = average[1]/in.length;
-//        double[] variance = new double[2];
-//        for (int spot = 0; spot < in.length; spot++){
-//            variance[0] += (in[spot].real-average[0])*(in[spot].real-average[0]);
-//            variance[1] += (in[spot].imaginary-average[1])*(in[spot].imaginary-average[1]);
-//        }
-//        //out.real = Math.signum(average[0])*Math.sqrt(variance[0]/average[0]);
-//        //out.imaginary = Math.signum(average[1])*Math.sqrt(variance[1]/average[1]);
-//        out = new Complex(average[0],average[1]);
-//        return out;
+
     }
     /**
      * Generates the polynomial of the permuted neighborhood multiplications, polynomial[row=0..places-1][term][place] is the term's exponents and polynomial[places][term][row] is the row's term coefficient.
@@ -709,13 +631,7 @@ public class ECAMpostProcessing {
                 }
             }
         }
-//        for (int factor = 0; factor <= numFactors; factor++) {
-//            System.out.println("Factor: " + factor);
-//            for (int row = 0; row < 20; row++) {
-//                System.out.println(Arrays.toString(out[factor][row]));
-//            }
-//            System.out.println();
-//        }
+
         return out;
     }
     /**
@@ -749,7 +665,7 @@ public class ECAMpostProcessing {
     /**
      * This function gets a subset of the output data calculated in validSolutionCoefficientCalculation(), non-negative real
      *
-     * @param solution a solution from ecam.specific
+     * @param solution a solution from ECAMspecific
      * @param rows     number of rows to output
      * @param columns  number of columns to output
      * @return coefficient field produced by the polynomial rather than the function itself

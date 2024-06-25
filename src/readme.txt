@@ -1,8 +1,8 @@
 consistently little-endian, consistently zero indexed,
 uses Java 17 because Mathematica doesn't recognize over 61.0 and Matlab doesn't recognize over 51
 error checking is mainly on user, Wolfram codes bigger than multiplication tables and multiplication tables bigger than Wolfram codes, search function calls with exponentially factorially long runtimes, grid output sizes, non-prime numbers in GaloisFields, etc. some throw errors, some produce gibberish
-it is not in package format so it is easier to use classes seperated from the GUI elsewhere, todo 2 packages?
-everything is public so you can call it from Mathematica, if it's not public, you can see it with Methods[] but not use it
+it is not in package format, so it is easier to use classes seperated from the GUI elsewhere, todo 2 packages?
+everything is public, so you can call it from Mathematica, if it's not public, you can see it with Methods[] but not use it
 to-do: even numbered rows with 0-4 values, as complex numbers, kcycles, prime number automata, 2D automata, implement negative input - results in complex numbers in postProcessing
 unsure whether to swap the row, column order in some of the function calls, because the algorithm uses row, column and Swing components use column, row. as-is for now
 
@@ -27,6 +27,7 @@ To use the search classes apart from the GUI:
     Set your input, or call the random input function
     Call validSolutionCoefficientCalculation()
     the set of ValidSolutions is in the fields of ECAMpostProcessing
+    use the extract functions of ValidSolutions if you want arrays of all the solutions' fields
 
 
 # Summary

@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="debugging the openjournal pdf compiler">
-      <change beforePath="$PROJECT_DIR$/src/Paper/paper.bib" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/paper.bib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/MultiplicativeECA.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ECAMdeep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMdeep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ECAMpostProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMpostProcessing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ECAMspecific.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMspecific.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ECAasMultiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAasMultiplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/MultiplicationsDiagram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/MultiplicationsDiagram.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/Paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/Paper.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/unitVectorChart.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/unitVectorChart.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RuleImageCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RuleImageCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SwingDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingDashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SwingPolynomialTestOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingPolynomialTestOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SwingPrimeOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SwingTextPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingTextPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/readme.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,8 +49,13 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
-    "onboarding.tips.debug.path": "C:/Users/danmc/IdeaProjects/MultiplicativeECA/src/Main.java"
+    "onboarding.tips.debug.path": "C:/Users/danmc/IdeaProjects/MultiplicativeECA/src/Main.java",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -239,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719253728644</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="debugging the openjournal pdf compiler">
+      <option name="closed" value="true" />
+      <created>1719253887191</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1719253887191</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

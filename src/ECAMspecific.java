@@ -46,6 +46,7 @@ public class ECAMspecific {
         searchStop = 60000 * 5;
     }
     /**
+     * Multiplications A in the paper.
      *
      * Finds permutation groups with length numFactors, of degree numBits, such that when each permutation is applied to its axis, the diagonal through the numFactors-dimensional multiplication table produces a pointer array that points to equal values of the original Wolfram code, reproducing the original Wolfram code.
      *

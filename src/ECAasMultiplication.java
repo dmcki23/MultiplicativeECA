@@ -14,7 +14,7 @@
 import java.util.Arrays;
 import java.util.Random;
 /**
- * Manages ECAMdeep, ECAMpostProcessing, and ECAMspecific
+ * Manages ECAMdeep, ECAMpostProcessing, and ECAMspecific, contains the heart of the project in generalWolframCode() and validSolutionCoefficientCalculation
  *
  * @author Daniel W McKinley
  */
@@ -147,7 +147,7 @@ public class ECAasMultiplication {
         System.out.println("Solution totals " + specific.numSolutions);
         System.out.println("Factors      " + Arrays.deepToString(specific.validSolutions[0].factors));
         System.out.println("Permutations " + Arrays.toString(specific.validSolutions[0].permutationGroup));
-        post.validSolutionCoefficientCalculation(specific.validSolutions[0], binaryInput, coeffInput, 400,1000);
+        post.multiplicativeSolutionOutput(specific.validSolutions[0], binaryInput, coeffInput, 400,1000);
         specific.validSolutions[0].polynomial = post.generatePolynomial(specific.validSolutions[0]);
         specific.validSolutions[0].polynomialString = post.polynomialAsStrings(specific.validSolutions[0].polynomial);
         return code;

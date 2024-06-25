@@ -1,16 +1,8 @@
 import javax.imageio.ImageIO;
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
-import java.awt.image.DataBufferInt;
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.io.PrintWriter;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Random;
 /**
@@ -152,7 +144,7 @@ public class RuleImageCollection {
             }
         }
         eca.post.widthOfRandomInput = 200;
-        eca.post.validSolutionCoefficientCalculation(eca.specific.validSolutions[activeSolution], eca.post.randomBinaryInput(), eca.post.randomDoubleInput(0, 10), 400, 1000);
+        eca.post.multiplicativeSolutionOutput(eca.specific.validSolutions[activeSolution], eca.post.randomBinaryInput(), eca.post.randomDoubleInput(0, 10), 400, 1000);
         eca.specific.validSolutions[activeSolution].polynomial = eca.post.generatePolynomial(eca.specific.validSolutions[activeSolution]);
         eca.specific.validSolutions[activeSolution].polynomialString = eca.post.polynomialAsStrings(eca.specific.validSolutions[activeSolution].polynomial);
         outputPanel.solutionNumber = activeSolution;
@@ -170,7 +162,7 @@ public class RuleImageCollection {
         stp.solution = eca.specific.validSolutions[activeSolution];
         stp.displayValidSolution(eca.specific.validSolutions[activeSolution]);
         swingComplexOutput.currentSolution = eca.specific.validSolutions[activeSolution];
-        swingComplexOutput.complexField = eca.post.validSolutionCoefficientCalculation(eca.specific.validSolutions[activeSolution], eca.post.randomComplexInput(-10, 10), 400, 1000);
+        swingComplexOutput.complexField = eca.post.multiplicativeSolutionOutput(eca.specific.validSolutions[activeSolution], eca.post.randomComplexInput(-10, 10), 400, 1000);
         neighborhoodFirstOut.currentSolution = eca.specific.validSolutions[activeSolution];
         neighborhoodFirstOut.complexField = eca.post.subsectionNeighborhoodFirst(eca.specific.validSolutions[activeSolution], 400, 1000);
 //        outputPanel.repaint();
@@ -282,7 +274,7 @@ public class RuleImageCollection {
         int[] wolframCode = Arrays.copyOfRange(eca.beca.ruleExtension(rule)[numBit], 0, (int) Math.pow(2, 3));
         eca.specific.generalWolframCode(wolframCode, 5, multTables, 1);
         int activeSolution = rand.nextInt(0, eca.specific.numSolutions);
-        eca.post.validSolutionCoefficientCalculation(eca.specific.validSolutions[activeSolution], eca.post.randomBinaryInput(), eca.post.randomDoubleInput(0, 10), 400, 1000);
+        eca.post.multiplicativeSolutionOutput(eca.specific.validSolutions[activeSolution], eca.post.randomBinaryInput(), eca.post.randomDoubleInput(0, 10), 400, 1000);
         eca.specific.validSolutions[activeSolution].polynomial = eca.post.generatePolynomial(eca.specific.validSolutions[activeSolution]);
         eca.specific.validSolutions[activeSolution].polynomialString = eca.post.polynomialAsStrings(eca.specific.validSolutions[activeSolution].polynomial);
         outputPanel.solutionNumber = activeSolution;
@@ -294,7 +286,7 @@ public class RuleImageCollection {
         stp.solution = eca.specific.validSolutions[activeSolution];
         stp.displayValidSolution(eca.specific.validSolutions[activeSolution]);
         swingComplexOutput.currentSolution = eca.specific.validSolutions[activeSolution];
-        swingComplexOutput.complexField = eca.post.validSolutionCoefficientCalculation(eca.specific.validSolutions[activeSolution], eca.post.randomComplexInput(-10, 10), 400, 1000);
+        swingComplexOutput.complexField = eca.post.multiplicativeSolutionOutput(eca.specific.validSolutions[activeSolution], eca.post.randomComplexInput(-10, 10), 400, 1000);
         neighborhoodFirstOut.currentSolution = eca.specific.validSolutions[activeSolution];
         neighborhoodFirstOut.complexField = eca.post.subsectionNeighborhoodFirst(eca.specific.validSolutions[activeSolution], 400, 1000);
 
@@ -416,7 +408,7 @@ public class RuleImageCollection {
         }
         eca.specific.generalWolframCode(wolframCode, 5, multTables, 0);
         int activeSolution = rand.nextInt(0, eca.specific.numSolutions);
-        eca.post.validSolutionCoefficientCalculation(eca.specific.validSolutions[activeSolution], eca.post.randomBinaryInput(), eca.post.randomDoubleInput(0, 10), 400, 1000);
+        eca.post.multiplicativeSolutionOutput(eca.specific.validSolutions[activeSolution], eca.post.randomBinaryInput(), eca.post.randomDoubleInput(0, 10), 400, 1000);
         eca.specific.validSolutions[activeSolution].polynomial = eca.post.generatePolynomial(eca.specific.validSolutions[activeSolution]);
         eca.specific.validSolutions[activeSolution].polynomialString = eca.post.polynomialAsStrings(eca.specific.validSolutions[activeSolution].polynomial);
         outputPanel.solutionNumber = activeSolution;
@@ -428,7 +420,7 @@ public class RuleImageCollection {
         stp.solution = eca.specific.validSolutions[activeSolution];
         stp.displayValidSolution(eca.specific.validSolutions[activeSolution]);
         swingComplexOutput.currentSolution = eca.specific.validSolutions[activeSolution];
-        swingComplexOutput.complexField = eca.post.validSolutionCoefficientCalculation(eca.specific.validSolutions[activeSolution], eca.post.randomComplexInput(-10, 10), 400, 1000);
+        swingComplexOutput.complexField = eca.post.multiplicativeSolutionOutput(eca.specific.validSolutions[activeSolution], eca.post.randomComplexInput(-10, 10), 400, 1000);
         neighborhoodFirstOut.currentSolution = eca.specific.validSolutions[activeSolution];
         neighborhoodFirstOut.complexField = eca.post.subsectionNeighborhoodFirst(eca.specific.validSolutions[activeSolution], 400, 1000);
 
@@ -564,7 +556,7 @@ public class RuleImageCollection {
             }
         }
         eca.post.widthOfRandomInput = 200;
-        eca.post.validSolutionCoefficientCalculation(eca.specific.validSolutions[activeSolution], eca.post.randomBinaryInput(), eca.post.randomDoubleInput(0, 10), 400, 1000);
+        eca.post.multiplicativeSolutionOutput(eca.specific.validSolutions[activeSolution], eca.post.randomBinaryInput(), eca.post.randomDoubleInput(0, 10), 400, 1000);
         eca.specific.validSolutions[activeSolution].polynomial = eca.post.generatePolynomial(eca.specific.validSolutions[activeSolution]);
         eca.specific.validSolutions[activeSolution].polynomialString = eca.post.polynomialAsStrings(eca.specific.validSolutions[activeSolution].polynomial);
         outputPanel.solutionNumber = activeSolution;
@@ -582,7 +574,7 @@ public class RuleImageCollection {
         stp.solution = eca.specific.validSolutions[activeSolution];
         stp.displayValidSolution(eca.specific.validSolutions[activeSolution]);
         swingComplexOutput.currentSolution = eca.specific.validSolutions[activeSolution];
-        swingComplexOutput.complexField = eca.post.validSolutionCoefficientCalculation(eca.specific.validSolutions[activeSolution], eca.post.randomComplexInput(-10, 10), 400, 1000);
+        swingComplexOutput.complexField = eca.post.multiplicativeSolutionOutput(eca.specific.validSolutions[activeSolution], eca.post.randomComplexInput(-10, 10), 400, 1000);
         neighborhoodFirstOut.currentSolution = eca.specific.validSolutions[activeSolution];
         neighborhoodFirstOut.complexField = eca.post.subsectionNeighborhoodFirst(eca.specific.validSolutions[activeSolution], 400, 1000);
 //        outputPanel.repaint();
@@ -710,7 +702,7 @@ public class RuleImageCollection {
             }
         }
         eca.post.widthOfRandomInput = 200;
-        eca.post.validSolutionCoefficientCalculation(eca.specific.validSolutions[activeSolution], eca.post.randomBinaryInput(), eca.post.randomDoubleInput(0, 10), 400, 1000);
+        eca.post.multiplicativeSolutionOutput(eca.specific.validSolutions[activeSolution], eca.post.randomBinaryInput(), eca.post.randomDoubleInput(0, 10), 400, 1000);
         eca.specific.validSolutions[activeSolution].polynomial = eca.post.generatePolynomial(eca.specific.validSolutions[activeSolution]);
         eca.specific.validSolutions[activeSolution].polynomialString = eca.post.polynomialAsStrings(eca.specific.validSolutions[activeSolution].polynomial);
         outputPanel.solutionNumber = activeSolution;
@@ -728,7 +720,7 @@ public class RuleImageCollection {
         stp.solution = eca.specific.validSolutions[activeSolution];
         stp.displayValidSolution(eca.specific.validSolutions[activeSolution]);
         swingComplexOutput.currentSolution = eca.specific.validSolutions[activeSolution];
-        swingComplexOutput.complexField = eca.post.validSolutionCoefficientCalculation(eca.specific.validSolutions[activeSolution], eca.post.randomComplexInput(-10, 10), 400, 1000);
+        swingComplexOutput.complexField = eca.post.multiplicativeSolutionOutput(eca.specific.validSolutions[activeSolution], eca.post.randomComplexInput(-10, 10), 400, 1000);
         neighborhoodFirstOut.currentSolution = eca.specific.validSolutions[activeSolution];
         neighborhoodFirstOut.complexField = eca.post.subsectionNeighborhoodFirst(eca.specific.validSolutions[activeSolution], 400, 1000);
 //        outputPanel.repaint();

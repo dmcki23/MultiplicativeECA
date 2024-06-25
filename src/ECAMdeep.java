@@ -54,7 +54,7 @@ public class ECAMdeep {
     /**
      * Similar to deepECAsearch() except that it uses the 0-16 four bit logic gate truth table instead of the 0-255 ECA
      *
-     * Crossreferences solutions to find which gates have solutions in common. Aggregates solution identiity information.
+     * Cross-references solutions to find which gates have solutions in common. Aggregates solution identiity information.
      *
      * @param numFactors number of factors to permute
      * @param whichTable which set of multiplication tables to use, @see whichMultTableNames

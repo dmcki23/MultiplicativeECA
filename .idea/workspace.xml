@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="updated some Swing component behavior, made sure it was compiling the jar correctly">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HTMLdashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTMLdashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="added the jar to git" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -271,7 +267,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719346949817</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="added the jar to git">
+      <option name="closed" value="true" />
+      <created>1719400853314</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1719400853314</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -293,6 +297,7 @@
     <MESSAGE value="debugging the openjournal pdf compiler" />
     <MESSAGE value="adjusted some screenshots, did spell check on every class, renamed validSolutionCoefficientCalculation() to multiplicativeSolutionOutput()" />
     <MESSAGE value="updated some Swing component behavior, made sure it was compiling the jar correctly" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated some Swing component behavior, made sure it was compiling the jar correctly" />
+    <MESSAGE value="added the jar to git" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the jar to git" />
   </component>
 </project>

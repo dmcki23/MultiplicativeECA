@@ -69,6 +69,8 @@ public class Main {
 //        htmLdashboard.generateIndexFilesWithNormalizations();
 //
 //        htmLdashboard.generateIndexFilesWithNormalizationsLogic();
+        //SwingDashboard swingDashboard = new SwingDashboard();
+        htmLdashboard.generateIndexFilesWithNormalizationsLogic();
         SwingDashboard swingDashboard = new SwingDashboard();
     }
 

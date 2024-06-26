@@ -676,6 +676,9 @@ public class SwingDashboard extends JPanel {
         JComboBox avoidDivZeroBox = new JComboBox();
         avoidDivZeroBox.addItem(true);
         avoidDivZeroBox.addItem(false);
+        JComboBox additiveBox = new JComboBox();
+        additiveBox.addItem(true);
+        additiveBox.addItem(false);
         JButton normalizationRefreshButton = new JButton("Refresh normalizations");
         normalizationRefreshButton.addActionListener(new ActionListener() {
             @Override
@@ -695,6 +698,7 @@ public class SwingDashboard extends JPanel {
                 } else {
                     ecam.post.avoidDivZero = false;
                 }
+                ecam.post.doAddititiveWolfram = (boolean) additiveBox.getSelectedItem();
             }
         });
         JButton restoreDefaultsButton = new JButton("Restore default normalizations");
@@ -709,6 +713,7 @@ public class SwingDashboard extends JPanel {
                 avoidDivZeroBox.setSelectedIndex(0);
             }
         });
+
 
 
 
@@ -745,6 +750,8 @@ public class SwingDashboard extends JPanel {
         frame.add(new JLabel());
         frame.add(new JLabel("Whether to normalize the cell to the unit complex circle"));
         frame.add(normalizeUnitBox);
+        frame.add(new JLabel("Do the additive Wolfram code call on the complex neighborhood"));
+        frame.add(additiveBox);
         frame.add(new JLabel("How to treat a 0 in the Wolfram code, {0,-1}"));
         frame.add(wolframIsNegOneBox);
         frame.add(new JLabel("Whether to avoid divisions by zero in the normalization"));

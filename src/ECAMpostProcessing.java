@@ -106,6 +106,11 @@ public class ECAMpostProcessing {
      */
     public boolean avoidDivZero;
     /**
+     * If true, it does a binary sum of the real and imaginary parts of the input neighborhood, >0 being 0 and <0 being 1, the real and imaginary treated as seperate, and calls the solution's Wolfram code with that value,
+     * and depending on the Wolfram code value at that additive spot, it checks wolframIsNegOne
+     */
+    public boolean doAddititiveWolfram;
+    /**
      * Currently empty
      */
     public ECAMpostProcessing() {
@@ -113,6 +118,7 @@ public class ECAMpostProcessing {
         normalizeUnit = true;
         wolframIsNegOne = false;
         avoidDivZero = true;
+        doAddititiveWolfram = true;
     }
     /**
      * Uses a solution found in ECAasMultiplication and applies the same permutation group multiplication to a neighborhood of non-negative real numbers in addition to the standard binary Wolfram calculation. The partialProduct[][] table is a class field set
@@ -337,7 +343,7 @@ public class ECAMpostProcessing {
                 //the permutation composition product, Multiplication C, is applied to the result neighborhood
                 for (int place = 0; place < places; place++) {
                     neighborhood[place] = complexMults[numFactors][perms[solution.permGroupProductInverse][place]];
-                    complexVectorField[place][row][column] = new Complex(complexMults[numFactors][perms[solution.permGroupProductInverse][place]].real,complexMults[numFactors][perms[solution.permGroupProductInverse][place]].imaginary);
+                    complexVectorField[place][row][column] = new Complex(complexMults[numFactors][perms[solution.permGroupProductInverse][place]].real, complexMults[numFactors][perms[solution.permGroupProductInverse][place]].imaginary);
                 }
                 complexField[row][column] = localNormalize(neighborhood);
                 //this is the additive automata using the signs of the neighborhood's components to moderate the output
@@ -358,12 +364,14 @@ public class ECAMpostProcessing {
                     tots.real += Math.pow(2, place) * a;
                     tots.imaginary += Math.pow(2, place) * b;
                 }
-                if (wolframIsNegOne) {
-                    if (solution.wolframCode[(int) tots.real] == 0) complexField[row][column].real *= -1;
-                    if (solution.wolframCode[(int) tots.imaginary] == 0) complexField[row][column].imaginary *= -1;
-                } else {
-                    if (solution.wolframCode[(int) tots.real] == 0) complexField[row][column].real = 0;
-                    if (solution.wolframCode[(int) tots.imaginary] == 0) complexField[row][column].imaginary = 0;
+                if (doAddititiveWolfram) {
+                    if (wolframIsNegOne) {
+                        if (solution.wolframCode[(int) tots.real] == 0) complexField[row][column].real *= -1;
+                        if (solution.wolframCode[(int) tots.imaginary] == 0) complexField[row][column].imaginary *= -1;
+                    } else {
+                        if (solution.wolframCode[(int) tots.real] == 0) complexField[row][column].real = 0;
+                        if (solution.wolframCode[(int) tots.imaginary] == 0) complexField[row][column].imaginary = 0;
+                    }
                 }
                 //
                 //
@@ -410,14 +418,18 @@ public class ECAMpostProcessing {
                     tots.real += Math.pow(2, place) * a;
                     tots.imaginary += Math.pow(2, place) * b;
                 }
-                if (wolframIsNegOne) {
-                    if (solution.wolframCode[(int) tots.real] == 0) neighborhoodNormalizeFirst[row][column].real *= -1;
-                    if (solution.wolframCode[(int) tots.imaginary] == 0)
-                        neighborhoodNormalizeFirst[row][column].imaginary *= -1;
-                } else {
-                    if (solution.wolframCode[(int) tots.real] == 0) neighborhoodNormalizeFirst[row][column].real = 0;
-                    if (solution.wolframCode[(int) tots.imaginary] == 0)
-                        neighborhoodNormalizeFirst[row][column].imaginary = 0;
+                if (doAddititiveWolfram) {
+                    if (wolframIsNegOne) {
+                        if (solution.wolframCode[(int) tots.real] == 0)
+                            neighborhoodNormalizeFirst[row][column].real *= -1;
+                        if (solution.wolframCode[(int) tots.imaginary] == 0)
+                            neighborhoodNormalizeFirst[row][column].imaginary *= -1;
+                    } else {
+                        if (solution.wolframCode[(int) tots.real] == 0)
+                            neighborhoodNormalizeFirst[row][column].real = 0;
+                        if (solution.wolframCode[(int) tots.imaginary] == 0)
+                            neighborhoodNormalizeFirst[row][column].imaginary = 0;
+                    }
                 }
             }
         }

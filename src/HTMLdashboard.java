@@ -265,7 +265,7 @@ public class HTMLdashboard {
                 PrintWriter printWriter = new PrintWriter("imageData\\Logic_" + n + "\\logic_" + n + "_index.html");
                 printWriter.print(generateGenericOpener());
                 printWriter.print("<a href=\"..\\mainIndex.html\">Main</a><br>");
-                printWriter.print(generateNormalizationsIndex(n));
+                printWriter.print(generateNormalizationsIndexLogic(n));
                 printWriter.print("<br><br><img src = \"Normalization_0\\logic"+n+"_singlebit.jpg\">Single bit initial input</img><br>\n");
                 printWriter.print("<br><br><img src = \"Normalization_0\\logic"+n+"_randombinary.jpg\">Random binary input</img><br>\n");
                 printWriter.print("</body>\n");

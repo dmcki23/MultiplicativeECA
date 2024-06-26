@@ -4,25 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="adjusted some screenshots, did spell check on every class, renamed validSolutionCoefficientCalculation() to multiplicativeSolutionOutput()">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/MultiplicativeECA_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/MultiplicativeECA.xml" beforeDir="false" />
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="updated some Swing component behavior, made sure it was compiling the jar correctly">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MultiplicativeECA/Paper/paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MultiplicativeECA/Paper/paper.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECAMdeep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMdeep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECAMpostProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMpostProcessing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HTMLdashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTMLdashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/Paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/Paper.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SwingComplexLayers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingComplexLayers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SwingComplexOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingComplexOutput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SwingDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingDashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SwingOutputPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingOutputPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SwingPolynomialTestOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingPolynomialTestOutput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SwingTextPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingTextPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/readme.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719278154328</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="updated some Swing component behavior, made sure it was compiling the jar correctly">
+      <option name="closed" value="true" />
+      <created>1719346949817</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1719346949817</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -299,6 +292,7 @@
     <MESSAGE value="changed the paper a little, got rid of two scratch paper classes" />
     <MESSAGE value="debugging the openjournal pdf compiler" />
     <MESSAGE value="adjusted some screenshots, did spell check on every class, renamed validSolutionCoefficientCalculation() to multiplicativeSolutionOutput()" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjusted some screenshots, did spell check on every class, renamed validSolutionCoefficientCalculation() to multiplicativeSolutionOutput()" />
+    <MESSAGE value="updated some Swing component behavior, made sure it was compiling the jar correctly" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated some Swing component behavior, made sure it was compiling the jar correctly" />
   </component>
 </project>

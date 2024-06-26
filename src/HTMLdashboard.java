@@ -89,7 +89,7 @@ public class HTMLdashboard {
         out += "<table>\n";
         for (int gate = 0; gate < 16; gate++) {
             out += "<tr>\n";
-            out += "<td><a href=\"Logic_" + gate + "\\Logic_" + gate + "_index.html\">" + "Gate: " + gate + ", " + logicGateNames[gate] + "</a></td>\n";
+            out += "<td><a href=\"Logic_" + gate + "\\logic_" + gate + "_index.html\">" + "Gate: " + gate + ", " + logicGateNames[gate] + "</a></td>\n";
             out += "</tr>\n";
         }
         out += "</table>";
@@ -192,7 +192,7 @@ public class HTMLdashboard {
             try {
                 PrintWriter printWriter = new PrintWriter("imageData\\ECA_" + n + "\\ECA_" + n + "_index.html");
                 printWriter.println(generateGenericOpener());
-                printWriter.println("<a href=\"..\\MainIndex.html\">Main</a>");
+                printWriter.println("<a href=\"..\\mainIndex.html\">Main</a>");
                 printWriter.write(generateSpecificRule(n));
                 printWriter.print("</body>\n");
                 printWriter.print("</html>\n");
@@ -248,18 +248,18 @@ public class HTMLdashboard {
      * Generates logic gate Wolfram code indexes with normalizations subfolders
      */
     public void generateIndexFilesWithNormalizationsLogic() {
-        try {
-            PrintWriter printWriter = new PrintWriter("imageData\\mainIndex.html");
-            printWriter.print(generateGenericOpener());
-            printWriter.print(generateLogicMenu());
-            printWriter.print(generateMainSquare(true));
-            printWriter.print(generateLRBW(true));
-            printWriter.print("</body>\n");
-            printWriter.print("</html>\n");
-            printWriter.close();
-        } catch (Exception e) {
-            System.out.println(e.toString());
-        }
+//        try {
+//            PrintWriter printWriter = new PrintWriter("imageData\\mainIndex.html");
+//            printWriter.print(generateGenericOpener());
+//            printWriter.print(generateLogicMenu());
+//            printWriter.print(generateMainSquare(true));
+//            printWriter.print(generateLRBW(true));
+//            printWriter.print("</body>\n");
+//            printWriter.print("</html>\n");
+//            printWriter.close();
+//        } catch (Exception e) {
+//            System.out.println(e.toString());
+//        }
         for (int n = 0; n < 16; n++) {
             try {
                 PrintWriter printWriter = new PrintWriter("imageData\\Logic_" + n + "\\logic_" + n + "_index.html");
@@ -360,9 +360,9 @@ public class HTMLdashboard {
     public void generateLogicIndexFiles() {
         for (int n = 0; n < 16; n++) {
             try {
-                PrintWriter printWriter = new PrintWriter("imageData\\Logic_" + n + "\\logic_" + n + "_index.html");
+                PrintWriter printWriter = new PrintWriter("imageData\\logic_" + n + "\\logic_" + n + "_index.html");
                 printWriter.println(generateGenericOpener());
-                printWriter.println("<a href=\"..\\MainIndex.html\">Main</a>");
+                printWriter.println("<a href=\"..\\mainIndex.html\">Main</a>");
                 printWriter.write(generateSpecificRuleLogic(n));
                 printWriter.print("</body>\n");
                 printWriter.print("</html>\n");

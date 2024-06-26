@@ -182,7 +182,7 @@ public class ECAMdeep {
         System.out.println("Has identity");
         for (int row = 0; row < 16; row++) {
             for (int column = 0; column < 16; column++) {
-                outstring += hasIdentity[row * 16 + column] + "\t";
+                outstring += "n: " + (16*row+column) + " " +hasIdentity[row * 16 + column] + "\t";
             }
             System.out.println(outstring);
             outstring = "";
@@ -196,7 +196,7 @@ public class ECAMdeep {
         System.out.println("");
         for (int row = 0; row < 16; row++) {
             for (int column = 0; column < 16; column++) {
-                outstring += hasNonTrivialIdentity[16 * row + column] + "\t";
+                outstring += "n: " + (16*row+column) + " " + hasNonTrivialIdentity[16 * row + column] + "\t";
             }
             System.out.println(outstring);
             outstring = "";
@@ -281,13 +281,13 @@ public class ECAMdeep {
             outstring += "\n" + ("ECA rules' non trivial identity arrays, {0 = not exist, 1 = exist} as a multiplication result");
             outstring += "\n" + ("a non trivial identity is an ");
             outstring += "\n" + ("ECApathPermutation solution");
-            outstring += "\n" + ("(1) with the unit identity array [0,1,2,3,4,5,6,7..k]");
+            outstring += "\n" + ("(1) with the unit identity array [0,1,2,3,4,5,6,7..k], k = wolframCode.length");
             outstring += "\n" + ("as the result of the multiplications, in the numFactors column of the factor array");
-            outstring += "\n" + ("(2) with a non-zero set of permutations used on the indexes");
+            outstring += "\n" + ("(2) and with a non-zero set of permutations used on the indexes");
             outstring += "\n" + ("");
             for (int row = 0; row < 16; row++) {
                 for (int column = 0; column < 16; column++) {
-                    outstring += hasNonTrivialIdentity[16 * row + column] + "\n";
+                    outstring += "n: " + (16*row+column) + " " + hasNonTrivialIdentity[16 * row + column] + "\n";
                 }
                 outstring += "\n";
             }

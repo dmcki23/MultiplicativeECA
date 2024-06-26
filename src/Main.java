@@ -65,11 +65,11 @@ public class Main {
         for (int axis = 0; axis < 6; axis++){
             System.out.println("Permutation: " + axis + ", " + Arrays.toString(axes[axis]));
         }
-        htmLdashboard.generateDirectory("");
-        htmLdashboard.generateIndexFilesWithNormalizations();
-
-        htmLdashboard.generateIndexFilesWithNormalizationsLogic();
-        //SwingDashboard swingDashboard = new SwingDashboard();
+//        htmLdashboard.generateDirectory("");
+//        htmLdashboard.generateIndexFilesWithNormalizations();
+//
+//        htmLdashboard.generateIndexFilesWithNormalizationsLogic();
+        SwingDashboard swingDashboard = new SwingDashboard();
     }
 
 

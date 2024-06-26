@@ -594,12 +594,20 @@ public class ECAMpostProcessing {
                 }
             }
         }
+//        for (int column = 0; column < places; column++) {
+//            for (int term = 0; term < (int) Math.pow(places, numFactors - 1); term++) {
+//                for (int place = 0; place < places; place++) {
+//                    out[column][term][place] = uniqueTerms[column][term][place];
+//                }
+//                out[places][term][column] = uniqueTermsTally[column][term];
+//            }
+//        }
         for (int column = 0; column < places; column++) {
             for (int term = 0; term < (int) Math.pow(places, numFactors - 1); term++) {
                 for (int place = 0; place < places; place++) {
-                    out[column][term][place] = uniqueTerms[column][term][place];
+                    out[perms[solution.permGroupProductInverse][column]][term][place] = uniqueTerms[column][term][place];
                 }
-                out[places][term][column] = uniqueTermsTally[column][term];
+                out[places][term][perms[solution.permGroupProductInverse][column]] = uniqueTermsTally[column][term];
             }
         }
         return out;

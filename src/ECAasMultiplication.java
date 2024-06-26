@@ -72,18 +72,15 @@ public class ECAasMultiplication {
      * Generates hypercomplex numbers and multiplication tables using permutation variations of the Cayley-Dickson method
      */
     public CayleyDickson cds = new CayleyDickson();
-    ///**
-     //* Utility class that provides permutations, combinations, factoradics
-     //*/
-    //public PermutationsFactoradic pf = new PermutationsFactoradic();
+
     /**
      * Once a solution is found, it is sent to this subclass for further analysis
      */
-    ECAMpostProcessing post = new ECAMpostProcessing();
+    public ECAMpostProcessing post = new ECAMpostProcessing();
     /**
      * Generates Galois field multiplication and addition tables
      */
-    GaloisFields galoisFields = new GaloisFields();
+    public GaloisFields galoisFields = new GaloisFields();
 
 
 

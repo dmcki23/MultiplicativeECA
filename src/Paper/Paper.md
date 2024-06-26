@@ -27,7 +27,7 @@ Elementary cellular automata (ECA) are a set of simple binary programs in the fo
 Hypercomplex unit vector implementation\
 ![Unit Vector Chart](unitVectorChart.jpg)
 
-The Cayley-Dickson (CD) and Fano support classes are discussed in greater detail in the readme and the documentation, they along with the Galois class provide sets of multiplication tables to be compared with cellular automata. The CD multiplication implementation permutes the steps of splitting and recombining hypercomplex numbers to increase the scope of the CD equation, $(a,b)x(c,d)=(ac-d*b,da+bc*)$, where * is the conjugate. It verifies itself by producing the symmetric group of its degree when interacting with other CD multiplications. The Fano library octonions produce a linear match to the CD octonions, and John Baez's octonions [@Baez].\
+The Cayley-Dickson (CD) and Fano support classes are discussed in greater detail in the readme and the documentation, they along with the Galois class provide sets of multiplication tables to be compared with cellular automata. The CD multiplication implementation permutes the steps of splitting and recombining hypercomplex numbers to increase the scope of the CD equation, $(a,b)x(c,d)=(ac-d*b,da+bc*)$, where * is the conjugate. It verifies itself by producing the symmetric group of its degree when interacting with other CD multiplications. The Fano library octonions produce a linear match to the CD octonions, and John Baez's  octonions [@Baez].\
 
 The main algorithm uses a set of permutations operating on cellular automata input, each permuted neighborhood becoming a factor, with four kinds of multiplications. \
 ![The four kinds of multiplication used](MultiplicationsDiagram.jpg)
@@ -35,7 +35,7 @@ The main algorithm uses a set of permutations operating on cellular automata inp
 The first set of multiplications, column A, brute forces all possible sets of permutations on all possible binary neighborhoods of the Wolfram code. A permutation in the set rearranges the columns of the input neighborhood, these become a set of factors.  A valid set of permutations is one that, for all possible input neighborhoods, the set of constructed factors using the permuted neighborhoods always multiplies out to a value that points to an equal value within the Wolfram code. The set of multiplication results is a pointer array that reproduces the original Wolfram code for every possible binary neighborhood. Identity solutions of 5 factors using all zero permutations exist for Wolfram codes up to 32 bits, using hypercomplex numbers and Galois addition but not Galois multiplication. The factors constructed are a loose diagonal through the multidimensional multiplication table, starting at the origin and ending at the opposite corner while zig-zagging.
 
 Permutations of 3 bit neighborhoods\
-![](bitPermutations.jpg)\
+![](bitPermutations.jpg)
 
 Flattened path through a six dimensional multiplication table\
 Six factors, permutation set = {0,1,2,3,4,5}\

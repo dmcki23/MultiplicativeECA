@@ -107,9 +107,9 @@ public class SwingDashboard extends JPanel {
         ptf = new SwingPolynomialTestOutput(ecam);
         outputPanel = new SwingOutputPanel();
         stp = new SwingTextPanel(ecam);
-        swingComplexOutput = new SwingComplexOutput("Polynomial, partial product multiplication");
-        neighborhoodFirstOut = new SwingComplexOutput("Complex parallel to binary unit vector construction and multiplication");
-        swingComplexLayers = new SwingComplexLayers("Complex neighborhood vector");
+        swingComplexOutput = new SwingComplexOutput("Multiplications B, partial product multiplication as a polynomial");
+        neighborhoodFirstOut = new SwingComplexOutput("Multiplications C, construction from A; like B but normalization first");
+        swingComplexLayers = new SwingComplexLayers("Multiplications B, complex neighborhood vector just prior to normalization");
         //complexOutAlt = new SwingComplexOutput();
         consoleDashboard = new ConsoleDashboard(stp);
         ecam.post.suppressConsole = true;

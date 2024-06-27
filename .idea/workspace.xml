@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="tweaking a paper screenshot">
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="tweaking a paper screenshot, added the doAdditive boolean option to ECAM.post">
+      <change afterPath="$PROJECT_DIR$/src/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Paper/Paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/Paper.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -333,7 +335,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719451172690</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="tweaking a paper screenshot, added the doAdditive boolean option to ECAM.post">
+      <option name="closed" value="true" />
+      <created>1719460958070</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1719460958070</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -361,6 +371,7 @@
     <MESSAGE value="the Mathematica notebook is working" />
     <MESSAGE value="added the option in post and the control panel whether to do the additive Wolfram code on the complex neighborhood or not. it's less interesting without it, just fuzz" />
     <MESSAGE value="tweaking a paper screenshot" />
-    <option name="LAST_COMMIT_MESSAGE" value="tweaking a paper screenshot" />
+    <MESSAGE value="tweaking a paper screenshot, added the doAdditive boolean option to ECAM.post" />
+    <option name="LAST_COMMIT_MESSAGE" value="tweaking a paper screenshot, added the doAdditive boolean option to ECAM.post" />
   </component>
 </project>

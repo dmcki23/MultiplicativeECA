@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="the Mathematica notebook is working">
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="added the option in post and the control panel whether to do the additive Wolfram code on the complex neighborhood or not. it's less interesting without it, just fuzz">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECAMpostProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMpostProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HTMLdashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTMLdashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SwingDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingDashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/Paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/Paper.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719410181950</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="added the option in post and the control panel whether to do the additive Wolfram code on the complex neighborhood or not. it's less interesting without it, just fuzz">
+      <option name="closed" value="true" />
+      <created>1719445241659</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1719445241659</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -340,6 +344,7 @@
     <MESSAGE value="tweaked the text output panel" />
     <MESSAGE value="deleted the redundant jar" />
     <MESSAGE value="the Mathematica notebook is working" />
-    <option name="LAST_COMMIT_MESSAGE" value="the Mathematica notebook is working" />
+    <MESSAGE value="added the option in post and the control panel whether to do the additive Wolfram code on the complex neighborhood or not. it's less interesting without it, just fuzz" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the option in post and the control panel whether to do the additive Wolfram code on the complex neighborhood or not. it's less interesting without it, just fuzz" />
   </component>
 </project>

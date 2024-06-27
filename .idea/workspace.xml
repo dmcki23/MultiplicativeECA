@@ -4,15 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="tweaking a paper screenshot, added the doAdditive boolean option to ECAM.post">
-      <change afterPath="$PROJECT_DIR$/src/LICENSE.txt" afterDir="false" />
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="added the OSI CC BY 4.0 LICENSE.txt file, renamed and moved the README">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/Paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/Paper.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GaloisFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GaloisFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,6 +58,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\danmc\IdeaProjects\MultiplicativeECA\src" />
+      <recent name="C:\Users\danmc\IdeaProjects\MultiplicativeECA" />
       <recent name="C:\Users\danmc\IdeaProjects\MultiplicativeECA\src\Paper" />
       <recent name="C:\Users\danmc\IdeaProjects\MultiplicativeECA\src\Paper\PaperImages" />
     </key>
@@ -343,7 +354,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719460958070</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="added the OSI CC BY 4.0 LICENSE.txt file, renamed and moved the README">
+      <option name="closed" value="true" />
+      <created>1719504512136</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1719504512136</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -372,6 +391,7 @@
     <MESSAGE value="added the option in post and the control panel whether to do the additive Wolfram code on the complex neighborhood or not. it's less interesting without it, just fuzz" />
     <MESSAGE value="tweaking a paper screenshot" />
     <MESSAGE value="tweaking a paper screenshot, added the doAdditive boolean option to ECAM.post" />
-    <option name="LAST_COMMIT_MESSAGE" value="tweaking a paper screenshot, added the doAdditive boolean option to ECAM.post" />
+    <MESSAGE value="added the OSI CC BY 4.0 LICENSE.txt file, renamed and moved the README" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the OSI CC BY 4.0 LICENSE.txt file, renamed and moved the README" />
   </component>
 </project>

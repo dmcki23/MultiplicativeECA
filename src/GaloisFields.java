@@ -1,4 +1,4 @@
-
+import java.util.Arrays;
 /**
  * Generates discrete Galois multiplication and addition tables
  */
@@ -118,6 +118,47 @@ public class GaloisFields {
             }
         }
         return out;
+    }
+    /**
+     * Checks how many factors are required to produce an identity array with Galois multiplication tables. Hypercomplex tables
+     */
+    public void numFactorsRequiredForIdentity(){
+        int[] primes = new int[]{2,3,5,7,11,13,17};
+        for (int prime = 0; prime < primes.length; prime++){
+            for (int power = 1; power < 4; power++){
+                for (int factors = 1; factors < 20; factors++){
+                    checkNumFactorIdentities(primes[prime],power,factors);
+                }
+            }
+        }
+    }
+    /**
+     * Util class of numFactorsRequiredForIdentity()
+     * @param p prime number
+     * @param m exponent
+     * @param numFactors number of factors to consider
+     */
+    public void checkNumFactorIdentities(int p, int m, int numFactors){
+        int[][] table =generateTable(p,m,false);
+        int size = table.length;
+        int[] out = new int[size];
+        for (int neighborhood = 0; neighborhood < size; neighborhood++){
+            int mainFactor = neighborhood;
+            for (int factor = 1; factor <= numFactors; factor++){
+                mainFactor = table[mainFactor][neighborhood];
+            }
+            out[neighborhood] = mainFactor;
+        }
+        boolean isIdentity = true;
+        for (int spot = 0; spot < size; spot++){
+            if (out[spot] != spot){
+                isIdentity = false;
+            }
+        }
+        if (isIdentity) {
+            System.out.println("p: " + p + " m: " + m + " numFactors: " + numFactors);
+            System.out.println(Arrays.toString(out));
+        }
     }
 }
 

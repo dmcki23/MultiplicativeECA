@@ -27,7 +27,7 @@ Elementary cellular automata (ECA) are a set of simple binary programs in the fo
 Hypercomplex unit vector implementation\
 ![Unit Vector Chart](unitVectorChart.jpg)
 
-The Cayley-Dickson (CD) and Fano support classes are discussed in greater detail in the readme and the documentation, they along with the Galois class provide sets of multiplication tables to be compared with cellular automata. The CD multiplication implementation permutes the steps of splitting and recombining hypercomplex numbers to increase the scope of the CD equation, $(a,b)x(c,d)=(ac-d*b,da+bc*)$, where * is the conjugate. It verifies itself by producing the symmetric group of its degree when interacting with other CD multiplications and producing permutations of layers of XOR operating on the non-negative place bits, while the negative sign bit layer stays the same. The Fano library octonions produce a triplet that is a linear match to the CD octonions, and John Baez's octonion triplets. [@Baez].\
+The Cayley-Dickson (CD) and Fano support classes are discussed in greater detail in the readme and the documentation, they along with the Galois class provide sets of multiplication tables to be compared with cellular automata. The CD multiplication implementation permutes the steps of splitting and recombining hypercomplex numbers to increase the scope of the CD equation, $(a,b)x(c,d)=(ac-d*b,da+bc*)$, where * is the conjugate. It verifies itself by producing the symmetric group of its degree when interacting with other CD multiplications and producing permutations of layers of XOR operating on the non-negative place bits, while the negative sign bit layer stays the same. The Fano library octonions produce a triplet that is a linear match to the CD octonions as triplets{0} when the up and down recursion factoradics are equal, and produce the triplet set of John Baez's Fano plane as triplets{10}. [@Baez].\
 
 The main algorithm uses a set of permutations operating on cellular automata input, each permuted neighborhood becoming a factor, with four kinds of multiplications. \
 ![The four kinds of multiplication used](MultiplicationsDiagram.jpg)
@@ -45,10 +45,19 @@ Multiplications B and C take a valid solution from the first set of multiplicati
 
  The call to the Wolfram code truth table is implemented with complex numbers by considering the sign values of the real and imaginary parts as binary numbers of two planes of separate cellular automata using the additive Wolfram code. Values less than zero are one, and values greater than one are zero, then the neighborhood's components are separately binary summed and plugged into the Wolfram code. If the Wolfram code is zero at each total's location, its part is zeroed out or made negative depending on parameters. The algorithm works with complex numbers, takes user input, and is tested via the GUI with random complex numbers at row 0.
 
+Control Panel\
 ![Control Panel](ControlPanel.jpg)\
+
+ECA 54, binary and non negative real\
 ![Fifty four binary and non-negative real](FiftyFour.jpg)\
+
+ECA 54, solution parameters, including polynomial\
 ![Fifty four text output](FiftyFourText.jpg)\
+
+ECA 54, solution output, complex\
 ![Fifty four with complex numbers](FiftyFourComplex.jpg)\
+
+ECA 54, solution factors, plotted\
 ![Fifty four permuted diagonal plotted in Mathematica](Mathematica.jpg)\
 
 # References

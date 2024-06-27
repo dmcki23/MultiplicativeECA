@@ -339,7 +339,6 @@ public class SwingDashboard extends JPanel {
                 ecam.specific.maxSolutions = 10000;
                 String outstring = (ecam.deep.deepECASearch(degree, 1, numFactors, whichMultTable.getSelectedIndex()));
                 stp.jTextArea.setText(outstring);
-                stp.repaint();
 
                 whichSolutionBox.removeAllItems();
             }

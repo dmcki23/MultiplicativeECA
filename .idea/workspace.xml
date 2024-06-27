@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="added the OSI CC BY 4.0 LICENSE.txt file, renamed and moved the README">
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="debugged and added GaloisFields.checkNumFactorIdentities(), made the readme a markdown file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GaloisFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GaloisFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MultiplicativeECA/MathematicaJLinkExample.nb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/Mathematica.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/Paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/Paper.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/flattenedSixCube.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/flattenedSixCube.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -362,7 +365,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719504512136</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="debugged and added GaloisFields.checkNumFactorIdentities(), made the readme a markdown file">
+      <option name="closed" value="true" />
+      <created>1719512042411</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1719512042411</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -392,6 +403,7 @@
     <MESSAGE value="tweaking a paper screenshot" />
     <MESSAGE value="tweaking a paper screenshot, added the doAdditive boolean option to ECAM.post" />
     <MESSAGE value="added the OSI CC BY 4.0 LICENSE.txt file, renamed and moved the README" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the OSI CC BY 4.0 LICENSE.txt file, renamed and moved the README" />
+    <MESSAGE value="debugged and added GaloisFields.checkNumFactorIdentities(), made the readme a markdown file" />
+    <option name="LAST_COMMIT_MESSAGE" value="debugged and added GaloisFields.checkNumFactorIdentities(), made the readme a markdown file" />
   </component>
 </project>

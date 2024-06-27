@@ -8,7 +8,7 @@ Swing components use (column,row), the project uses (row,column)
 Installation instructions:
 Option 1. Run the available jar file in /out/production/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar
 Option 2. Open the source code in you favorite IDE and build and run
-Option 3. Mathematica uses the JLink package to load Java objects in a notebook, see Mathematica documentation and the notebook in /out/artifacts/production/MultiplicativeECA/MathematicaJLinkExample.nb
+Option 3. Mathematica uses the JLink package to load Java objects in a notebook, see Mathematica documentation
 
 Javadoc:
 Open the source code in your favorite editor and use the generate Javadoc tool
@@ -35,6 +35,7 @@ Hypercomplex unit vector chart\
 The Cayley-Dickson (CD) and Fano support classes are discussed in greater detail in the readme and the documentation. The CD algorithm verifies itself by producing the symmetric group of its degree when interacting with other CD multiplications, and the Fano library octonions produce a linear match to the CD octonions. The Fano library also produces John Baez's octonions [@Baez].
 
 Additional CD material added from readme:
+These images are in the /src/Paper/ folder
 
 ![](/src/Paper/quaternionsSplitScreenshot.jpg)\
 ![](/src/octonionSplitScreenshot.jpg)\

@@ -32,7 +32,9 @@ The Cayley-Dickson (CD) and Fano support classes are discussed in greater detail
 The main algorithm uses a set of permutations operating on cellular automata input, each permuted neighborhood becoming a factor, with four kinds of multiplications. \
 ![The four kinds of multiplication used](MultiplicationsDiagram.jpg)
 
-The first set of multiplications, column A, brute forces all possible sets of permutations on all possible binary neighborhoods of the Wolfram code. A permutation in the set rearranges the columns of the input neighborhood, these become a set of factors.  A valid set of permutations is one that, for all possible input neighborhoods, the set of constructed factors using the permuted neighborhoods always multiplies out to a value that points to an equal value within the Wolfram code. The set of multiplication results is a pointer array that reproduces the original Wolfram code for every possible binary neighborhood. Identity solutions of 5 factors using all zero permutations exist for Wolfram codes up to 32 bits in this library using hypercomplex numbers and Galois addition, Galois multiplication took 10 factors to find solutions for all 0-255 ECA. The factors constructed are a loose diagonal through the multidimensional multiplication table, starting at the origin and ending at the opposite corner while zig-zagging.
+The first set of multiplications, column A, brute forces all possible sets of permutations on all possible binary neighborhoods of the Wolfram code. A permutation in the set rearranges the columns of the input neighborhood, these become a set of factors.  A valid set of permutations is one that, for all possible input neighborhoods, the set of constructed factors using the permuted neighborhoods always multiplies out to a value that points to an equal value within the Wolfram code. The set of multiplication results is a pointer array that reproduces the original Wolfram code for every possible binary neighborhood. 
+
+Identity solutions of 5 factors using all zero permutations exist for Wolfram codes up to 32 bits in this library using hypercomplex numbers and Galois addition. Galois multiplication takes a mix of numbers of factors to get the identity multiplication result array, there is a function in the GaloisField class that provides it. The factors constructed are a loose diagonal through the multidimensional multiplication table, starting at the origin and ending at the opposite corner while zig-zagging. The path lengths of each factor and the result are included in ValidSolution results.
 
 Permutations of 3 bit neighborhoods\
 ![](bitPermutations.jpg)
@@ -56,8 +58,5 @@ ECA 54, solution parameters, including polynomial\
 
 ECA 54, solution output, complex\
 ![Fifty four with complex numbers](FiftyFourComplex.jpg)\
-
-ECA 54, solution factors, plotted\
-![Fifty four permuted diagonal plotted in Mathematica](Mathematica.jpg)\
 
 # References

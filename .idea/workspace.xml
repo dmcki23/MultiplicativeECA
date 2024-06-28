@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="tweaked the readme, tweaked Javadoc on a few classes" />
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="tweaked the readme," />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -388,7 +388,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719534556484</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="tweaked the readme,">
+      <option name="closed" value="true" />
+      <created>1719539250548</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1719539250548</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -422,6 +430,7 @@
     <MESSAGE value="changed some references" />
     <MESSAGE value="added the zip file to git" />
     <MESSAGE value="tweaked the readme, tweaked Javadoc on a few classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="tweaked the readme, tweaked Javadoc on a few classes" />
+    <MESSAGE value="tweaked the readme," />
+    <option name="LAST_COMMIT_MESSAGE" value="tweaked the readme," />
   </component>
 </project>

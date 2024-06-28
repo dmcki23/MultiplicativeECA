@@ -143,87 +143,45 @@ public class SwingPolynomialTestOutput extends JPanel {
      * @param g the specified Graphics window
      */
     public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        activeLayer = layerBox.getSelectedIndex();
         //super.paintComponent(g);
-        g.setColor(Color.WHITE);
-        g.fillRect(0, 0, 1100, 500);
+       // g.setColor(Color.WHITE);
+        //g.fillRect(0, 0, 1100, 500);
         if (solution == null) return;
+        BufferedImage mainImage = new BufferedImage(1000,400,BufferedImage.TYPE_INT_RGB);
+        int[] raster;
         if (activeLayer < solution.numBits) {
-            vectorImage = new BufferedImage(1000, 400, BufferedImage.TYPE_INT_RGB);
-            vectorRaster = ((DataBufferInt) vectorImage.getRaster().getDataBuffer()).getData();
+            raster = ((DataBufferInt) mainImage.getRaster().getDataBuffer()).getData();
             for (int row = 0; row < 400; row++) {
                 for (int column = 0; column < 1000; column++) {
                     for (int power = 0; power < 24; power++) {
-                        vectorRaster[row * 1000 + column] += (int) Math.pow(2, power) * (vectorField[activeLayer][row][column] / Math.pow(2, -power + 3) % 2);
+                        raster[row * 1000 + column] += (int) Math.pow(2,  power) * (vectorField[activeLayer][row][column] / Math.pow(2, -power + 3) % 2);
                     }
                 }
             }
-            g.drawImage(vectorImage, 0, 0, null);
-        } else if (activeLayer > solution.numBits && activeLayer < solution.numBits+1+solution.numFactors) {
-            factorImage = new BufferedImage(1000, 400, BufferedImage.TYPE_INT_RGB);
-            factorRaster = ((DataBufferInt) factorImage.getRaster().getDataBuffer()).getData();
+            g.drawImage(mainImage, 0, 0, null);
+        } else if (activeLayer > solution.numBits) {
+            raster = ((DataBufferInt) mainImage.getRaster().getDataBuffer()).getData();
             for (int row = 0; row < 400; row++) {
                 for (int column = 0; column < 1000; column++) {
-                    factorRaster[row * 1000 + column] = (int) Math.pow(2, factorLayers[activeLayer - solution.numBits - 1][row][column]) + (int) Math.pow(2, ((3 + factorLayers[activeLayer - solution.numBits - 1][row][column]) % 8) + 8);
+                    raster[row * 1000 + column] = (int) Math.pow(2,factorLayers[activeLayer - solution.numBits - 1][row][column]);
                 }
             }
-            g.drawImage(factorImage, 0, 0, null);
+            g.drawImage(mainImage, 0, 0, null);
         } else if (activeLayer == solution.numBits) {
-            fieldImage = new BufferedImage(1000, 400, BufferedImage.TYPE_INT_RGB);
-            imageRaster = ((DataBufferInt) fieldImage.getRaster().getDataBuffer()).getData();
+            raster = ((DataBufferInt) mainImage.getRaster().getDataBuffer()).getData();
             for (int row = 0; row < 400; row++) {
                 for (int column = 0; column < 1000; column++) {
                     for (int power = 0; power < 24; power++) {
-                        imageRaster[row * 1000 + column] += (int) Math.pow(2, power) * (field[row][column] / Math.pow(2, -power + 3) % 2);
+                        raster[row * 1000 + column] += (int) Math.pow(2, power) * (field[row][column] / Math.pow(2, -power + 3) % 2);
                     }
                 }
             }
-            g.drawRect(0, 415, 400, 1000);
+            g.drawImage(mainImage,0,0,null);
         }
 
-//        } else if (activeLayer >solution.numBits+solution.numFactors+1 && activeLayer != solution.numBits+solution.numFactors+1+solution.numBits+1) {
-//            fieldImage = new BufferedImage(1000, 400, BufferedImage.TYPE_INT_RGB);
-//            imageRaster = ((DataBufferInt) fieldImage.getRaster().getDataBuffer()).getData();
-//            for (int row = 0; row < 400; row++) {
-//                for (int column = 0; column < 1000; column++) {
-//                    for (int power = 0; power < 24; power++) {
-//                        imageRaster[row * 1000 + column] += (int) Math.pow(2, power) * ( complexVectorField[activeLayer-1-solution.numBits-solution.numFactors][row][column].real / Math.pow(2, -power + 3) % 2);
-//                    }
-//                }
-//            }
-//            complexImage = new BufferedImage(1000,400,BufferedImage.TYPE_INT_RGB);
-//            complexRaster = ((DataBufferInt) complexImage.getRaster().getDataBuffer()).getData();
-//            for (int row = 0; row < 400; row++) {
-//                for (int column = 0; column < 1000; column++) {
-//                    for (int power = 0; power < 24; power++) {
-//                        complexRaster[row * 1000 + column] += (int) Math.pow(2, power) * (complexVectorField[activeLayer-1-solution.numBits-solution.numFactors][row][column].imaginary / Math.pow(2, -power + 3) % 2);
-//                    }
-//                }
-//            }
-//            g.drawImage(fieldImage, 0, 0, null);
-//            g.drawImage(complexImage, 0, 415, null);
-//
-//        } else {
-//            fieldImage = new BufferedImage(1000, 400, BufferedImage.TYPE_INT_RGB);
-//            imageRaster = ((DataBufferInt) fieldImage.getRaster().getDataBuffer()).getData();
-//            for (int row = 0; row < 400; row++) {
-//                for (int column = 0; column < 1000; column++) {
-//                    for (int power = 0; power < 24; power++) {
-//                        imageRaster[row * 1000 + column] += (int) Math.pow(2, power) * (complexField[row][column].real / Math.pow(2, -power + 3) % 2);
-//                    }
-//                }
-//            }
-//            complexImage = new BufferedImage(1000,400,BufferedImage.TYPE_INT_RGB);
-//            complexRaster = ((DataBufferInt) complexImage.getRaster().getDataBuffer()).getData();
-//            for (int row = 0; row < 400; row++) {
-//                for (int column = 0; column < 1000; column++) {
-//                    for (int power = 0; power < 24; power++) {
-//                        complexRaster[row * 1000 + column] += (int) Math.pow(2, power) * (complexField[row][column].imaginary / Math.pow(2, -power + 3) % 2);
-//                    }
-//                }
-//            }
-//            g.drawImage(fieldImage, 0, 0, null);
-//            g.drawImage(complexImage, 0, 415, null);
-//        }
+
     }
 }
 

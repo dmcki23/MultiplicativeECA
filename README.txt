@@ -16,7 +16,7 @@ To use the search classes apart from the GUI:
     Set your input, or call the random input function
     Call multiplicativeSolutionOutput()
     the set of ValidSolutions is in the fields of ECAMpostProcessing
-    use the extract functions of ValidSolutions if you want arrays of all the solutions' fields
+    use the extract functions of ValidSolutions if you want arrays of the solutions' fields
 
 there is an easily browsable database of solution images at www.danielmckinley.com
 consistently little-endian, consistently zero indexed,
@@ -26,6 +26,8 @@ it is not in package format, so it is easier to use classes seperated from the G
 everything is public, so you can call it from Mathematica, if it's not public, you can see it with Methods[] but not use it
 Swing components use (column,row), the project uses (row,column)
 there is another markdown paper about the Cayley-Dickson algorithm in the /src/Paper/ folder with some helpful diagrams
+there are group theory implications here, but I come from a programming background before pure math, and speak better Java than groups atm
+
 
 Installation instructions:
 Option 1. Run the available jar file in /out/production/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar

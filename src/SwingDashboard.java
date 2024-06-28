@@ -11,7 +11,6 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 /**
  * GUI control panel, manages the other Swing classes, there is no algorithm logic in the GUI components, that is all in ECAasMultiplications. This GUI is not necessary for the algorithm, and can be split off for integration in other projects.
- *
  */
 public class SwingDashboard extends JPanel {
     /**
@@ -88,8 +87,6 @@ public class SwingDashboard extends JPanel {
      * Displays the complex vector output of an applied ValidSolution doing the normalization last, in layer form
      */
     SwingComplexLayers swingComplexLayers;
-
-
     /**
      * Bottom end of random input range
      */
@@ -119,7 +116,7 @@ public class SwingDashboard extends JPanel {
         addGeneralDisplayComponents();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 1100);
-        frame.setLocation(200,200);
+        frame.setLocation(200, 200);
         frame.pack();
         frame.setVisible(true);
         ptf.setSize(1000, 450);
@@ -197,7 +194,6 @@ public class SwingDashboard extends JPanel {
             public void actionPerformed(ActionEvent e) {
             }
         });
-
         JComboBox timeOutBox = new JComboBox();
         timeOutBox.addItem((long) 30);
         timeOutBox.addItem((long) 60);
@@ -206,7 +202,6 @@ public class SwingDashboard extends JPanel {
         timeOutBox.addItem((long) 480);
         JLabel tBoxLabel = new JLabel("Keeps functions from running longer than the user want, in seconds");
         JComboBox partialProductBox = new JComboBox();
-
         calculateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -251,14 +246,12 @@ public class SwingDashboard extends JPanel {
                 }
             }
         });
-
         JLabel partialProductLabel = new JLabel("Partial product table, size = places x places");
         specificSolutionButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("\n\n\n\n\n\n\n\n\n\n----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                 int activeSolution = whichSolutionBox.getSelectedIndex();
-
                 if (numRows == 1) {
                     if (partialProductBox.getSelectedIndex() == 0) {
                         ecam.post.partialProductTable = ecam.galoisFields.galoisFieldAddition(numBit);
@@ -281,7 +274,7 @@ public class SwingDashboard extends JPanel {
                 }
                 beca.widthRandom = slider.getValue();
                 ecam.post.widthOfRandomInput = slider.getValue();
-                ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution], ecam.post.randomBinaryInput(), ecam.post.randomDoubleInput(0,componentRandRangeMax), 400, 1000);
+                ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution], ecam.post.randomBinaryInput(), ecam.post.randomDoubleInput(0, componentRandRangeMax), 400, 1000);
                 ecam.specific.validSolutions[activeSolution].polynomial = ecam.post.generatePolynomial(ecam.specific.validSolutions[activeSolution]);
                 ecam.specific.validSolutions[activeSolution].polynomialString = ecam.post.polynomialAsStrings(ecam.specific.validSolutions[activeSolution].polynomial);
                 outputPanel.solutionNumber = activeSolution;
@@ -292,40 +285,33 @@ public class SwingDashboard extends JPanel {
                 outputPanel.currentSolution = ecam.specific.validSolutions[activeSolution];
                 outputPanel.repaint();
                 ecam.displayValidSolution(ecam.specific.validSolutions[activeSolution]);
-
                 stp.solution = ecam.specific.validSolutions[activeSolution];
                 stp.displayValidSolution(ecam.specific.validSolutions[activeSolution]);
                 stp.repaint();
                 swingComplexOutput.currentSolution = ecam.specific.validSolutions[activeSolution];
-                swingComplexOutput.complexField = ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution],ecam.post.randomComplexInput(componentRandRange,componentRandRangeMax),400,1000);
+                swingComplexOutput.complexField = ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution], ecam.post.randomComplexInput(componentRandRange, componentRandRangeMax), 400, 1000);
                 swingComplexOutput.repaint();
                 neighborhoodFirstOut.currentSolution = ecam.specific.validSolutions[activeSolution];
-                neighborhoodFirstOut.complexField = ecam.post.subsectionNeighborhoodFirst(ecam.specific.validSolutions[activeSolution],400,1000);
+                neighborhoodFirstOut.complexField = ecam.post.subsectionNeighborhoodFirst(ecam.specific.validSolutions[activeSolution], 400, 1000);
                 neighborhoodFirstOut.repaint();
                 ptf.solution = ecam.specific.validSolutions[activeSolution];
-
-                ptf.redoLayerBox();
-
-                ptf.vectorField = ecam.post.subsectionVectorField(ecam.specific.validSolutions[activeSolution], 400, 1000);
+                ptf.vectorField = ecam.post.subsectionVectorField(ecam.specific.validSolutions[activeSolution], 400, 1000).clone();
                 ptf.factorLayers = ecam.post.subsectionFactorLayers(ecam.specific.validSolutions[activeSolution], 400, 1000);
                 ptf.field = ecam.post.subsectionCoefficientMultiplication(ecam.specific.validSolutions[activeSolution], 400, 1000);
-
+                ptf.redoLayerBox();
                 ptf.repaint();
                 swingComplexLayers.currentSolution = ecam.specific.validSolutions[activeSolution];
-
-                swingComplexLayers.complexField = ecam.post.subsectionComplexField(ecam.specific.validSolutions[activeSolution],400,1000);
-                swingComplexLayers.vectorField = ecam.post.subsectionComplexVectorField(ecam.specific.validSolutions[activeSolution],400,1000);
-                for (int row = 0; row < 20; row++){
-                    for (int column = 175; column < 225; column++){
+                swingComplexLayers.complexField = ecam.post.subsectionComplexField(ecam.specific.validSolutions[activeSolution], 400, 1000);
+                swingComplexLayers.vectorField = ecam.post.subsectionComplexVectorField(ecam.specific.validSolutions[activeSolution], 400, 1000);
+                for (int row = 0; row < 20; row++) {
+                    for (int column = 175; column < 225; column++) {
                         System.out.print(swingComplexLayers.vectorField[0][row][column].real);
                     }
                     System.out.print("\n");
                 }
                 System.out.println();
                 swingComplexLayers.redoLayerBox();
-
                 swingComplexLayers.repaint();
-
             }
         });
         deepButton.addActionListener(new ActionListener() {
@@ -339,7 +325,6 @@ public class SwingDashboard extends JPanel {
                 ecam.specific.maxSolutions = 10000;
                 String outstring = (ecam.deep.deepECASearch(degree, 1, numFactors, whichMultTable.getSelectedIndex()));
                 stp.jTextArea.setText(outstring);
-
                 whichSolutionBox.removeAllItems();
             }
         });
@@ -360,7 +345,6 @@ public class SwingDashboard extends JPanel {
         frame.add(numberRows);
         frame.add(partialProductLabel);
         frame.add(partialProductBox);
-
         frame.add(tBoxLabel);
         frame.add(timeOutBox);
         frame.add(calculateLabel);
@@ -398,8 +382,6 @@ public class SwingDashboard extends JPanel {
         }
         logicFactorsBox.setSelectedIndex(3);
         gateBox.setSelectedIndex(6);
-
-
         JLabel logicRefreshLabel = new JLabel("Refresh logic gate solutions");
         JButton logicRefreshButton = new JButton("Refresh");
         JLabel logicTableLabel = new JLabel("Which multiplication table to use");
@@ -407,7 +389,6 @@ public class SwingDashboard extends JPanel {
         logicTableBox.addItem("XOR");
         logicTableBox.addItem("GF(5,1) shifted to exclude zeros");
         logicTableBox.addItem("GF(2,2)");
-
         JLabel deepLogicLabel = new JLabel("Search all logic gates for solutions and cross reference gates that have solutions in common");
         JButton deepLogicButton = new JButton("Deep logic gate search");
         logicRefreshButton.addActionListener(new ActionListener() {
@@ -416,7 +397,6 @@ public class SwingDashboard extends JPanel {
                 numLogicFactors = logicFactorsBox.getSelectedIndex() + 2;
                 activeGate = gateBox.getSelectedIndex();
                 ecam.specific.maxSolutions = 10000;
-
                 int[][][] tables = new int[1][4][4];
                 if (logicTableBox.getSelectedIndex() == 0) {
                     tables = new int[1][4][4];
@@ -441,7 +421,6 @@ public class SwingDashboard extends JPanel {
                 System.out.println("numLogicFactors: " + numLogicFactors);
             }
         });
-
         logicDisplayButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -460,7 +439,7 @@ public class SwingDashboard extends JPanel {
                 }
                 ecam.specific.validSolutions[activeSolution].polynomial = ecam.post.generatePolynomial(ecam.specific.validSolutions[activeSolution]);
                 ecam.specific.validSolutions[activeSolution].polynomialString = ecam.post.polynomialAsStrings(ecam.specific.validSolutions[activeSolution].polynomial);
-                ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution], ecam.post.randomBinaryInput(), ecam.post.randomDoubleInput(0,componentRandRangeMax), 400, 1000);
+                ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution], ecam.post.randomBinaryInput(), ecam.post.randomDoubleInput(0, componentRandRangeMax), 400, 1000);
                 ecam.displayValidSolution(ecam.specific.validSolutions[activeSolution]);
                 outputPanel.solutionNumber = activeSolution;
                 outputPanel.coeffField = ecam.post.coefficientField;
@@ -473,25 +452,22 @@ public class SwingDashboard extends JPanel {
                 ptf.factorLayers = ecam.post.subsectionFactorLayers(ecam.specific.validSolutions[activeSolution], 400, 1000);
                 ptf.field = ecam.post.subsectionCoefficientMultiplication(ecam.specific.validSolutions[activeSolution], 400, 1000);
                 ptf.solution = ecam.specific.validSolutions[0];
-
                 ptf.redoLayerBox();
                 ptf.repaint();
                 stp.solution = ecam.specific.validSolutions[activeSolution];
                 stp.displayValidSolution(ecam.specific.validSolutions[activeSolution]);
                 stp.repaint();
                 swingComplexOutput.currentSolution = ecam.specific.validSolutions[activeSolution];
-                swingComplexOutput.complexField = ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution],ecam.post.randomComplexInput(componentRandRange,componentRandRangeMax),400,1000);
+                swingComplexOutput.complexField = ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution], ecam.post.randomComplexInput(componentRandRange, componentRandRangeMax), 400, 1000);
                 swingComplexOutput.repaint();
                 neighborhoodFirstOut.currentSolution = ecam.specific.validSolutions[activeSolution];
-                neighborhoodFirstOut.complexField = ecam.post.subsectionNeighborhoodFirst(ecam.specific.validSolutions[activeSolution],400,1000);
+                neighborhoodFirstOut.complexField = ecam.post.subsectionNeighborhoodFirst(ecam.specific.validSolutions[activeSolution], 400, 1000);
                 neighborhoodFirstOut.repaint();
                 swingComplexLayers.currentSolution = ecam.specific.validSolutions[activeSolution];
-                swingComplexLayers.complexField = ecam.post.subsectionComplexField(ecam.specific.validSolutions[activeSolution],400,1000);
-                swingComplexLayers.vectorField = ecam.post.subsectionComplexVectorField(ecam.specific.validSolutions[activeSolution],400,1000);
+                swingComplexLayers.complexField = ecam.post.subsectionComplexField(ecam.specific.validSolutions[activeSolution], 400, 1000);
+                swingComplexLayers.vectorField = ecam.post.subsectionComplexVectorField(ecam.specific.validSolutions[activeSolution], 400, 1000);
                 swingComplexLayers.redoLayerBox();
-
                 swingComplexLayers.repaint();
-
             }
         });
         deepLogicButton.addActionListener(new ActionListener() {
@@ -520,8 +496,6 @@ public class SwingDashboard extends JPanel {
         frame.add(logicTableBox);
         frame.add(new JLabel("Partial product table"));
         frame.add(partialProductBox);
-
-
         frame.add(logicRefreshLabel);
         frame.add(logicRefreshButton);
         frame.add(logicButtonLabel);
@@ -577,7 +551,7 @@ public class SwingDashboard extends JPanel {
         powerSelector.addItem(4);
         powerSelector.addItem(5);
         JComboBox lengthBox = new JComboBox();
-        for (int l = 1; l < 6; l++){
+        for (int l = 1; l < 6; l++) {
             lengthBox.addItem(l);
         }
         lengthBox.setSelectedIndex(3);
@@ -589,10 +563,10 @@ public class SwingDashboard extends JPanel {
                 int specTableA = (int) specificTableBoxA.getSelectedItem();
                 int specTableB = (int) specificTableBoxB.getSelectedItem();
                 int fanoTable = (int) fanoTripletsBox.getSelectedItem();
-                consoleDashboard.displayCayleyDickson(dispDegree,specTableA,specTableB);
+                consoleDashboard.displayCayleyDickson(dispDegree, specTableA, specTableB);
                 consoleDashboard.displayFano(fanoTable);
-                consoleDashboard.displayGalois((int)primeSelector.getSelectedItem(),(int)powerSelector.getSelectedItem());
-                consoleDashboard.displaySet(dispDegree,specTableA,specTableB,fanoTable,(int)primeSelector.getSelectedItem(),(int)powerSelector.getSelectedItem(),(int)lengthBox.getSelectedItem());
+                consoleDashboard.displayGalois((int) primeSelector.getSelectedItem(), (int) powerSelector.getSelectedItem());
+                consoleDashboard.displaySet(dispDegree, specTableA, specTableB, fanoTable, (int) primeSelector.getSelectedItem(), (int) powerSelector.getSelectedItem(), (int) lengthBox.getSelectedItem());
                 stp.repaint();
             }
         });
@@ -604,7 +578,6 @@ public class SwingDashboard extends JPanel {
             public void actionPerformed(ActionEvent e) {
                 System.out.println("\n\n\n\n\n\n\n\n\n\n----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                 consoleDashboard.fanoTest();
-
                 consoleDashboard.stp.jTextArea.setText(consoleDashboard.fano.fanoTest(true));
             }
         });
@@ -628,10 +601,8 @@ public class SwingDashboard extends JPanel {
                 Random rand = new Random();
                 ecam.post.widthOfRandomInput = 200;
                 ecam.specific.maxSolutions = 1;
-
-                ecam.testGeneralWolframCode((int) Math.pow(2, rand.nextInt(2, 6)), 1000, 2000, componentRandRange,componentRandRangeMax);
+                ecam.testGeneralWolframCode((int) Math.pow(2, rand.nextInt(2, 6)), 1000, 2000, componentRandRange, componentRandRangeMax);
                 ecam.specific.validSolutions[0].polynomial = ecam.post.generatePolynomial(ecam.specific.validSolutions[0]);
-
                 ecam.displayValidSolution(ecam.specific.validSolutions[0]);
                 outputPanel.solutionNumber = 0;
                 outputPanel.coeffField = ecam.post.coefficientField;
@@ -644,28 +615,24 @@ public class SwingDashboard extends JPanel {
                 ptf.factorLayers = ecam.post.subsectionFactorLayers(ecam.specific.validSolutions[0], 400, 1000);
                 ptf.field = ecam.post.subsectionCoefficientMultiplication(ecam.specific.validSolutions[0], 400, 1000);
                 ptf.solution = ecam.specific.validSolutions[0];
-
                 ptf.redoLayerBox();
                 ptf.repaint();
                 stp.solution = ecam.specific.validSolutions[0];
                 stp.displayValidSolution(ecam.specific.validSolutions[0]);
                 stp.repaint();
                 swingComplexOutput.currentSolution = ecam.specific.validSolutions[0];
-                swingComplexOutput.complexField = ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[0],ecam.post.randomComplexInput(componentRandRange,componentRandRangeMax),400,1000);
+                swingComplexOutput.complexField = ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[0], ecam.post.randomComplexInput(componentRandRange, componentRandRangeMax), 400, 1000);
                 swingComplexOutput.repaint();
                 neighborhoodFirstOut.currentSolution = ecam.specific.validSolutions[0];
-                neighborhoodFirstOut.complexField = ecam.post.subsectionNeighborhoodFirst(ecam.specific.validSolutions[0],400,1000);
+                neighborhoodFirstOut.complexField = ecam.post.subsectionNeighborhoodFirst(ecam.specific.validSolutions[0], 400, 1000);
                 neighborhoodFirstOut.repaint();
                 swingComplexLayers.currentSolution = ecam.specific.validSolutions[0];
-
-                swingComplexLayers.complexField = ecam.post.subsectionComplexField(ecam.specific.validSolutions[0],400,1000);
-                swingComplexLayers.vectorField = ecam.post.subsectionComplexVectorField(ecam.specific.validSolutions[0],400,1000);
+                swingComplexLayers.complexField = ecam.post.subsectionComplexField(ecam.specific.validSolutions[0], 400, 1000);
+                swingComplexLayers.vectorField = ecam.post.subsectionComplexVectorField(ecam.specific.validSolutions[0], 400, 1000);
                 swingComplexLayers.redoLayerBox();
                 swingComplexLayers.repaint();
-
             }
         });
-
         JComboBox normalizeUnitBox = new JComboBox();
         normalizeUnitBox.addItem(true);
         normalizeUnitBox.addItem(false);
@@ -682,17 +649,17 @@ public class SwingDashboard extends JPanel {
         normalizationRefreshButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (normalizeUnitBox.getSelectedIndex() == 0){
+                if (normalizeUnitBox.getSelectedIndex() == 0) {
                     ecam.post.normalizeUnit = true;
                 } else {
                     ecam.post.normalizeUnit = false;
                 }
-                if (wolframIsNegOneBox.getSelectedIndex() == 1){
+                if (wolframIsNegOneBox.getSelectedIndex() == 1) {
                     ecam.post.wolframIsNegOne = true;
                 } else {
                     ecam.post.wolframIsNegOne = false;
                 }
-                if (avoidDivZeroBox.getSelectedIndex() == 0){
+                if (avoidDivZeroBox.getSelectedIndex() == 0) {
                     ecam.post.avoidDivZero = true;
                 } else {
                     ecam.post.avoidDivZero = false;
@@ -712,12 +679,6 @@ public class SwingDashboard extends JPanel {
                 avoidDivZeroBox.setSelectedIndex(0);
             }
         });
-
-
-
-
-
-
         frame.add(new JLabel());
         frame.add(new JLabel("Table Display Degree, 2 = quaternions, 3 = octonions, 4 = sedonions"));
         frame.add(cdDispBox);
@@ -759,8 +720,5 @@ public class SwingDashboard extends JPanel {
         frame.add(normalizationRefreshButton);
         frame.add(new JLabel("Restore default normalizations"));
         frame.add(restoreDefaultsButton);
-
-
-
     }
 }

@@ -201,8 +201,8 @@ public class ECAMpostProcessing {
                 //normalize factor-wise
                 for (int place = 0; place < places; place++) {
                     mults[numFactors][place] = geometricMean(mults[numFactors - 1][place], numFactors);
-                    if (ruleField[row][column] == 1 && neighborhoodMask[place] == 1) {
-                        vectorField[place][row][column] = mults[numFactors][place];
+                    if (ruleField[row][column] == 1) {
+                        vectorField[place][row][column] = mults[numFactors-1][place];
                     } else {
                         vectorField[place][row][column] = 0;
                     }
@@ -278,7 +278,7 @@ public class ECAMpostProcessing {
         currentSolution = solution;
         complexVectorField = new Complex[places][gridSize][gridSize];
         complexField = new Complex[gridSize][gridSize];
-        vectorField = new double[places][gridSize][gridSize];
+        //vectorField = new double[places][gridSize][gridSize];
         System.out.println("numFactors: " + numFactors);
         System.out.println(factors.length);
         System.out.println(Arrays.deepToString(factors));

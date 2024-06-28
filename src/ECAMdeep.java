@@ -58,6 +58,7 @@ public class ECAMdeep {
      *
      * @param numFactors number of factors to permute
      * @param whichTable which set of multiplication tables to use, @see whichMultTableNames
+     * @return a String of the output, used in SwingTextPanel
      */
     public String deepLogicSearch(int numFactors, int whichTable) {
         int[][][] tables = new int[1][4][4];
@@ -112,6 +113,7 @@ public class ECAMdeep {
      * @param numRows        number of rows in the ECA analyze, 1 row is standard 3-bit input neighborhood, 2 rows is a 5-bit neighborhood, etc
      * @param numFactors     number of factors to use in calculation
      * @param whichMultTable which multiplication table option
+     * @return a String of the output, used in SwingTextPanel
      */
     public String deepECASearch(int degree, int numRows, int numFactors, int whichMultTable) {
         //aggregate solution bins

@@ -106,7 +106,7 @@ public class ECAMpostProcessing {
      */
     public boolean avoidDivZero;
     /**
-     * If true, it does a binary sum of the real and imaginary parts of the input neighborhood, >0 being 0 and <0 being 1, the real and imaginary treated as seperate, and calls the solution's Wolfram code with that value,
+     * If true, it does a binary sum of the real and imaginary parts of the input neighborhood, greater than 0 being 0 and  less than 0  being 1, the real and imaginary treated as seperate, and calls the solution's Wolfram code with that value,
      * and depending on the Wolfram code value at that additive spot, it checks wolframIsNegOne
      */
     public boolean doAddititiveWolfram;

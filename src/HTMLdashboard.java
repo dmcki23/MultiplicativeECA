@@ -1,7 +1,7 @@
 import java.io.File;
 import java.io.PrintWriter;
 /**
- * This outputs the HTML for the imageData solution database
+ * This outputs the HTML for the imageData solution database,
  */
 public class HTMLdashboard {
     /**
@@ -393,6 +393,10 @@ public class HTMLdashboard {
         out += "</p>\n";
         return out;
     }
+    /**
+     * Generates the directory structure
+     * @param directoryName name of the directory to create
+     */
     public void generateDirectory(String directoryName){
             File file = new File("imageData\\directory.txt");
             file.mkdirs();

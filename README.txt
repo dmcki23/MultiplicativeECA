@@ -25,6 +25,7 @@ error checking is mainly on user, Wolfram codes bigger than multiplication table
 it is not in package format, so it is easier to use classes seperated from the GUI elsewhere,
 everything is public, so you can call it from Mathematica, if it's not public, you can see it with Methods[] but not use it
 Swing components use (column,row), the project uses (row,column)
+there is another markdown paper about the Cayley-Dickson algorithm in the /src/Paper/ folder with some helpful diagrams
 
 Installation instructions:
 Option 1. Run the available jar file in /out/production/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar

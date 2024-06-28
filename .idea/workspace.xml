@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="added the zip file to git">
-      <change afterPath="$PROJECT_DIR$/MultiplicativeECA.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECAMdeep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMdeep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECAMpostProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMpostProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HTMLdashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTMLdashboard.java" afterDir="false" />
-    </list>
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="tweaked the readme, tweaked Javadoc on a few classes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -387,7 +380,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719532509208</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="tweaked the readme, tweaked Javadoc on a few classes">
+      <option name="closed" value="true" />
+      <created>1719534556484</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1719534556484</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -420,6 +421,7 @@
     <MESSAGE value="debugged and added GaloisFields.checkNumFactorIdentities(), made the readme a markdown file" />
     <MESSAGE value="changed some references" />
     <MESSAGE value="added the zip file to git" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the zip file to git" />
+    <MESSAGE value="tweaked the readme, tweaked Javadoc on a few classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="tweaked the readme, tweaked Javadoc on a few classes" />
   </component>
 </project>

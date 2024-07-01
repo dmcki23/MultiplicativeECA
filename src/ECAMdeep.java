@@ -1,7 +1,7 @@
 
 import java.util.Arrays;
 /**
- * Exhaustively searches sets of  all Wolfram codes of various lengths
+ * Exhaustively searches sets of  all Wolfram codes of various lengths, with various parameters
  */
 public class ECAMdeep {
     /**
@@ -43,7 +43,7 @@ public class ECAMdeep {
     ECAasMultiplication ecam;
 
     /**
-     * Initializes super class
+     * Initializes ecam
      * @param inEcam super class
      */
 
@@ -52,7 +52,7 @@ public class ECAMdeep {
     }
 
     /**
-     * Similar to deepECAsearch() except that it uses the 0-16 four bit logic gate truth table instead of the 0-255 ECA
+     * Similar to deepECAsearch() except that it uses the 0-16 four bit logic gate truth table instead of the 0-255 ECA.
      *
      * Cross-references solutions to find which gates have solutions in common. Aggregates solution identiity information.
      *
@@ -61,6 +61,7 @@ public class ECAMdeep {
      * @return a String of the output, used in SwingTextPanel
      */
     public String deepLogicSearch(int numFactors, int whichTable) {
+        //setup
         int[][][] tables = new int[1][4][4];
         GaloisFields galois = new GaloisFields();
         if (whichTable == 0) {
@@ -73,15 +74,15 @@ public class ECAMdeep {
             tables = new int[1][4][4];
             tables[0] = galois.generateTable(2, 2, false);
         }
-
         logicSolutions = new ValidSolution[16][1];
         logicSolutionTotals = new int[16];
+        //main Multiplications A loop
         for (int gate = 0; gate < 16; gate++) {
             ecam.specific.logicGateSearchSpecific(gate, numFactors, tables,whichTable);
             logicSolutions[gate] = ecam.specific.validSolutions.clone();
             logicSolutionTotals[gate] = logicSolutions[gate].length;
         }
-
+        //tallying results
         int[] hasRepeats = new int[16];
         int[] identities = new int[16];
         int[] nonTrivialIdentities = new int[16];
@@ -94,6 +95,7 @@ public class ECAMdeep {
                 if(!logicSolutions[gate][sol].noRepeats) hasRepeats[gate]++;
             }
         }
+        //outputting results
         for (int gate = 0; gate < 16; gate++){
             System.out.println("Gate: " + gate + "\t Total solutions: " + logicSolutionTotals[gate] + "\t Identities: " + identities[gate] + "\t  Non-tirivial identities: " + nonTrivialIdentities[gate] + "\t Repeats: " + hasRepeats[gate] + "\t No repeats: "+ noRepeats[gate]);
         }
@@ -104,7 +106,7 @@ public class ECAMdeep {
         return outstring;
     }
     /**
-     * This function searches every 0-255 ECA rule with the given parameters for valid solutions and cross-references and displays the results, similar to wideShallow() but focused on ECA rather than general binary array Wolfram codes
+     * This function searches every 0-255 ECA rule with the given parameters for valid solutions and cross-references and displays the results, similar to deepLogicSearch() but focused on ECA rather than logic gate Wolfram codes
      * <p>
      * Cross-references solutions to see which ECA have solutions in common. Checks all ECA solutions for identities and non-trivial identities ( a non-trivial identity is a multiplication result row that equals the identity, with a non-zero permutation set).
      * Checks all ECA solutions for having repeat indices and non-repeat indices.
@@ -126,7 +128,7 @@ public class ECAMdeep {
         //set of multiplication tables to use
         int[][][] multTables = new int[1][8][8];
         multTables = ecam.generateMultTable(whichMultTable, degree, numBits);
-        //do for every 0-255 ECA
+        //do for every 0-255 ECA, main Multiplications A loop
         for (int n = 0; n < 256; n++) {
             System.out.print(n+" " );
             if (n%16 ==0) System.out.print("\n");
@@ -134,6 +136,7 @@ public class ECAMdeep {
             ecaSolutions[n] = ecam.specific.validSolutions;
             ecaSolutionTotals[n] = ecam.specific.numSolutions;
         }
+        //tally and output results
         System.out.println();
         String outstring = "";
         System.out.println("Total Solutions grouped by left right black white rule symmetry");
@@ -223,7 +226,7 @@ public class ECAMdeep {
 
 
 
-
+            //same results to return a String
 
 
 

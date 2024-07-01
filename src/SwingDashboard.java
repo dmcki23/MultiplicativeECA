@@ -62,7 +62,7 @@ public class SwingDashboard extends JPanel {
     /**
      * Displays the results of generatePolynomial() applied to a coefficient field, verifies the integrity of generatePolynomial()
      */
-    SwingPolynomialTestOutput ptf;
+    SwingLayers ptf;
     /**
      * Swing frame to display this panel in
      */
@@ -101,7 +101,7 @@ public class SwingDashboard extends JPanel {
     public SwingDashboard() {
         componentRandRange = 0;
         componentRandRangeMax = 1;
-        ptf = new SwingPolynomialTestOutput(ecam);
+        ptf = new SwingLayers(ecam);
         outputPanel = new SwingOutputPanel();
         stp = new SwingTextPanel(ecam);
         swingComplexOutput = new SwingComplexOutput("Multiplications B, partial product multiplication as a polynomial");

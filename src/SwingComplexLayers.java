@@ -7,7 +7,7 @@ import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
 import java.util.Arrays;
 /**
- * Swing component used to display a specific solution from ECAasMultiplications
+ * Swing component used to display a specific solution from ECAasMultiplication
  */
 public class SwingComplexLayers extends JPanel {
     /**

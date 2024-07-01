@@ -6,11 +6,9 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
 /**
- * This displays the results of applying a polynomial from polynomialGenerate() from an ECApathPermutationSolution, verifying the integrity of polynomialGenerate(). Also potentially displayed are the unit vector coefficients as layers and the permuted binary neighborhood layers.
- * <p>
- * The difference between the polynomial-applied field and the field produced by various CoefficientCalculation overloads is zero, so generatePolynomial() is accurate
+ * Displays the binary neighborhoods as binary factor layers, displays the non-negative real version of Multiplications B
  */
-public class SwingPolynomialTestOutput extends JPanel {
+public class SwingLayers extends JPanel {
     /**
      * A ValidSolution applied as automata with user row 0 input, non-negative real
      */
@@ -90,7 +88,7 @@ public class SwingPolynomialTestOutput extends JPanel {
      *
      * @param in Currently active ECAasMultiplication
      */
-    public SwingPolynomialTestOutput(ECAasMultiplication in) {
+    public SwingLayers(ECAasMultiplication in) {
         ecam = in;
         field = new double[400][1000];
         JFrame jFrame = new JFrame();

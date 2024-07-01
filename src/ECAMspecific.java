@@ -1,16 +1,13 @@
 import java.util.Arrays;
 /**
- * Main algorithm, heart of the project, takes a given length Wolfram code,searches sets of permutations that permute a cellular automata neighborhood such that their hypercomplex multiplication of  n dimensions always results in a value that is an equal Wolfram code value. Neighborhood permutation multiplication results in a pass-by-reference  array that reproduces the original Wolfram code.
+ * Main algorithm, heart of the project, takes a given length Wolfram code,searches sets of permutations that permute a cellular automata neighborhood such that their hypercomplex multiplication of  n dimensions always results in a value that is an equal Wolfram code value. Neighborhood permutation multiplication results in a pass-by-reference  array that reproduces the original Wolfram code. These results are stored in ValidSolution arrays and passed to ECAMpostProcessing for polynomial and output
  */
 public class ECAMspecific {
     /**
      * A timeout variable for the search functions, in milliseconds
      */
-    long searchStop;
-    /**
-     * All solutions found in the last search
-     */
-    public ValidSolution[] validSolutions;
+    public long searchStop;
+
     /**
      * Limits the searches to a maximum number of functions, can be set to 1 for first available solution
      */
@@ -20,10 +17,6 @@ public class ECAMspecific {
      */
     public int numSolutions;
     /**
-     * Utility class that has permutations, factoradics, combinations, etc
-     */
-    PermutationsFactoradic pf = new PermutationsFactoradic();
-    /**
      * Last Wolfram code passed to generalWolframCode() or ecaSpecificRuleSearch()
      */
     public int[] lastWolframCode;
@@ -32,13 +25,22 @@ public class ECAMspecific {
      */
     public int lastNumFactors;
     /**
-     * Super class
+     * Utility class that has permutations, factoradics, combinations, etc
+     */
+    public PermutationsFactoradic pf = new PermutationsFactoradic();
+    /**
+     * All solutions found in the last search
+     */
+    public ValidSolution[] validSolutions;
+
+    /**
+     * Manager
      */
     public ECAasMultiplication ecam;
     /**
      * Initializes a few things
      *
-     * @param inPath superClass
+     * @param inPath instance of manager class
      */
     public ECAMspecific(ECAasMultiplication inPath) {
         ecam = inPath;
@@ -98,7 +100,7 @@ public class ECAMspecific {
         int placesFactorial = pf.factorial(numBits);
         mainLoop:
         for (int l = 0; l < (int) Math.pow(pf.factorial(numBits), numFactors); l++) {
-            //splits off the main loop counter into a permutation of each factor
+            //splits off the main loop counter into a permutation of each factor, converts it into base places!
             for (int factor = 0; factor < numFactors; factor++) {
                 ps[factor] = (l / (int) Math.pow(placesFactorial, factor)) % placesFactorial;
             }
@@ -144,6 +146,7 @@ public class ECAMspecific {
                 }
             }
         }
+        //initializes the variables of the solutions
         validSolutions = new ValidSolution[activeSolution];
         for (int sol = 0; sol < activeSolution; sol++) {
             validSolutions[sol] = new ValidSolution();
@@ -169,7 +172,6 @@ public class ECAMspecific {
                     validSolutions[sol].permGroupProductInverse = inverse;
                 }
             }
-            validSolutions[sol] = ecam.post.applyPermutationGroupProductToFactorsResult(validSolutions[sol]);
 
             validSolutions[sol] = checkIdentities(validSolutions[sol]);
         }
@@ -264,7 +266,7 @@ public class ECAMspecific {
         return out;
     }
     /**
-     * Takes a validSolution and returns it with the appropriate boolean identity fields flagged appropriately
+     * Takes a validSolution and returns it with the appropriate boolean identity fields flagged appropriately. An identity is a result layer of Multiplications A [0,1,2,3,4,5,6,7...] as appropriately long. A non-trivial identity is an identity with a non-zero set of permutations that produces it. No repeats is one of everything not necessarily in identity order.
      *
      * @param validSolution a valid solution from a search function
      * @return returns the input with the boolean identity and repeat flags flagged appropriately

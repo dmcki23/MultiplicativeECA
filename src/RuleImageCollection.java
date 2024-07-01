@@ -20,7 +20,7 @@ public class RuleImageCollection {
     /**
      * Swing Panel used to render the images
      */
-    SwingPolynomialTestOutput ptf;
+    SwingLayers ptf;
     /**
      * Swing Panel used to render the images
      */
@@ -41,7 +41,7 @@ public class RuleImageCollection {
      * Initializes render panels
      */
     public RuleImageCollection() {
-        ptf = new SwingPolynomialTestOutput(eca);
+        ptf = new SwingLayers(eca);
         outputPanel = new SwingOutputPanel();
         stp = new SwingTextPanel(eca);
         swingComplexOutput = new SwingComplexOutput("");

@@ -2,7 +2,7 @@
 import java.util.Arrays;
 import java.util.Random;
 /**
- * Used to multiply hypercomplex numbers using the Cayley-Dickson algorithm, as well as compare Cayley-Dickson solutions
+ * Used to multiply hypercomplex numbers using the Cayley-Dickson algorithm, as well as compare Cayley-Dickson solutions, produces individual multiplication tables, sets of all tables of a given degree, and a recursive version for individual unit vectors
  */
 public class CayleyDickson {
     /**
@@ -45,9 +45,7 @@ public class CayleyDickson {
      * @return returns the result of multiplying two hypercomplex numbers row, column, with CD solution, cdz, cdo
      */
     public int multiplyUnitHyperComplex(int rootDegree, int row, int column, int cdz, int cdo) {
-//        int[][] startRemainders = pf.permRemainders(rootDegree);
-//        int[] cdzRemainders = startRemainders[cdz].clone();
-//        int[] cdoRemainders = startRemainders[cdo].clone();
+
         int[][] startRemainders;
         int[] cdzRemainders;
         int[] cdoRemainders;
@@ -145,6 +143,7 @@ public class CayleyDickson {
             g = multRecursive(rootDegree, depth + 1, d, a, cdzRemainders, cdoRemainders);
             g = pf.insertBit(g, otherBit, 1);
         }
+        //adjusts the quadrants back to equivalent to where they were
         if (rowBack == 1) {
             g = (g + hl) % (hl * 2);
         }

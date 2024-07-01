@@ -14,13 +14,13 @@
 import java.util.Arrays;
 import java.util.Random;
 /**
- * Manages ECAMdeep, ECAMpostProcessing, and ECAMspecific, contains the heart of the project in generalWolframCode() and validSolutionCoefficientCalculation
+ * Manages ECAMdeep, ECAMpostProcessing, and ECAMspecific, contains the heart of the project in generalWolframCode() and multiplicativeSolutionOutput()
  *
  * @author Daniel W McKinley
  */
 public class ECAasMultiplication {
     /**
-     * Names of the various multiplication tables implemented here
+     * Names of the various multiplication tables
      */
     public enum whichMultTableNames {
         /**
@@ -74,7 +74,7 @@ public class ECAasMultiplication {
     public CayleyDickson cds = new CayleyDickson();
 
     /**
-     * Once a solution is found, it is sent to this subclass for further analysis
+     * Once a solution is found, it is sent here for further processing and output
      */
     public ECAMpostProcessing post = new ECAMpostProcessing();
     /**
@@ -96,7 +96,7 @@ public class ECAasMultiplication {
     public ECAMspecific specific;
 
     /**
-     * Initializes subclasses
+     * Initializes fields
      */
     public ECAasMultiplication() {
         deep = new ECAMdeep(this);

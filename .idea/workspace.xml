@@ -4,27 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="minor changes">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="went through Javadoc comments, went through inline main algorithm comments in all the ECAM classes, deleted some out of scope functions in Fano, deleted an out of scope scratchpaper class">
+      <change afterPath="$PROJECT_DIR$/src/SwingBinaryShadow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SwingPolyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MultiplicativeECA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/MultiplicativeECA.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CayleyDickson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CayleyDickson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECAMdeep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMdeep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BasicECA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicECA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConsoleDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleDashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ECAMpostProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMpostProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECAMspecific.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMspecific.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECAasMultiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAasMultiplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fano.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/CayleyDicksonPaper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/CayleyDicksonPaper.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/Paper.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/Paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/Paper.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RuleImageCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RuleImageCollection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SwingComplexLayers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingComplexLayers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SwingComplexOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingComplexOutput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SwingDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingDashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SwingOutputPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingOutputPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SwingPolynomialTestOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingLayers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SwingTextPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingTextPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SwingLayers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingLayers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -441,7 +432,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719604886121</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="went through Javadoc comments, went through inline main algorithm comments in all the ECAM classes, deleted some out of scope functions in Fano, deleted an out of scope scratchpaper class">
+      <option name="closed" value="true" />
+      <created>1719809918532</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1719809918532</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -479,6 +478,7 @@
     <MESSAGE value="updated the zip" />
     <MESSAGE value="tracked down a bug in SwingPolynomialTestOutput that was not showing the unit vector coefficient layers, turns out vectorField[][][] was reinitialized downstream in the complex overload of multiplicativeSolutionOutput()" />
     <MESSAGE value="minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
+    <MESSAGE value="went through Javadoc comments, went through inline main algorithm comments in all the ECAM classes, deleted some out of scope functions in Fano, deleted an out of scope scratchpaper class" />
+    <option name="LAST_COMMIT_MESSAGE" value="went through Javadoc comments, went through inline main algorithm comments in all the ECAM classes, deleted some out of scope functions in Fano, deleted an out of scope scratchpaper class" />
   </component>
 </project>

@@ -30,8 +30,9 @@ public class ConsoleDashboard {
      * Displays a specific Fano octonion table out of 480
      *
      * @param table which table out of 480
+     * @return a String of the output
      */
-    public void displayFano(int table) {
+    public String displayFano(int table) {
         fano = new Fano();
         fano.fanoGenerate();
         display = fano.fanoTables[table];
@@ -50,6 +51,22 @@ public class ConsoleDashboard {
             }
         }
         System.out.println();
+        String outstring = "Fano table: " + table + "\n";
+        for (int row = 0; row < 16; row++) {
+            outstring += (Arrays.toString(display[row])) + "\n";
+        }
+        outstring += ("By places\n");
+        for (int power = 0; power < 4; power++) {
+            outstring += ("Power " + power) + "\n";
+            for (int row = 0; row < 16; row++) {
+                for (int column = 0; column < 16; column++) {
+                    outstring += ((display[row][column] / ((int) Math.pow(2, power)) % 2));
+                }
+                outstring += ("\n");
+            }
+        }
+        outstring += "\n";
+        return outstring;
     }
     /**
      * Displays a specific hypercomplex multiplication table with Cayley-Dickson permutation numbers (cdz, cdo)
@@ -57,8 +74,9 @@ public class ConsoleDashboard {
      * @param degree degree hypercomplex, 2 = quaternions, 3 = octonions, 4  = sedonions, etc
      * @param cdz    Cayley-Dickson permutations used as splitting bit, down in recursion
      * @param cdo    Cayley-Dickson permutations used as recombination bit, up in recursion
+     * @return a String of the output
      */
-    public void displayCayleyDickson(int degree, int cdz, int cdo) {
+    public String displayCayleyDickson(int degree, int cdz, int cdo) {
         System.out.println("hypercomplex degree " + degree);
         System.out.println("Cayley Dickson permutation numbers (" + cdz + "," + cdo + ")");
         CayleyDickson cd = new CayleyDickson();
@@ -66,7 +84,6 @@ public class ConsoleDashboard {
         for (int row = 0; row < (int) Math.pow(2, degree + 1); row++) {
             System.out.println(Arrays.toString(display[row]));
         }
-        int[][][] byPower = new int[degree + 1][display.length][display.length];
         for (int power = 0; power < degree + 1; power++) {
             System.out.println("Power " + power);
             for (int row = 0; row < display.length; row++) {
@@ -77,6 +94,23 @@ public class ConsoleDashboard {
             }
         }
         System.out.println();
+        String outstring = "";
+        outstring += ("hypercomplex degree " + degree) + "\n";
+        outstring += ("Cayley Dickson permutation numbers (" + cdz + "," + cdo + ")")+ "\n";
+        for (int row = 0; row < (int) Math.pow(2, degree + 1); row++) {
+            outstring += (Arrays.toString(display[row]))+ "\n";
+        }
+        for (int power = 0; power < degree + 1; power++) {
+            outstring += ("Power " + power)+ "\n";
+            for (int row = 0; row < display.length; row++) {
+                for (int column = 0; column < display.length; column++) {
+                    outstring += ((display[row][column] / (int) Math.pow(2, power) % 2));
+                }
+                outstring += ("\n");
+            }
+        }
+        outstring += "\n";
+        return outstring;
     }
     /**
      * Displays a specific Galois multiplication field
@@ -84,8 +118,9 @@ public class ConsoleDashboard {
      * @param m must be prime to work correctly, however it is not error-corrected yet and
      *          will output garbage
      * @param n power of m, m^n, GF(m,n)
+     * @return a String of the output
      */
-    public void displayGalois(int m, int n) {
+    public String displayGalois(int m, int n) {
         System.out.println("Galois Field");
         System.out.println("prime " + m + ", power" + n);
         GaloisFields qls = new GaloisFields();
@@ -94,6 +129,12 @@ public class ConsoleDashboard {
             System.out.println(Arrays.toString(display[row]));
         }
         System.out.println();
+        String outstring = "Galois Field, prime: " + m + " , power: " + n + "\n";
+        for (int row = 0; row < (int)Math.pow(m,n); row++){
+            outstring += Arrays.toString(display[row])+"\n";
+        }
+        outstring += "\n";
+        return outstring;
     }
 
 

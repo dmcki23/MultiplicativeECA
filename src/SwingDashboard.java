@@ -13,19 +13,12 @@ import javax.swing.event.ChangeListener;
  * GUI control panel, manages the other Swing classes, there is no algorithm logic in the GUI components, that is all in ECAasMultiplications. This GUI is not necessary for the algorithm, and can be split off for integration in other projects.
  */
 public class SwingDashboard extends JPanel {
-    /**
-     * Basic ECA utility class
-     */
-    public BasicECA beca = new BasicECA();
+
     /**
      * Real positive coefficients on input, multiplied out for each cell using a solution from ECAecam
      */
     public double[][] coeffField;
-    /**
-     * Finds a set of permutations that when applied to the indexes a multiplication table, creates
-     * a set of pointers that reproduces the original ECA Wolfram code
-     */
-    ECAasMultiplication ecam = new ECAasMultiplication();
+
     /**
      * Current ECA number
      */
@@ -54,6 +47,23 @@ public class SwingDashboard extends JPanel {
      * Currently active logic gate solutions
      */
     int activeGate;
+    /**
+     * Bottom end of random input range
+     */
+    int componentRandRange;
+    /**
+     * Top end of random input range
+     */
+    int componentRandRangeMax;
+    /**
+     * Basic ECA utility class
+     */
+    public BasicECA beca = new BasicECA();
+    /**
+     * Finds a set of permutations that when applied to the indexes a multiplication table, creates
+     * a set of pointers that reproduces the original ECA Wolfram code
+     */
+    ECAasMultiplication ecam = new ECAasMultiplication();
     /**
      * Swing component that displays valid solutions as ECA
      */
@@ -87,14 +97,9 @@ public class SwingDashboard extends JPanel {
      * Displays the complex vector output of an applied ValidSolution doing the normalization last, in layer form
      */
     SwingComplexLayers swingComplexLayers;
-    /**
-     * Bottom end of random input range
-     */
-    int componentRandRange;
-    /**
-     * Top end of random input range
-     */
-    int componentRandRangeMax;
+    SwingBinaryShadow swingBinaryShadow;
+    SwingPolyTest swingPolyTest;
+
     /**
      * Contains all the Java Swing component initialization and function-calling logic
      */
@@ -107,6 +112,8 @@ public class SwingDashboard extends JPanel {
         swingComplexOutput = new SwingComplexOutput("Multiplications B, partial product multiplication as a polynomial");
         neighborhoodFirstOut = new SwingComplexOutput("Multiplications C, construction from A; like B but normalization first");
         swingComplexLayers = new SwingComplexLayers("Multiplications B, complex neighborhood vector just prior to normalization");
+        swingBinaryShadow = new SwingBinaryShadow("Binary shadow of complex Multiplications B");
+        swingPolyTest = new SwingPolyTest();
         //complexOutAlt = new SwingComplexOutput();
         consoleDashboard = new ConsoleDashboard(stp);
         ecam.post.suppressConsole = true;
@@ -296,7 +303,6 @@ public class SwingDashboard extends JPanel {
                 neighborhoodFirstOut.repaint();
                 ptf.solution = ecam.specific.validSolutions[activeSolution];
                 ptf.vectorField = ecam.post.subsectionVectorField(ecam.specific.validSolutions[activeSolution], 400, 1000).clone();
-                ptf.factorLayers = ecam.post.subsectionFactorLayers(ecam.specific.validSolutions[activeSolution], 400, 1000);
                 ptf.field = ecam.post.subsectionCoefficientMultiplication(ecam.specific.validSolutions[activeSolution], 400, 1000);
                 ptf.redoLayerBox();
                 ptf.repaint();
@@ -312,6 +318,10 @@ public class SwingDashboard extends JPanel {
                 System.out.println();
                 swingComplexLayers.redoLayerBox();
                 swingComplexLayers.repaint();
+                swingBinaryShadow.binaryField = ecam.post.subsectionComplexFieldToBinary(ecam.specific.validSolutions[activeSolution],400,1000);
+                swingBinaryShadow.repaint();
+                swingPolyTest.fieldFromPolynomial = ecam.post.subsectionCoefficientMultiplication(ecam.specific.validSolutions[activeSolution],400,1000);
+                swingPolyTest.repaint();
             }
         });
         deepButton.addActionListener(new ActionListener() {
@@ -449,7 +459,6 @@ public class SwingDashboard extends JPanel {
                 outputPanel.currentSolution = ecam.specific.validSolutions[activeSolution];
                 outputPanel.repaint();
                 ptf.vectorField = ecam.post.subsectionVectorField(ecam.specific.validSolutions[activeSolution], 400, 1000);
-                ptf.factorLayers = ecam.post.subsectionFactorLayers(ecam.specific.validSolutions[activeSolution], 400, 1000);
                 ptf.field = ecam.post.subsectionCoefficientMultiplication(ecam.specific.validSolutions[activeSolution], 400, 1000);
                 ptf.solution = ecam.specific.validSolutions[0];
                 ptf.redoLayerBox();
@@ -468,6 +477,10 @@ public class SwingDashboard extends JPanel {
                 swingComplexLayers.vectorField = ecam.post.subsectionComplexVectorField(ecam.specific.validSolutions[activeSolution], 400, 1000);
                 swingComplexLayers.redoLayerBox();
                 swingComplexLayers.repaint();
+                swingBinaryShadow.binaryField = ecam.post.subsectionComplexFieldToBinary(ecam.specific.validSolutions[activeSolution],400,1000);
+                swingBinaryShadow.repaint();
+                swingPolyTest.fieldFromPolynomial = ecam.post.subsectionCoefficientMultiplication(ecam.specific.validSolutions[activeSolution],400,1000);
+                swingPolyTest.repaint();
             }
         });
         deepLogicButton.addActionListener(new ActionListener() {
@@ -563,14 +576,15 @@ public class SwingDashboard extends JPanel {
                 int specTableA = (int) specificTableBoxA.getSelectedItem();
                 int specTableB = (int) specificTableBoxB.getSelectedItem();
                 int fanoTable = (int) fanoTripletsBox.getSelectedItem();
-                consoleDashboard.displayCayleyDickson(dispDegree, specTableA, specTableB);
-                consoleDashboard.displayFano(fanoTable);
-                consoleDashboard.displayGalois((int) primeSelector.getSelectedItem(), (int) powerSelector.getSelectedItem());
-                consoleDashboard.displaySet(dispDegree, specTableA, specTableB, fanoTable, (int) primeSelector.getSelectedItem(), (int) powerSelector.getSelectedItem(), (int) lengthBox.getSelectedItem());
-                stp.repaint();
+                //consoleDashboard.displayCayleyDickson(dispDegree, specTableA, specTableB);
+                //consoleDashboard.displayFano(fanoTable);
+                //consoleDashboard.displayGalois((int) primeSelector.getSelectedItem(), (int) powerSelector.getSelectedItem());
+                //consoleDashboard.displaySet(dispDegree, specTableA, specTableB, fanoTable, (int) primeSelector.getSelectedItem(), (int) powerSelector.getSelectedItem(), (int) lengthBox.getSelectedItem());
+                stp.jTextArea.setText(consoleDashboard.displayCayleyDickson(dispDegree, specTableA, specTableB) + "\n" + consoleDashboard.displayFano(fanoTable) + "\n" + consoleDashboard.displayGalois((int) primeSelector.getSelectedItem(), (int) powerSelector.getSelectedItem()));
+                //stp.repaint();
             }
         });
-        refresh.doClick();
+        //refresh.doClick();
         JLabel fanoTestLabel = new JLabel("Compare Fano-generated octonions with permuted Cayley-Dickson octonions");
         JButton fanoTestButton = new JButton("Fano/CD Compare");
         fanoTestButton.addActionListener(new ActionListener() {
@@ -612,7 +626,6 @@ public class SwingDashboard extends JPanel {
                 outputPanel.currentSolution = ecam.specific.validSolutions[0];
                 outputPanel.repaint();
                 ptf.vectorField = ecam.post.subsectionVectorField(ecam.specific.validSolutions[0], 400, 1000);
-                ptf.factorLayers = ecam.post.subsectionFactorLayers(ecam.specific.validSolutions[0], 400, 1000);
                 ptf.field = ecam.post.subsectionCoefficientMultiplication(ecam.specific.validSolutions[0], 400, 1000);
                 ptf.solution = ecam.specific.validSolutions[0];
                 ptf.redoLayerBox();
@@ -631,6 +644,10 @@ public class SwingDashboard extends JPanel {
                 swingComplexLayers.vectorField = ecam.post.subsectionComplexVectorField(ecam.specific.validSolutions[0], 400, 1000);
                 swingComplexLayers.redoLayerBox();
                 swingComplexLayers.repaint();
+                swingBinaryShadow.binaryField = ecam.post.subsectionComplexFieldToBinary(ecam.specific.validSolutions[0],400,1000);
+                swingBinaryShadow.repaint();
+                swingPolyTest.fieldFromPolynomial = ecam.post.subsectionCoefficientMultiplication(ecam.specific.validSolutions[0],400,1000);
+                swingPolyTest.repaint();
             }
         });
         JComboBox normalizeUnitBox = new JComboBox();
@@ -718,7 +735,7 @@ public class SwingDashboard extends JPanel {
         frame.add(avoidDivZeroBox);
         frame.add(new JLabel("Refresh normalization parameters"));
         frame.add(normalizationRefreshButton);
-        frame.add(new JLabel("Restore default normalizations"));
-        frame.add(restoreDefaultsButton);
+//        frame.add(new JLabel("Restore default normalizations"));
+//        frame.add(restoreDefaultsButton);
     }
 }

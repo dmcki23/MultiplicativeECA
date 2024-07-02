@@ -2,7 +2,6 @@ import java.util.Arrays;
 /**
  * Standard Java Main class
  *
- * @author Daniel W McKinley
  */
 public class Main {
     /**

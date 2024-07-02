@@ -18,6 +18,11 @@ public class Fano {
      */
     public int[][][] fanoTables;
     /**
+     * These are preprocessed and populated in fanoGenerate(), these are the Fano plane numberings in triplet form, there are 30 sets of 7 sets of triplets that share no more than one element with any other, triplet index 0 is the Cayley-Dickson octonions, triplets index 10 is John Baez's Fano plane numbering [Baez,2001] full citation in paper
+     */
+    public int[][][] fanoTriplets;
+    public int[] fanoBitmasks;
+    /**
      * Used in fanoTest() and testUtil(), number octonion tables between different
      * generation algorithms that are exactly equal.
      */
@@ -143,16 +148,16 @@ public class Fano {
      * @return array of 480 valid octonion multiplication tables
      */
     public int[][][] fanoGenerate() {
-        //results will be placed in this for output
-        int[][][] out = new int[480][16][16];
+
         //results are placed here
         int[][][] tripletOctonions = new int[480][16][16];
+        fanoBitmasks = new int[480];
         //7 choose 3, there are 35 triplets out of 7
         int[][] combs = pf.combinations(7, 3);
         //precomputed results to save time, these are all the sets of 7 triplets from above that don't share more than one value
         int[][] tripletIndexes = new int[][]{{0, 9, 14, 20, 23, 27, 28}, {0, 9, 14, 21, 22, 26, 29}, {0, 10, 13, 19, 24, 27, 28}, {0, 10, 13, 21, 22, 25, 30}, {0, 11, 12, 19, 24, 26, 29}, {0, 11, 12, 20, 23, 25, 30}, {1, 6, 14, 17, 23, 27, 31}, {1, 6, 14, 18, 22, 26, 32}, {1, 7, 13, 16, 24, 27, 31}, {1, 7, 13, 18, 22, 25, 33}, {1, 8, 12, 16, 24, 26, 32}, {1, 8, 12, 17, 23, 25, 33}, {2, 5, 14, 17, 21, 29, 31}, {2, 5, 14, 18, 20, 28, 32}, {2, 7, 11, 15, 24, 29, 31}, {2, 7, 11, 18, 20, 25, 34}, {2, 8, 10, 15, 24, 28, 32}, {2, 8, 10, 17, 21, 25, 34}, {3, 5, 13, 16, 21, 30, 31}, {3, 5, 13, 18, 19, 28, 33}, {3, 6, 11, 15, 23, 30, 31}, {3, 6, 11, 18, 19, 26, 34}, {3, 8, 9, 15, 23, 28, 33}, {3, 8, 9, 16, 21, 26, 34}, {4, 5, 12, 16, 20, 30, 32}, {4, 5, 12, 17, 19, 29, 33}, {4, 6, 10, 15, 22, 30, 32}, {4, 6, 10, 17, 19, 27, 34}, {4, 7, 9, 15, 22, 29, 33}, {4, 7, 9, 16, 20, 27, 34}};
         //precomputed triplets processed into Fano plane form
-        int[][][] fanoTriplets = new int[30][7][3];
+        fanoTriplets = new int[30][7][3];
         for (int set = 0; set < 30; set++) {
             for (int spot = 0; spot < 7; spot++) {
                 for (int sspot = 0; sspot < 3; sspot++) {
@@ -200,6 +205,8 @@ public class Fano {
                         continue negsLoop;
                     }
                 }
+                //at this point it is a valid bitmask, otherwise it would have tripped the continue
+                fanoBitmasks[index] = negs;
                 //System.out.println(Arrays.deepToString(activeTriplets));
                 //uses the valid set of triplets to construct the octonion table
                 //using the equations, indexes 0x1=2, 1x2=0, 2x0=1, 1x0=-2, 2x1=-0,0x2=-1
@@ -233,6 +240,7 @@ public class Fano {
                 }
                 index++;
                 //the octonions from the anti-activeTriplet[][]
+                fanoBitmasks[index] = 127-negs;
                 for (int spot = 0; spot < 7; spot++) {
                     for (int sspot = 0; sspot < 3; sspot++) {
                         activeTriplets[spot][sspot] = (activeTriplets[spot][sspot] + 8) % 16;

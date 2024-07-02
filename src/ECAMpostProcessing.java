@@ -43,6 +43,10 @@ public class ECAMpostProcessing {
      */
     public double[][] field;
     /**
+     * same as field[][], except that field mutiplies out the whole numFactors-dim partialProduct[][] table, and this uses the polynomial from generatePolynomial()
+     */
+    public double[][] fieldFromPolynomial;
+    /**
      * Binary 2D array of integers of a Wolfram code calculation with given input that validSolutionCoefficientCalculation() parallel multiplication operates
      */
     public int[][] ruleField;
@@ -145,6 +149,7 @@ public class ECAMpostProcessing {
         System.out.println("coeffInput " + Arrays.toString(doubleInput));
         //coefficient multiplication results
         field = new double[gridSize][gridSize];
+        fieldFromPolynomial = new double[gridSize][gridSize];
         //standard ECA calculation with given input
         ruleField = new int[gridSize][gridSize];
         vectorField = new double[places][gridSize][gridSize];
@@ -157,8 +162,12 @@ public class ECAMpostProcessing {
         //initializes to input and calculates the standardECA computation
         for (int column = (gridSize / 2) - (binaryInput.length / 2); column < (gridSize / 2) + (binaryInput.length / 2); column++) {
             field[0][column] = doubleInput[column - (gridSize / 2) + (doubleInput.length / 2)];
+            fieldFromPolynomial[0][column] = field[0][column];
             ruleField[0][column] = binaryInput[column - (gridSize / 2) + (binaryInput.length / 2)];
-            if (ruleField[0][column] == 0) field[0][column] = 0;
+            if (ruleField[0][column] == 0) {
+                field[0][column] = 0;
+                fieldFromPolynomial[0][column] = 0;
+            }
         }
         System.out.println(Arrays.toString(ruleField[0]));
         //standard ECA calculation
@@ -214,6 +223,35 @@ public class ECAMpostProcessing {
                 }
             }
         }
+//        double[] polyMults = new double[places];
+//        for (int row = 1; row <= rows; row++) {
+//            for (int column = places + row; column < gridSize - places - row; column++) {
+//                if (ruleField[row][column] == 0) continue;
+//                polyMults = new double[places];
+//
+//                //
+//                //
+//                //
+//                //
+//                //multiplication loop, uses the polynomial, Multiplication B
+//                for (int place = 0; place < places; place++) {
+//                    for (int term = 0; term < solution.polynomial[0].length; term++) {
+//                        if (solution.polynomial[places][term][place] == 0) continue;
+//                        double cterm = solution.polynomial[places][term][place];
+//                        for (int spot = 0; spot < places; spot++) {
+//                            for (int power = 0; power < solution.polynomial[place][term][spot]; power++) {
+//                                cterm = cterm * fieldFromPolynomial[row - 1][column - places / 2 + spot];
+//                            }
+//                        }
+//                        polyMults[place] += cterm;
+//                    }
+//                }
+//                for (int place = 0; place < places; place++){
+//                    polyMults[place] = geometricMean(polyMults[place],numFactors);
+//                }
+//                fieldFromPolynomial[row][column] = localNormalize(polyMults);
+//            }
+//        }
         //console display stuff
         System.out.println("partialProductTable ");
         System.out.println(Arrays.deepToString(partialProductTable));
@@ -365,8 +403,8 @@ public class ECAMpostProcessing {
                 }
                 if (doAddititiveWolfram) {
                     if (wolframIsNegOne) {
-                        if (solution.wolframCode[(int) tots.real] == 0) complexField[row][column].real *= -1;
-                        if (solution.wolframCode[(int) tots.imaginary] == 0) complexField[row][column].imaginary *= -1;
+                        if (solution.wolframCode[(int) tots.real] == 1) complexField[row][column].real *= -1;
+                        if (solution.wolframCode[(int) tots.imaginary] == 1) complexField[row][column].imaginary *= -1;
                     } else {
                         if (solution.wolframCode[(int) tots.real] == 0) complexField[row][column].real = 0;
                         if (solution.wolframCode[(int) tots.imaginary] == 0) complexField[row][column].imaginary = 0;
@@ -420,9 +458,9 @@ public class ECAMpostProcessing {
                 }
                 if (doAddititiveWolfram) {
                     if (wolframIsNegOne) {
-                        if (solution.wolframCode[(int) tots.real] == 0)
+                        if (solution.wolframCode[(int) tots.real] == 1)
                             neighborhoodNormalizeFirst[row][column].real *= -1;
-                        if (solution.wolframCode[(int) tots.imaginary] == 0)
+                        if (solution.wolframCode[(int) tots.imaginary] == 1)
                             neighborhoodNormalizeFirst[row][column].imaginary *= -1;
                     } else {
                         if (solution.wolframCode[(int) tots.real] == 0)
@@ -603,6 +641,7 @@ public class ECAMpostProcessing {
                 }
             }
         }
+        //code for stashing the result in the return variable, sans the permutation by inverse direct product
 //        for (int column = 0; column < places; column++) {
 //            for (int term = 0; term < (int) Math.pow(places, numFactors - 1); term++) {
 //                for (int place = 0; place < places; place++) {
@@ -795,29 +834,7 @@ public class ECAMpostProcessing {
                 }
             }
         }
-        //this section does the same output as above, except without the parentheses and asterisks
-//        for (int row = 0; row < places; row++) {
-//            for (int term = 0; term < length; term++) {
-//                out[row] += (coefficients[row][term]+" "  );
-//                for (int place = 0; place < places; place++) {
-//                    out[row] += columnName[place] + "^" + terms[row][term][place] + " ";
-//                    if (place != places - 1) {
-//                        //out[row] += ("*");
-//                    }
-//                }
-//                //out[row] += ")";
-//                if (term == length - 1) break;
-//                if (coefficients[row][term + 1] != 0) {
-//                    out[row] += (" + ");
-//                } else {
-//                    break;
-//                }
-//            }
-//        }
-        //System.out.println("Polynomial for each cell of a neighborhood");
-        for (int row = 0; row < places; row++) {
-            //System.out.println(out[row]);
-        }
+
         return out;
     }
     /**
@@ -899,29 +916,105 @@ public class ECAMpostProcessing {
         }
         return out;
     }
+
     /**
      * Takes the complex output of a solution, if the real and imaginary parts are negative, they become 1's in the output, if positive, 0.
      * The 0 index layer is the real part and the 1 index layer is the imaginary part
      *
-     * @param inField Complex output of a solution
+     * @param rows number of rows of subsection of complexField[rows][gridSize]
+     * @param columns number of columns of subsection of complexField[rows][gridSize]
      * @return two layer binary array with the sign values of the real and complex parts as 1s and 0s
      */
-    public int[][][] subsectionComplexFieldToBinary(Complex[][] inField) {
-        int[][][] out = new int[2][inField.length][inField[0].length];
-        for (int row = 0; row < inField.length; row++) {
-            for (int column = 0; column < inField.length; column++) {
-                if (inField[row][column].real < 0) {
-                    out[0][row][column] = 1;
+    public int[][][] subsectionComplexFieldToBinary(int rows, int columns) {
+        int[][][] out = new int[2][rows][columns];
+        for (int row = 0; row < rows; row++) {
+            for (int column = gridSize/2-columns/2; column < gridSize/2+columns/2; column++) {
+                if (complexField[row][column].real < 0) {
+                    out[0][row][column-gridSize/2+columns/2] = 1;
                 } else {
-                    out[0][row][column] = 0;
+                    out[0][row][column-gridSize/2+columns/2] = 0;
                 }
-                if (inField[row][column].imaginary < 0) {
-                    out[1][row][column] = 1;
+                if (complexField[row][column].imaginary < 0) {
+                    out[1][row][column-gridSize/2+columns/2] = 1;
                 } else {
-                    out[1][row][column] = 0;
+                    out[1][row][column-gridSize/2+columns/2] = 0;
                 }
             }
         }
+        return out;
+    }
+    /**
+     * Takes the complex output of a solution, if the real and imaginary parts are negative, they become 1's in the output, if positive, 0.
+     * The 0 index layer is the real part and the 1 index layer is the imaginary part
+     *
+     * @param rows number of rows of subsection of complexField[rows][gridSize]
+     * @param columns number of columns of subsection of complexField[rows][gridSize]
+     * @return two layer binary array with the sign values of the real and complex parts as 1s and 0s
+     */
+    public int[][][] subsectionComplexFieldToBinary(ValidSolution solution, int rows, int columns) {
+        int[][][] out = new int[2][rows][columns];
+        for (int row = 0; row < rows; row++) {
+            for (int column = gridSize/2-columns/2; column < gridSize/2+columns/2; column++) {
+                if (complexField[row][column].real < 0) {
+                    out[0][row][column-gridSize/2+columns/2] = 1;
+                } else {
+                    out[0][row][column-gridSize/2+columns/2] = 0;
+                }
+                if (complexField[row][column].imaginary < 0) {
+                    out[1][row][column-gridSize/2+columns/2] = 1;
+                } else {
+                    out[1][row][column-gridSize/2+columns/2] = 0;
+                }
+            }
+        }
+//        for (int layer = 0; layer < 2; layer++) {
+//            int[] attemptedWolfram = new int[(int) Math.pow(2, solution.numBits)];
+//            for (int spot = 0; spot < attemptedWolfram.length; spot++) {
+//                attemptedWolfram[spot] = -1;
+//            }
+//            int totWolframConflicts = 0;
+//            for (int row = 2; row < 75; row++) {
+//                for (int column = solution.numBits+row; column < columns-solution.numBits-row; column++) {
+//                    int tot = 0;
+//                    for (int spot = 0; spot < solution.numBits; spot++) {
+//                        tot += (int) Math.pow(2, spot) * out[layer][row - 1][column - solution.numBits / 2 + spot];
+//                    }
+//                    if (attemptedWolfram[tot] == -1) {
+//                        attemptedWolfram[tot] = out[layer][row][column];
+//                    } else if (attemptedWolfram[tot] == out[layer][row][column]) {
+//
+//                    } else {
+//                        totWolframConflicts++;
+//                    }
+//                }
+//            }
+//            System.out.println("Total attempted Wolfram code conflicts: " + totWolframConflicts);
+//            System.out.println(Arrays.toString(attemptedWolfram));
+//
+//        }
+        int[] attemptedWolfram = new int[(int) Math.pow(2, solution.numBits*2)];
+        for (int spot = 0; spot < attemptedWolfram.length; spot++) {
+            attemptedWolfram[spot] = -1;
+        }
+        int totWolframConflicts = 0;
+        for (int row = 2; row < 75; row++) {
+            for (int column = solution.numBits+row; column < columns-solution.numBits-row; column++) {
+                int tot = 0;
+                for (int spot = 0; spot < solution.numBits; spot++) {
+                    tot += (int) Math.pow(2, spot) * out[0][row - 1][column - solution.numBits / 2 + spot];
+                    tot += (int)Math.pow(2,spot+solution.numBits)*out[1][row-1][column-solution.numBits/2+spot];
+                }
+                if (attemptedWolfram[tot] == -1) {
+                    attemptedWolfram[tot] = out[0][row][column]+2*out[1][row][column];
+                } else if (attemptedWolfram[tot] == (out[0][row][column]+2*out[1][row][column])) {
+
+                } else if (attemptedWolfram[tot] != -1 && attemptedWolfram[tot] != (out[0][row][column]+2*out[1][row][column])) {
+                    totWolframConflicts++;
+                }
+            }
+        }
+        System.out.println("Total attempted Wolfram code conflicts: " + totWolframConflicts);
+        System.out.println(Arrays.toString(attemptedWolfram));
         return out;
     }
 }

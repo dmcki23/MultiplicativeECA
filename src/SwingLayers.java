@@ -92,7 +92,7 @@ public class SwingLayers extends JPanel {
         ecam = in;
         field = new double[400][1000];
         JFrame jFrame = new JFrame();
-        jFrame.setSize(1100, 830);
+        jFrame.setSize(1000, 400);
         jFrame.setLocation(50, 50);
         jFrame.setTitle("Non-neg real layers");
         layerBox = new JComboBox();
@@ -111,7 +111,7 @@ public class SwingLayers extends JPanel {
         this.add(layerBox);
         this.add(new JLabel(""));
         this.add(layerButton);
-        jFrame.setTitle("PolynomialTestFrame");
+        jFrame.setTitle("Multiplications B, vector output, non-neg real");
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jFrame.add(this);
         //jFrame.pack();
@@ -127,13 +127,7 @@ public class SwingLayers extends JPanel {
             layerBox.addItem("Unit Vector e" + spot + " coefficient layer");
         }
         layerBox.addItem("Coefficient result layer");
-        for (int spot = 0; spot < solution.numFactors; spot++) {
-            layerBox.addItem("Factor layer " + spot);
-        }
-        layerBox.addItem("Factor result layer ");
-//        for (int spot = 0; spot < solution.numBits; spot++){
-//            layerBox.addItem("Complex unit vector e" + spot);
-//        }
+
     }
     /**
      * JFrame paint() implementation

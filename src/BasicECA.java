@@ -378,24 +378,8 @@ public class BasicECA {
                 }
             }
         }
-        int[] tots = new int[5];
-        for (int n = 0; n < 256; n++) {
-            tots[ruleClasses[n]]++;
-        }
-        System.out.println("tots: " + Arrays.toString(tots));
-        System.out.println(Arrays.toString(ruleClasses));
-        for (int group = 0; group < 88; group++) {
-            if (ruleClasses[equivRules[group][0]] == 4) {
-                System.out.println("Group: " + group + " " + Arrays.toString(equivRules[group]));
-            }
-        }
-        System.out.println("here");
-//        for (int row = 0; row < 16; row++){
-//            for (int column = 0; column < 16; column++){
-//                System.out.print(ruleClasses[16*row+column] ^ ruleClasses[255-16*row-column]);
-//            }
-//            System.out.print("\n");
-//        }
+
+
         classesRules = classes;
         return ruleClasses;
     }

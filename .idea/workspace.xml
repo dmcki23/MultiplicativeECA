@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="went through Javadoc comments, went through inline main algorithm comments in all the ECAM classes, deleted some out of scope functions in Fano, deleted an out of scope scratchpaper class">
-      <change afterPath="$PROJECT_DIR$/src/SwingBinaryShadow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SwingPolyTest.java" afterDir="false" />
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="added SwingPolyTest">
+      <change afterPath="$PROJECT_DIR$/src/ECAMoutputSubsections.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BasicECA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicECA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ConsoleDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleDashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ECAMdeep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMdeep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ECAMpostProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMpostProcessing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Fano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fano.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PermutationsFactoradic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PermutationsFactoradic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RuleImageCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RuleImageCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SwingBinaryShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingBinaryShadow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SwingDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingDashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SwingLayers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingLayers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SwingPolyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingPolyTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -440,7 +441,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719809918532</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="added SwingPolyTest">
+      <option name="closed" value="true" />
+      <created>1719896867221</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1719896867221</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -479,6 +488,7 @@
     <MESSAGE value="tracked down a bug in SwingPolynomialTestOutput that was not showing the unit vector coefficient layers, turns out vectorField[][][] was reinitialized downstream in the complex overload of multiplicativeSolutionOutput()" />
     <MESSAGE value="minor changes" />
     <MESSAGE value="went through Javadoc comments, went through inline main algorithm comments in all the ECAM classes, deleted some out of scope functions in Fano, deleted an out of scope scratchpaper class" />
-    <option name="LAST_COMMIT_MESSAGE" value="went through Javadoc comments, went through inline main algorithm comments in all the ECAM classes, deleted some out of scope functions in Fano, deleted an out of scope scratchpaper class" />
+    <MESSAGE value="added SwingPolyTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="added SwingPolyTest" />
   </component>
 </project>

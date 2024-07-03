@@ -64,7 +64,6 @@ public class PermutationsFactoradic {
         }
         return out;
     }
-
     /**
      * Specific factoradic, typically for lengths of longer than 8 or 9, to save time and memory
      *
@@ -276,7 +275,6 @@ public class PermutationsFactoradic {
             System.out.println(outstring);
             outstring = "";
         }
-
         for (int row = 1; row < degree + 1; row++) {
             for (int perm = 0; perm < factorial(row); perm++) {
                 for (int spot = 1; spot < (int) Math.pow(2, row); spot++) {
@@ -318,7 +316,6 @@ public class PermutationsFactoradic {
         }
         return out;
     }
-
     /**
      * Factorial n
      *
@@ -359,7 +356,7 @@ public class PermutationsFactoradic {
      * @param bit which place to removed
      * @return a double with bit's place removed, and shifted to cover the missing place
      */
-    public static  double removeBit(double in, int bit) {
+    public static double removeBit(double in, int bit) {
         double out = in - (in / (int) Math.pow(2, bit) % 2);
         double decimalPart = out - (Math.floor(out));
         double intPart = Math.floor(out);
@@ -406,7 +403,7 @@ public class PermutationsFactoradic {
      * @param spot index of element to remove
      * @return int array in with element spot removed
      */
-    public static  int[] removeElement(int[] in, int spot) {
+    public static int[] removeElement(int[] in, int spot) {
         int[] out = new int[in.length - 1];
         int index = 0;
         for (int power = 0; power < in.length; power++) {
@@ -419,7 +416,6 @@ public class PermutationsFactoradic {
         }
         return out;
     }
-
     /**
      * Permutations of permutations in list form
      *
@@ -450,7 +446,6 @@ public class PermutationsFactoradic {
      * @return a grid of permutation compositions
      */
     public static int[][] permsOfPermsGrid(int length) {
-
         int[][] perms = permSequences(length);
         int[][] out = new int[factorial(length)][factorial(length)];
         int[] activePerm = new int[length];
@@ -529,7 +524,7 @@ public class PermutationsFactoradic {
      * @param n          length of input array
      */
     public static void combinationUtil(int[] arr, int[] data, int start,
-                                int end, int index, int r, int[][] masterData, int[] mdIndex, int n) {
+                                       int end, int index, int r, int[][] masterData, int[] mdIndex, int n) {
         // Current combination is ready to be printed, print it
         if (index == r) {
             masterData[mdIndex[0]] = data.clone();
@@ -554,7 +549,7 @@ public class PermutationsFactoradic {
      * @param r size of output array
      * @return all combinations of size r from 0..n-1
      */
-    public static  int[][] combinations(int n, int r) {
+    public static int[][] combinations(int n, int r) {
         // A temporary array to store all combination one by one
         int[] data = new int[r];
         int[] arr = new int[n];

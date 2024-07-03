@@ -97,7 +97,13 @@ public class SwingDashboard extends JPanel {
      * Displays the complex vector output of an applied ValidSolution doing the normalization last, in layer form
      */
     SwingComplexLayers swingComplexLayers;
+    /**
+     * Displays output of subsection.complexFieldToBinary(), experimental
+     */
     SwingBinaryShadow swingBinaryShadow;
+    /**
+     * Displays the non-negative real output processed with the polynomial of the solution from generatePolynomial(), rather than multiplying out the whole numFactors-dim partial product table
+     */
     SwingPolyTest swingPolyTest;
 
     /**
@@ -299,16 +305,16 @@ public class SwingDashboard extends JPanel {
                 swingComplexOutput.complexField = ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution], ecam.post.randomComplexInput(componentRandRange, componentRandRangeMax), 400, 1000);
                 swingComplexOutput.repaint();
                 neighborhoodFirstOut.currentSolution = ecam.specific.validSolutions[activeSolution];
-                neighborhoodFirstOut.complexField = ecam.post.subsectionNeighborhoodFirst(ecam.specific.validSolutions[activeSolution], 400, 1000);
+                neighborhoodFirstOut.complexField = ecam.post.subsection.subsectionNeighborhoodFirst(ecam.specific.validSolutions[activeSolution], 400, 1000);
                 neighborhoodFirstOut.repaint();
                 ptf.solution = ecam.specific.validSolutions[activeSolution];
-                ptf.vectorField = ecam.post.subsectionVectorField(ecam.specific.validSolutions[activeSolution], 400, 1000).clone();
-                ptf.field = ecam.post.subsectionCoefficientMultiplication(ecam.specific.validSolutions[activeSolution], 400, 1000);
+                ptf.vectorField = ecam.post.subsection.subsectionVectorField(ecam.specific.validSolutions[activeSolution], 400, 1000).clone();
+                ptf.field = ecam.post.subsection.subsectionCoefficientMultiplication(ecam.specific.validSolutions[activeSolution], 400, 1000);
                 ptf.redoLayerBox();
                 ptf.repaint();
                 swingComplexLayers.currentSolution = ecam.specific.validSolutions[activeSolution];
-                swingComplexLayers.complexField = ecam.post.subsectionComplexField(ecam.specific.validSolutions[activeSolution], 400, 1000);
-                swingComplexLayers.vectorField = ecam.post.subsectionComplexVectorField(ecam.specific.validSolutions[activeSolution], 400, 1000);
+                swingComplexLayers.complexField = ecam.post.subsection.subsectionComplexField(ecam.specific.validSolutions[activeSolution], 400, 1000);
+                swingComplexLayers.vectorField = ecam.post.subsection.subsectionComplexVectorField(ecam.specific.validSolutions[activeSolution], 400, 1000);
                 for (int row = 0; row < 20; row++) {
                     for (int column = 175; column < 225; column++) {
                         System.out.print(swingComplexLayers.vectorField[0][row][column].real);
@@ -318,9 +324,9 @@ public class SwingDashboard extends JPanel {
                 System.out.println();
                 swingComplexLayers.redoLayerBox();
                 swingComplexLayers.repaint();
-                swingBinaryShadow.binaryField = ecam.post.subsectionComplexFieldToBinary(ecam.specific.validSolutions[activeSolution],400,1000);
+                swingBinaryShadow.binaryField = ecam.post.subsection.subsectionComplexFieldToBinary(ecam.specific.validSolutions[activeSolution],400,1000);
                 swingBinaryShadow.repaint();
-                swingPolyTest.fieldFromPolynomial = ecam.post.subsectionCoefficientMultiplication(ecam.specific.validSolutions[activeSolution],400,1000);
+                swingPolyTest.fieldFromPolynomial = ecam.post.subsection.subsectionCoefficientMultiplication(ecam.specific.validSolutions[activeSolution],400,1000);
                 swingPolyTest.repaint();
             }
         });
@@ -458,8 +464,8 @@ public class SwingDashboard extends JPanel {
                 outputPanel.repaint();
                 outputPanel.currentSolution = ecam.specific.validSolutions[activeSolution];
                 outputPanel.repaint();
-                ptf.vectorField = ecam.post.subsectionVectorField(ecam.specific.validSolutions[activeSolution], 400, 1000);
-                ptf.field = ecam.post.subsectionCoefficientMultiplication(ecam.specific.validSolutions[activeSolution], 400, 1000);
+                ptf.vectorField = ecam.post.subsection.subsectionVectorField(ecam.specific.validSolutions[activeSolution], 400, 1000);
+                ptf.field = ecam.post.subsection.subsectionCoefficientMultiplication(ecam.specific.validSolutions[activeSolution], 400, 1000);
                 ptf.solution = ecam.specific.validSolutions[0];
                 ptf.redoLayerBox();
                 ptf.repaint();
@@ -470,16 +476,16 @@ public class SwingDashboard extends JPanel {
                 swingComplexOutput.complexField = ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution], ecam.post.randomComplexInput(componentRandRange, componentRandRangeMax), 400, 1000);
                 swingComplexOutput.repaint();
                 neighborhoodFirstOut.currentSolution = ecam.specific.validSolutions[activeSolution];
-                neighborhoodFirstOut.complexField = ecam.post.subsectionNeighborhoodFirst(ecam.specific.validSolutions[activeSolution], 400, 1000);
+                neighborhoodFirstOut.complexField = ecam.post.subsection.subsectionNeighborhoodFirst(ecam.specific.validSolutions[activeSolution], 400, 1000);
                 neighborhoodFirstOut.repaint();
                 swingComplexLayers.currentSolution = ecam.specific.validSolutions[activeSolution];
-                swingComplexLayers.complexField = ecam.post.subsectionComplexField(ecam.specific.validSolutions[activeSolution], 400, 1000);
-                swingComplexLayers.vectorField = ecam.post.subsectionComplexVectorField(ecam.specific.validSolutions[activeSolution], 400, 1000);
+                swingComplexLayers.complexField = ecam.post.subsection.subsectionComplexField(ecam.specific.validSolutions[activeSolution], 400, 1000);
+                swingComplexLayers.vectorField = ecam.post.subsection.subsectionComplexVectorField(ecam.specific.validSolutions[activeSolution], 400, 1000);
                 swingComplexLayers.redoLayerBox();
                 swingComplexLayers.repaint();
-                swingBinaryShadow.binaryField = ecam.post.subsectionComplexFieldToBinary(ecam.specific.validSolutions[activeSolution],400,1000);
+                swingBinaryShadow.binaryField = ecam.post.subsection.subsectionComplexFieldToBinary(ecam.specific.validSolutions[activeSolution],400,1000);
                 swingBinaryShadow.repaint();
-                swingPolyTest.fieldFromPolynomial = ecam.post.subsectionCoefficientMultiplication(ecam.specific.validSolutions[activeSolution],400,1000);
+                swingPolyTest.fieldFromPolynomial = ecam.post.subsection.subsectionCoefficientMultiplication(ecam.specific.validSolutions[activeSolution],400,1000);
                 swingPolyTest.repaint();
             }
         });
@@ -625,8 +631,8 @@ public class SwingDashboard extends JPanel {
                 outputPanel.repaint();
                 outputPanel.currentSolution = ecam.specific.validSolutions[0];
                 outputPanel.repaint();
-                ptf.vectorField = ecam.post.subsectionVectorField(ecam.specific.validSolutions[0], 400, 1000);
-                ptf.field = ecam.post.subsectionCoefficientMultiplication(ecam.specific.validSolutions[0], 400, 1000);
+                ptf.vectorField = ecam.post.subsection.subsectionVectorField(ecam.specific.validSolutions[0], 400, 1000);
+                ptf.field = ecam.post.subsection.subsectionCoefficientMultiplication(ecam.specific.validSolutions[0], 400, 1000);
                 ptf.solution = ecam.specific.validSolutions[0];
                 ptf.redoLayerBox();
                 ptf.repaint();
@@ -637,16 +643,16 @@ public class SwingDashboard extends JPanel {
                 swingComplexOutput.complexField = ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[0], ecam.post.randomComplexInput(componentRandRange, componentRandRangeMax), 400, 1000);
                 swingComplexOutput.repaint();
                 neighborhoodFirstOut.currentSolution = ecam.specific.validSolutions[0];
-                neighborhoodFirstOut.complexField = ecam.post.subsectionNeighborhoodFirst(ecam.specific.validSolutions[0], 400, 1000);
+                neighborhoodFirstOut.complexField = ecam.post.subsection.subsectionNeighborhoodFirst(ecam.specific.validSolutions[0], 400, 1000);
                 neighborhoodFirstOut.repaint();
                 swingComplexLayers.currentSolution = ecam.specific.validSolutions[0];
-                swingComplexLayers.complexField = ecam.post.subsectionComplexField(ecam.specific.validSolutions[0], 400, 1000);
-                swingComplexLayers.vectorField = ecam.post.subsectionComplexVectorField(ecam.specific.validSolutions[0], 400, 1000);
+                swingComplexLayers.complexField = ecam.post.subsection.subsectionComplexField(ecam.specific.validSolutions[0], 400, 1000);
+                swingComplexLayers.vectorField = ecam.post.subsection.subsectionComplexVectorField(ecam.specific.validSolutions[0], 400, 1000);
                 swingComplexLayers.redoLayerBox();
                 swingComplexLayers.repaint();
-                swingBinaryShadow.binaryField = ecam.post.subsectionComplexFieldToBinary(ecam.specific.validSolutions[0],400,1000);
+                swingBinaryShadow.binaryField = ecam.post.subsection.subsectionComplexFieldToBinary(ecam.specific.validSolutions[0],400,1000);
                 swingBinaryShadow.repaint();
-                swingPolyTest.fieldFromPolynomial = ecam.post.subsectionCoefficientMultiplication(ecam.specific.validSolutions[0],400,1000);
+                swingPolyTest.fieldFromPolynomial = ecam.post.subsection.subsectionCoefficientMultiplication(ecam.specific.validSolutions[0],400,1000);
                 swingPolyTest.repaint();
             }
         });

@@ -21,6 +21,9 @@ public class Fano {
      * These are preprocessed and populated in fanoGenerate(), these are the Fano plane numberings in triplet form, there are 30 sets of 7 sets of triplets that share no more than one element with any other, triplet index 0 is the Cayley-Dickson octonions, triplets index 10 is John Baez's Fano plane numbering [Baez,2001] full citation in paper
      */
     public int[][][] fanoTriplets;
+    /**
+     * The 480 Fano plane bitmask sets
+     */
     public int[] fanoBitmasks;
     /**
      * Used in fanoTest() and testUtil(), number octonion tables between different

@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
 /**
- * Swing component used to display a specific solution from ECAasMultiplication
+ * Swing component used to display a specific solution from ECAasMultiplication. This is the binary shadow of
  */
 public class SwingBinaryShadow extends JPanel {
     /**

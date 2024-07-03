@@ -2,10 +2,25 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
+/**
+ * Displays results of the non-negative real output processed with the polynomial from generatePolynomial() rather than multiplying out the whole numFactors-dim partial product table
+ */
 public class SwingPolyTest extends JPanel {
+    /**
+     * output from subsection.complexFieldToBinary()
+     */
     public double[][] fieldFromPolynomial;
+    /**
+     * Display image
+     */
     public BufferedImage bufferedImage;
+    /**
+     * Display image raster
+     */
     public int[] raster;
+    /**
+     * Initializes a Swing JFrame to put this JPanel on
+     */
     public SwingPolyTest(){
         fieldFromPolynomial = new double[400][1000];
         JFrame frame = new JFrame();
@@ -18,6 +33,10 @@ public class SwingPolyTest extends JPanel {
 
 
     }
+    /**
+     * Paints this JPanel
+     * @param g the <code>Graphics</code> object to protect
+     */
     public void paintComponent(Graphics g){
         bufferedImage = new BufferedImage(1000,400,BufferedImage.TYPE_INT_RGB);
         raster = ((DataBufferInt) bufferedImage.getRaster().getDataBuffer()).getData();

@@ -142,8 +142,9 @@ public class ConsoleDashboard {
      * Outputs permutation compositions in both list and grid form
      *
      * @param length length of array to permute
+     * @return the symmetric group in String form
      */
-    public void permutationsOfPermutations(int length) {
+    public String permutationsOfPermutations(int length) {
         System.out.println("Permutations of permutations");
         PermutationsFactoradic pf = new PermutationsFactoradic();
         int[][] pop = pf.permsOfPermsGrid(length);
@@ -153,6 +154,11 @@ public class ConsoleDashboard {
             System.out.println(Arrays.toString(pop[row]));
         }
         System.out.println();
+        String outstring = "";
+        for (int row = 0; row < pf.factorial(length); row++){
+            outstring += Arrays.toString(pop[row]) + "\n";
+        }
+        return outstring;
     }
 
 

@@ -164,7 +164,7 @@ public class RuleImageCollection {
         swingComplexOutput.currentSolution = eca.specific.validSolutions[activeSolution];
         swingComplexOutput.complexField = eca.post.multiplicativeSolutionOutput(eca.specific.validSolutions[activeSolution], eca.post.randomComplexInput(-10, 10), 400, 1000);
         neighborhoodFirstOut.currentSolution = eca.specific.validSolutions[activeSolution];
-        neighborhoodFirstOut.complexField = eca.post.subsectionNeighborhoodFirst(eca.specific.validSolutions[activeSolution], 400, 1000);
+        neighborhoodFirstOut.complexField = eca.post.subsection.subsectionNeighborhoodFirst(eca.specific.validSolutions[activeSolution], 400, 1000);
 //        outputPanel.repaint();
 //        swingComplexOutput.repaint();
 //        neighborhoodFirstOut.repaint();
@@ -288,7 +288,7 @@ public class RuleImageCollection {
         swingComplexOutput.currentSolution = eca.specific.validSolutions[activeSolution];
         swingComplexOutput.complexField = eca.post.multiplicativeSolutionOutput(eca.specific.validSolutions[activeSolution], eca.post.randomComplexInput(-10, 10), 400, 1000);
         neighborhoodFirstOut.currentSolution = eca.specific.validSolutions[activeSolution];
-        neighborhoodFirstOut.complexField = eca.post.subsectionNeighborhoodFirst(eca.specific.validSolutions[activeSolution], 400, 1000);
+        neighborhoodFirstOut.complexField = eca.post.subsection.subsectionNeighborhoodFirst(eca.specific.validSolutions[activeSolution], 400, 1000);
 
         String[] types = new String[]{"Single bit initial input", "Random initial input", "Solution applied with non negative reals", "Solution applied with complex, real part", "Solution applied with complex, imaginary part", "Solution applied with complex normalization first, real part", "Solution applied with complex normalization first, imaginary part"};
 
@@ -422,7 +422,7 @@ public class RuleImageCollection {
         swingComplexOutput.currentSolution = eca.specific.validSolutions[activeSolution];
         swingComplexOutput.complexField = eca.post.multiplicativeSolutionOutput(eca.specific.validSolutions[activeSolution], eca.post.randomComplexInput(-10, 10), 400, 1000);
         neighborhoodFirstOut.currentSolution = eca.specific.validSolutions[activeSolution];
-        neighborhoodFirstOut.complexField = eca.post.subsectionNeighborhoodFirst(eca.specific.validSolutions[activeSolution], 400, 1000);
+        neighborhoodFirstOut.complexField = eca.post.subsection.subsectionNeighborhoodFirst(eca.specific.validSolutions[activeSolution], 400, 1000);
 
         String[] types = new String[]{"Single bit initial input", "Random initial input", "Solution applied with non negative reals", "Solution applied with complex, real part", "Solution applied with complex, imaginary part", "Solution applied with complex normalization first, real part", "Solution applied with complex normalization first, imaginary part"};
 
@@ -576,7 +576,7 @@ public class RuleImageCollection {
         swingComplexOutput.currentSolution = eca.specific.validSolutions[activeSolution];
         swingComplexOutput.complexField = eca.post.multiplicativeSolutionOutput(eca.specific.validSolutions[activeSolution], eca.post.randomComplexInput(-10, 10), 400, 1000);
         neighborhoodFirstOut.currentSolution = eca.specific.validSolutions[activeSolution];
-        neighborhoodFirstOut.complexField = eca.post.subsectionNeighborhoodFirst(eca.specific.validSolutions[activeSolution], 400, 1000);
+        neighborhoodFirstOut.complexField = eca.post.subsection.subsectionNeighborhoodFirst(eca.specific.validSolutions[activeSolution], 400, 1000);
 //        outputPanel.repaint();
 //        swingComplexOutput.repaint();
 //        neighborhoodFirstOut.repaint();
@@ -722,7 +722,7 @@ public class RuleImageCollection {
         swingComplexOutput.currentSolution = eca.specific.validSolutions[activeSolution];
         swingComplexOutput.complexField = eca.post.multiplicativeSolutionOutput(eca.specific.validSolutions[activeSolution], eca.post.randomComplexInput(-10, 10), 400, 1000);
         neighborhoodFirstOut.currentSolution = eca.specific.validSolutions[activeSolution];
-        neighborhoodFirstOut.complexField = eca.post.subsectionNeighborhoodFirst(eca.specific.validSolutions[activeSolution], 400, 1000);
+        neighborhoodFirstOut.complexField = eca.post.subsection.subsectionNeighborhoodFirst(eca.specific.validSolutions[activeSolution], 400, 1000);
 //        outputPanel.repaint();
 //        swingComplexOutput.repaint();
 //        neighborhoodFirstOut.repaint();

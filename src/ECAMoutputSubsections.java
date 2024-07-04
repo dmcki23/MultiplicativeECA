@@ -16,7 +16,7 @@ public class ECAMoutputSubsections {
 
     }
     /**
-     * This function transforms the output of a standard ECA calculation into the constituent factors of a solution from ECApathPermutations
+     * This function transforms the output of a standard additive ECA calculation into the constituent binary factors of a solution from ECApathPermutations as layers
      *
      * @param solution a valid solution from ECAasMultiplications
      * @param rows     number of rows to output
@@ -42,10 +42,16 @@ public class ECAMoutputSubsections {
                 }
             }
         }
+        for (int factor = 0; factor < numFactors; factor++) {
+            System.out.println("factor: "+ factor);
+            for (int row = 1; row < 20; row++) {
+                System.out.println(Arrays.toString(Arrays.copyOfRange(out[factor][row],columns/2-20,columns/2+20)));
+            }
+        }
         return out;
     }
     /**
-     * This function gets a subset of the output data calculated in validSolutionCoefficientCalculation(), non-negative real
+     * This function gets a subset of the output data calculated in multiplicativeSolutionOutput(), non-negative real
      *
      * @param solution a solution from ECAMspecific
      * @param rows     number of rows to output
@@ -86,7 +92,7 @@ public class ECAMoutputSubsections {
         return coeffField;
     }
     /**
-     * Gets a rectangular subsection of the output from validSolutionCoefficientCalculation(), complex vector, each unit vector is a column in the neighborhood after multiplication just before normalization
+     * Gets a rectangular subsection of the output from multiplicativeSolutionOutput(), complex vector, each unit vector is a column in the neighborhood after multiplication just before normalization
      *
      * @param solution ValidSolution used
      * @param rows     number of rows to return
@@ -105,7 +111,7 @@ public class ECAMoutputSubsections {
         return out;
     }
     /**
-     * Gets a rectangular subsection of the output from validSolutionCoefficientCalculation(), complex
+     * Gets a rectangular subsection of the output from multiplicativeSolutionOutput(), complex
      *
      * @param solution ValidSolution used
      * @param rows     number of rows to return
@@ -122,7 +128,7 @@ public class ECAMoutputSubsections {
         return out;
     }
     /**
-     * Returns a subsection of the vector field calculated in validSolutionCoefficientCalculation(), it is the neighborhood polynomial results just prior to the neighborhood normalization and just after the geometric mean
+     * Returns a subsection of the vector field calculated in multiplicativeSolutionOutput(), it is the neighborhood polynomial results just prior to the neighborhood normalization and just after the geometric mean
      *
      * @param solution a valid solution from ecam.specific
      * @param rows     number of rows to return
@@ -141,7 +147,7 @@ public class ECAMoutputSubsections {
         return out;
     }
     /**
-     * Returns a subsection of the vector field calculated in validSolutionCoefficientCalculation(), it is the neighborhood polynomial results just prior to the neighborhood normalization and just after the geometric mean
+     * Returns a subsection of the vector field calculated in multiplicativeSolutionOutput(), it is the neighborhood polynomial results just prior to the neighborhood normalization and just after the geometric mean
      *
      * @param solution a valid solution from ecam.specific
      * @param rows     number of rows to return
@@ -195,7 +201,7 @@ public class ECAMoutputSubsections {
      * @return two layer binary array with the sign values of the real and complex parts as 1s and 0s
      */
     public int[][][] subsectionComplexFieldToBinary(ValidSolution solution, int rows, int columns) {
-        int[][][] out = new int[2][rows][columns];
+        int[][][] out = new int[4][rows][columns];
         for (int row = 0; row < rows; row++) {
             for (int column = post.gridSize/2-columns/2; column < post.gridSize/2+columns/2; column++) {
                 if (post.complexField[row][column].real < 0) {
@@ -208,32 +214,70 @@ public class ECAMoutputSubsections {
                 } else {
                     out[1][row][column-post.gridSize/2+columns/2] = 0;
                 }
+                if (post.neighborhoodNormalizeFirst[row][column].real < 0) {
+                    out[2][row][column-post.gridSize/2+columns/2] = 1;
+                } else {
+                    out[2][row][column-post.gridSize/2+columns/2] = 0;
+                }
+                if (post.neighborhoodNormalizeFirst[row][column].imaginary < 0) {
+                    out[3][row][column-post.gridSize/2+columns/2] = 1;
+                } else {
+                    out[3][row][column-post.gridSize/2+columns/2] = 0;
+                }
             }
         }
 
-        int[] attemptedWolfram = new int[(int) Math.pow(2, solution.numBits*2)];
+        int[] attemptedWolfram = new int[(int) Math.pow(2, solution.numBits*4)];
         for (int spot = 0; spot < attemptedWolfram.length; spot++) {
             attemptedWolfram[spot] = -1;
         }
         int totWolframConflicts = 0;
+        int totSuccesses = 0;
         for (int row = 2; row < 75; row++) {
             for (int column = solution.numBits+row; column < columns-solution.numBits-row; column++) {
                 int tot = 0;
                 for (int spot = 0; spot < solution.numBits; spot++) {
                     tot += (int) Math.pow(2, spot) * out[0][row - 1][column - solution.numBits / 2 + spot];
                     tot += (int)Math.pow(2,spot+solution.numBits)*out[1][row-1][column-solution.numBits/2+spot];
+                    tot += (int)Math.pow(2,spot+2*solution.numBits)*out[2][row-1][column-solution.numBits/2+spot];
+                    tot += (int)Math.pow(2,spot+3*solution.numBits)*out[3][row-1][column-solution.numBits/2+spot];
+                }
+                int value = 0;
+                for (int power = 0; power < 4; power++){
+                    value += out[power][row][column]*(int)Math.pow(2,power);
                 }
                 if (attemptedWolfram[tot] == -1) {
-                    attemptedWolfram[tot] = out[0][row][column]+2*out[1][row][column];
-                } else if (attemptedWolfram[tot] == (out[0][row][column]+2*out[1][row][column])) {
-
-                } else if (attemptedWolfram[tot] != -1 && attemptedWolfram[tot] != (out[0][row][column]+2*out[1][row][column])) {
+                    attemptedWolfram[tot] = value;
+                    totSuccesses++;
+                } else if (attemptedWolfram[tot] == value) {
+                    totSuccesses++;
+                } else if (attemptedWolfram[tot] != -1 && attemptedWolfram[tot] != (value)) {
                     totWolframConflicts++;
                 }
             }
         }
         System.out.println("Total attempted Wolfram code conflicts: " + totWolframConflicts);
+        System.out.println("Total successful attempts: " + totSuccesses);
         System.out.println(Arrays.toString(attemptedWolfram));
         return out;
+    }
+    /**
+     * Value of each cell's input neighborhood from the binary additive version of the Wolfram code's output. If the Wolfram code is [0,1,0,1,0,1,0,1], each cell's neighborhood will be one of {0,1,2,3,4,5,6,7}
+     * @param solution solution that's been applied
+     * @param rows number of rows to output
+     * @param columns number of columns to output
+     * @return 2D array of each cell's neighborhood value
+     */
+    public int[][] additiveNeighborhood(ValidSolution solution, int rows, int columns){
+        int[][] out = new int[rows][columns];
+        for (int row = 1; row < rows; row++){
+            for (int column = solution.numBits; column < columns - solution.numBits; column++){
+                for (int place = 0; place < solution.numBits; place++){
+                    out[row][column] += (int)Math.pow(2,place)*post.ruleField[row-1][post.gridSize/2-columns/2+column-solution.numBits/2+place];
+                }
+            }
+        }
+        return out;
+
     }
 }

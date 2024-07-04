@@ -1,6 +1,6 @@
 import java.util.Arrays;
 /**
- * Main algorithm, heart of the project, takes a given length Wolfram code,searches sets of permutations that permute a cellular automata neighborhood such that their hypercomplex multiplication of  n dimensions always results in a value that is an equal Wolfram code value. Neighborhood permutation multiplication results in a pass-by-reference  array that reproduces the original Wolfram code. These results are stored in ValidSolution arrays and passed to ECAMpostProcessing for polynomial and output
+ * Main algorithm, Multiplications A, brute force hypercomplex multiplication validating a set of permutations. Neighborhood permutation multiplication results in a pass-by-reference  array that reproduces the original Wolfram code. These results are stored in ValidSolution arrays and passed to ECAMpostProcessing for polynomial and output
  */
 public class ECAMspecific {
     /**
@@ -48,7 +48,7 @@ public class ECAMspecific {
         searchStop = 60000 * 5;
     }
     /**
-     * Multiplications A in the paper.
+     * Multiplications A in the paper, on the Swing text output panel, this is the first set of output
      *
      * Finds permutation groups with length numFactors, of degree numBits, such that when each permutation is applied to its axis, the diagonal through the numFactors-dimensional multiplication table produces a pointer array that points to equal values of the original Wolfram code, reproducing the original Wolfram code.
      *

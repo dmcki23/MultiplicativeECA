@@ -98,70 +98,9 @@ public class Complex {
         return Math.atan((imaginary / real));
     }
     /**
-     * This function may or may not work, was used in trial and error normalizations of validSolutionCoefficientMultiplication() from ecam.post, not currently being used,
-     * The negative signs of the Math library trig functions was awkward
-     * @param a Complex base
-     * @param exponent to the power of
-     * @return a^exponent
+     * String of this complex number (real,imaginary)
+     * @return String of this complex number (real,imaginary)
      */
-    public static Complex toThePowerOf(Complex a, double exponent) {
-        Complex out = new Complex(0, 0);
-        double radius = (a.real * a.real + a.imaginary * a.imaginary);
-        radius = Math.sqrt(radius);
-        double theta = Math.PI / 2;
-        //if (Double.isNaN(theta)) theta = 0;
-        if (radius == 0){
-            theta = 0;
-        } else {
-            theta = Math.atan(((Math.abs(a.imaginary) / Math.abs(a.real)) ));
-
-        }
-        double aa = 0;
-        double bb = 0;
-        if (a.imaginary < 0) {
-            aa = 1;
-        } else {
-            aa = 0;
-        }
-        if (a.real < 0) {
-            bb = 1;
-        } else {
-            bb = 0;
-        }
-        if (aa == 0 && bb == 0) {
-        } else if (aa == 1 && bb == 0) {
-            theta += 3 * Math.PI / 2;
-        } else if (aa == 0 && bb == 1) {
-            theta += Math.PI / 2;
-        } else {
-            theta += Math.PI;
-        }
-        theta = theta * exponent;
-        theta = theta % (Math.PI * 2);
-        if (theta >= 0 && theta < Math.PI / 2) {
-            aa = 1;
-            bb = 1;
-        } else if (theta >= Math.PI / 2 && theta < Math.PI) {
-            aa = 1;
-            bb = -1;
-        } else if (theta >= Math.PI && theta < 3 * Math.PI / 2) {
-            aa = -1;
-            bb = -1;
-        } else {
-            aa = -1;
-            bb = 1;
-        }
-        double thetaQuarter = theta % (Math.PI / 4);
-        if (radius == 0) {
-            radius = Math.pow(radius, exponent);
-        } else {
-            radius = 0;
-        }
-        out.real = bb * radius * Math.cos(thetaQuarter);
-        out.imaginary = aa * radius * Math.sin(thetaQuarter);
-        return out;
-    }
-
     public String toString(){
         return "("+real+", "+imaginary+") ";
     }

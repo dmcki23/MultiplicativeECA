@@ -270,95 +270,22 @@ public class BasicECA {
      */
     public int[][] randomOut(int n, int rows, int columns, int widthRandom) {
         int[][] randOut = new int[rows + 1][columns];
+        Random rand = new Random();
         //initialize neighborhood to random values
         for (int column = 0; column < widthRandom; column++) {
-            randOut[0][columns / 2 - widthRandom / 2 + column] = randomInitOutput[0][column];
+            randOut[0][columns / 2 - widthRandom / 2 + column] = rand.nextInt(0,2);
         }
         for (int row = 1; row <= rows; row++) {
             for (int column = 1; column < columns - 2; column++) {
                 randOut[row][column] = (randOut[row - 1][column - 1] + 2 * randOut[row - 1][column] + 4 * randOut[row - 1][column + 1]);
                 randOut[row][column] = ruleTruthTable[n][randOut[row][column]];
-                //randomInitOutput[row][column] =  randOut[row][column];
             }
         }
         return randOut;
     }
-    /**
-     * Elementary cellular automata with single-bit initial input
-     *
-     * @param n elementary cellular automata rule, 0-255
-     * @return 2D binary integer array with the results of the ECA's single bit init input;
-     */
-    public int[][] basicOut(int n) {
-        int[][] out = new int[400][1000];
-        //initialize single bit init input
-        out[0][400] = 1;
-        //standard ECA calculation
-        for (int row = 1; row < 400; row++) {
-            for (int column = 1; column < 998; column++) {
-                out[row][column] = (out[row - 1][column - 1] + 2 * out[row - 1][column] + 4 * out[row - 1][column + 1]);
-                out[row][column] = ruleTruthTable[n][out[row][column]];
-            }
-        }
-        return out;
-    }
-    /**
-     * Elementary cellular automata with random initial input
-     *
-     * @param n elementary cellular automata rule, 0-255
-     * @return 2d integer array of ECA rule with random initial input
-     */
-    public int[][] randomOut(int n) {
-        int[][] randOut = new int[400][1000];
-        //initialize random input
-        for (int column = 400; column < 500; column++) {
-            randOut[0][column] = randomInitOutput[0][column];
-        }
-        //standard ECA calculation
-        for (int row = 1; row < 400; row++) {
-            for (int column = 1; column < 998; column++) {
-                randOut[row][column] = (randOut[row - 1][column - 1] + 2 * randOut[row - 1][column] + 4 * randOut[row - 1][column + 1]);
-                randOut[row][column] = ruleTruthTable[n][randOut[row][column]];
-            }
-        }
-        return randOut;
-    }
-    /**
-     * Console output of single-bit init input ECA
-     *
-     * @param inrule ECA rule to display
-     */
-    public void specificRuleOutput(int inrule) {
-        basicOut(inrule);
-        String outstring = "";
-        System.out.println("Specific Rule " + inrule + " Initial conditions one 1, the rest are 0");
-        for (int row = 0; row < 50; row++) {
-            for (int column = 475; column < 525; column++) {
-                if (basicOutput[row][column] == 1) {
-                    outstring += Integer.toString(basicOutput[row][column]);
-                } else {
-                    outstring += " ";
-                }
-            }
-            System.out.println(outstring);
-            outstring = "";
-        }
-        System.out.println();
-        outstring = "";
-        System.out.println("Specific Rule " + inrule + " Random Initial conditions");
-        for (int row = 0; row < 50; row++) {
-            for (int column = 1; column < 98; column++) {
-                if (randomInitOutput[row][column] == 1) {
-                    outstring += Integer.toString(randomInitOutput[row][column]);
-                } else {
-                    outstring += " ";
-                }
-            }
-            System.out.println(outstring);
-            outstring = "";
-        }
-        System.out.println();
-    }
+
+
+
     /**
      * Behavior classes of the ECA
      *

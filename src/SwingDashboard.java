@@ -105,6 +105,7 @@ public class SwingDashboard extends JPanel {
      * Displays the non-negative real output processed with the polynomial of the solution from generatePolynomial(), rather than multiplying out the whole numFactors-dim partial product table
      */
     SwingPolyTest swingPolyTest;
+    SwingBinaryFactorLayers swingBinaryFactorLayers;
 
     /**
      * Contains all the Java Swing component initialization and function-calling logic
@@ -119,10 +120,10 @@ public class SwingDashboard extends JPanel {
         neighborhoodFirstOut = new SwingComplexOutput("Multiplications C, construction from A; like B but normalization first");
         swingComplexLayers = new SwingComplexLayers("Multiplications B, complex neighborhood vector just prior to normalization");
         swingBinaryShadow = new SwingBinaryShadow("Binary shadow of complex Multiplications B");
+        swingBinaryFactorLayers = new SwingBinaryFactorLayers();
         swingPolyTest = new SwingPolyTest();
         //complexOutAlt = new SwingComplexOutput();
         consoleDashboard = new ConsoleDashboard(stp);
-        ecam.post.suppressConsole = true;
         coeffField = new double[1][1];
         addECAcomponents();
         addLogicComponents();
@@ -328,6 +329,13 @@ public class SwingDashboard extends JPanel {
                 swingBinaryShadow.repaint();
                 swingPolyTest.fieldFromPolynomial = ecam.post.subsection.subsectionCoefficientMultiplication(ecam.specific.validSolutions[activeSolution],400,1000);
                 swingPolyTest.repaint();
+                //ecam.post.subsection.subsectionFactorLayers(ecam.specific.validSolutions[activeSolution],400,1000);
+                swingBinaryFactorLayers.additiveLayer = ecam.post.subsection.additiveNeighborhood(ecam.specific.validSolutions[activeSolution],400,1000);
+                swingBinaryFactorLayers.layers = ecam.post.subsection.subsectionFactorLayers(ecam.specific.validSolutions[activeSolution],400,1000);
+                swingBinaryFactorLayers.solution = ecam.specific.validSolutions[activeSolution];
+                swingBinaryFactorLayers.updateBox();
+                swingBinaryFactorLayers.activeLayer = 0;
+                swingBinaryFactorLayers.updateText();
             }
         });
         deepButton.addActionListener(new ActionListener() {
@@ -487,6 +495,12 @@ public class SwingDashboard extends JPanel {
                 swingBinaryShadow.repaint();
                 swingPolyTest.fieldFromPolynomial = ecam.post.subsection.subsectionCoefficientMultiplication(ecam.specific.validSolutions[activeSolution],400,1000);
                 swingPolyTest.repaint();
+                swingBinaryFactorLayers.additiveLayer = ecam.post.subsection.additiveNeighborhood(ecam.specific.validSolutions[activeSolution],400,1000);
+                swingBinaryFactorLayers.layers = ecam.post.subsection.subsectionFactorLayers(ecam.specific.validSolutions[activeSolution],400,1000);
+                swingBinaryFactorLayers.solution = ecam.specific.validSolutions[activeSolution];
+                swingBinaryFactorLayers.updateBox();
+                swingBinaryFactorLayers.activeLayer = 0;
+                swingBinaryFactorLayers.updateText();
             }
         });
         deepLogicButton.addActionListener(new ActionListener() {
@@ -654,6 +668,12 @@ public class SwingDashboard extends JPanel {
                 swingBinaryShadow.repaint();
                 swingPolyTest.fieldFromPolynomial = ecam.post.subsection.subsectionCoefficientMultiplication(ecam.specific.validSolutions[0],400,1000);
                 swingPolyTest.repaint();
+                swingBinaryFactorLayers.additiveLayer = ecam.post.subsection.additiveNeighborhood(ecam.specific.validSolutions[0],400,1000);
+                swingBinaryFactorLayers.layers = ecam.post.subsection.subsectionFactorLayers(ecam.specific.validSolutions[0],400,1000);
+                swingBinaryFactorLayers.solution = ecam.specific.validSolutions[0];
+                swingBinaryFactorLayers.updateBox();
+                swingBinaryFactorLayers.activeLayer = 0;
+                swingBinaryFactorLayers.updateText();
             }
         });
         JComboBox normalizeUnitBox = new JComboBox();

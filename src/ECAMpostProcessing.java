@@ -1,19 +1,19 @@
 import java.util.Arrays;
 import java.util.Random;
 /**
- * Secondary processing of solutions found in ECAasMultiplication, generates output of a ValidSolution, generates the polynomial
+ * Secondary processing of solutions found in ECAasMultiplication, Multiplications B and C, generates output of a ValidSolution, generates the polynomial
  *
  * @author Daniel W McKinley
  */
 public class ECAMpostProcessing {
-    /**
-     * When false, some functions output to the console, when true this console output is suppressed
-     */
-    boolean suppressConsole;
+
     /**
      * General permutations and factoradic utility class
      */
     PermutationsFactoradic pf = new PermutationsFactoradic();
+    /**
+     * Manages trimming the output arrays to size
+     */
     ECAMoutputSubsections subsection;
     /**
      * Variable used in outputting to console
@@ -40,7 +40,7 @@ public class ECAMpostProcessing {
      */
     public int widthOfRandomInput = 50;
     /**
-     * 2D array of doubles with the coefficients of a validSolutionCoefficientCalculation()
+     * 2D array of doubles with the coefficients of a multiplicativeSolutionOutput()
      */
     public double[][] field;
     /**
@@ -48,11 +48,11 @@ public class ECAMpostProcessing {
      */
     public double[][] fieldFromPolynomial;
     /**
-     * Binary 2D array of integers of a Wolfram code calculation with given input that validSolutionCoefficientCalculation() parallel multiplication operates
+     * Binary 2D array of integers of a Wolfram code calculation with given input that multiplicativeSolutionOutput() parallel multiplication operates
      */
     public int[][] ruleField;
     /**
-     * Binary 2D array of the Wolfram code output
+     * Binary 2D array of the binary additive Wolfram code output
      */
     public int[][] ruleOutput;
     /**
@@ -74,11 +74,11 @@ public class ECAMpostProcessing {
      */
     public double[][][] vectorField;
     /**
-     * Output of a ValidSolution in validSolutionCoefficientCalculation(), complex vector, Multiplications B just prior to normalization
+     * Output of a ValidSolution in multiplicativeSolutionOutput(), complex vector, Multiplications B just prior to normalization
      */
     public Complex[][][] complexVectorField;
     /**
-     * Output of a ValidSolution in validSolutionCoefficientCalculation(), complex, Multiplications B, after normalization
+     * Output of a ValidSolution in multiplicativeSolutionOutput(), complex, Multiplications B, after normalization
      */
     public Complex[][] complexField;
     /**
@@ -90,7 +90,7 @@ public class ECAMpostProcessing {
      */
     boolean useComplexComponentRoots;
     /**
-     * How many rows and columns to calculate. validSolutionCoefficientCalculation() calculates this size field, the other functions operate as subsets of this array[gridSize][gridSize].
+     * Number of columns in the output, must be larger than the input array parameter in multiplicativeSolutionOutput().
      */
     public int gridSize;
     /**
@@ -127,10 +127,10 @@ public class ECAMpostProcessing {
         subsection = new ECAMoutputSubsections(this);
     }
     /**
-     * Uses a solution found in ECAasMultiplication and applies the same permutation group multiplication to a neighborhood of non-negative real numbers in addition to the standard binary Wolfram calculation. The partialProduct[][] table is a class field set
+     * Multiplications B, Uses a solution found in ECAasMultiplication and applies the same permutation group multiplication to a neighborhood of non-negative real numbers in addition to the standard binary Wolfram calculation. In this version the standard binary Wolfram code output moderates the non-negative real multiplications by only setting the cell's double value if the binary addtive Wolfram code call for that neighborhood is 1. The partialProduct[][] table is a class field set
      * externally from this function. The partialProduct[][] table is a closed group of size numBits x numBits, typically Galois addition or multiplication
      * <p>
-     * Non-negative real
+     * Non-negative real hybrid with binary additive Wolfram code output
      *
      * @param solution    user-supplied ValidSolution from ECAasMultiplication
      * @param binaryInput user-supplied binary array to use as input at row 0 in the ECA calculation
@@ -664,7 +664,7 @@ public class ECAMpostProcessing {
     }
 
     /**
-     * Generates the standard Wolfram code calculation with single bit initial input using the given truth table
+     * Generates the standard binary additive Wolfram code calculation with single bit initial input using the given truth table
      *
      * @param wolframCode binary array of length powers of 2
      * @param rows        number of rows to output

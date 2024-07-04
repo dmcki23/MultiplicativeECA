@@ -1,7 +1,7 @@
 
 import java.util.Arrays;
 /**
- *  Console output
+ *  Text output
  */
 public class ConsoleDashboard {
     /**

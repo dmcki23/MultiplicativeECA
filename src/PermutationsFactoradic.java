@@ -542,7 +542,7 @@ public class PermutationsFactoradic {
         }
     }
     /**
-     * Wrapper function that calls combinationUtil() to produce all combinations of size r
+     * Calls combinationUtil() to produce all combinations of size r
      * from an array of size n.
      *
      * @param n size of alphabet

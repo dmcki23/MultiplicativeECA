@@ -35,7 +35,7 @@ public class CayleyDickson {
      */
     public int[] binPowers = new int[16];
     /**
-     * Wrapper function used to initiate the recursion when multiplying hypercomplex numbers. Initializes the factoradics.
+     * Multiplies two permuted Cayley-Dickson nion unit vectors. Wrapper function used to initiate the recursion when multiplying hypercomplex numbers. Initializes the factoradics.
      *
      * @param rootDegree hypercomplex degree, 2 = quaternions, 3 = octonions, 4 = sedonions, etc
      * @param row        first hypercomplex unit vector factor
@@ -580,9 +580,8 @@ public class CayleyDickson {
         return isLatin;
     }
     /**
-     * Pre-calculates the multiplication tables of the permuted Cayley-Dickson quaternions,
-     * octonions, and sedonions. Pre-calculating beyond sedonions (with 5!*5! entries) is very
-     * time and memory intensive.
+     * Pre-calculates the entire set of multiplication tables of the permuted Cayley-Dickson quaternions,
+     * octonions, and sedonions. Pre-calculating beyond sedonions, O(n)=d!*d!*2^(2*d+1), blows up Java
      *
      * @param degree degree hypercomplex, 2 = quaternions, 3 = octonions, 4 = sedonions...
      * @return an array of all permuted Cayley-Dickson multiplication tables for degree hypercomplex

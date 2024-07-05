@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
 import java.util.Arrays;
 /**
- * Swing component used to display a specific solution from ECAasMultiplication
+ * Multiplications B and C output, seperately
  */
 public class SwingComplexOutput extends JPanel {
     /**

@@ -7,7 +7,7 @@ import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
 import java.util.Arrays;
 /**
- * Swing component used to display a specific solution from ECAasMultiplication
+ * Multiplications B, complex, just prior to normalization is a neighborhood of complex data than can be interpreted as a components of a vector for that cell
  */
 public class SwingComplexLayers extends JPanel {
     /**

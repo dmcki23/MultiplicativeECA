@@ -120,7 +120,7 @@ public class GaloisFields {
         return out;
     }
     /**
-     * Checks how many factors are required to produce an identity array with Galois multiplication tables. Hypercomplex tables
+     * Checks how many factors are required to produce an identity array diagonal with Galois multiplication tables. Hypercomplex tables
      */
     public void numFactorsRequiredForIdentity(){
         int[] primes = new int[]{2,3,5,7,11,13,17};

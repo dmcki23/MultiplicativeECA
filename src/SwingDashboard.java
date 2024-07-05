@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 /**
- * GUI control panel, manages the other Swing classes, there is no algorithm logic in the GUI components, that is all in ECAasMultiplications. This GUI is not necessary for the algorithm, and can be split off for integration in other projects.
+ * GUI control panel, manages the other Swing classes, there is no algorithm logic in the GUI components, that is all in ECAasMultiplication. This GUI is not necessary for the algorithm, and can be split off for integration in other projects.
  */
 public class SwingDashboard extends JPanel {
 
@@ -105,6 +105,9 @@ public class SwingDashboard extends JPanel {
      * Displays the non-negative real output processed with the polynomial of the solution from generatePolynomial(), rather than multiplying out the whole numFactors-dim partial product table
      */
     SwingPolyTest swingPolyTest;
+    /**
+     * Multiplications A, each layer is a factor for that cell
+     */
     SwingBinaryFactorLayers swingBinaryFactorLayers;
 
     /**
@@ -286,7 +289,7 @@ public class SwingDashboard extends JPanel {
                         }
                     }
                 }
-                beca.widthRandom = slider.getValue();
+                //beca.widthRandom = slider.getValue();
                 ecam.post.widthOfRandomInput = slider.getValue();
                 ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution], ecam.post.randomBinaryInput(), ecam.post.randomDoubleInput(0, componentRandRangeMax), 400, 1000);
                 ecam.specific.validSolutions[activeSolution].polynomial = ecam.post.generatePolynomial(ecam.specific.validSolutions[activeSolution]);

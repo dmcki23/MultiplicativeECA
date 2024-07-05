@@ -1,5 +1,3 @@
-
-import java.util.Arrays;
 /**
  * Exhaustively searches sets of  all Wolfram codes of various lengths, with various parameters
  */
@@ -138,8 +136,8 @@ public class ECAMdeep {
         String outstring = "";
         System.out.println("Total Solutions grouped by left right black white rule symmetry");
         for (int group = 0; group < 88; group++) {
-            System.out.println("Group " + group + ": " + ecam.beca.equivRules[group][0] + " " + ecam.beca.equivRules[group][1] + " " + ecam.beca.equivRules[group][2] + " " + ecam.beca.equivRules[group][3]);
-            System.out.println(ecaSolutionTotals[ecam.beca.equivRules[group][0]] + " " + ecaSolutionTotals[ecam.beca.equivRules[group][1]] + " " + ecaSolutionTotals[ecam.beca.equivRules[group][2]] + " " + ecaSolutionTotals[ecam.beca.equivRules[group][3]]);
+            System.out.println("Group " + group + ": " + ecam.beca.lrbwGroups[group][0] + " " + ecam.beca.lrbwGroups[group][1] + " " + ecam.beca.lrbwGroups[group][2] + " " + ecam.beca.lrbwGroups[group][3]);
+            System.out.println(ecaSolutionTotals[ecam.beca.lrbwGroups[group][0]] + " " + ecaSolutionTotals[ecam.beca.lrbwGroups[group][1]] + " " + ecaSolutionTotals[ecam.beca.lrbwGroups[group][2]] + " " + ecaSolutionTotals[ecam.beca.lrbwGroups[group][3]]);
             System.out.println();
         }
         outstring = "";
@@ -223,8 +221,8 @@ public class ECAMdeep {
         outstring = "";
         outstring += "\n" + ("Total Solutions grouped by left right black white rule symmetry\n");
         for (int group = 0; group < 88; group++) {
-            outstring += "\n" + ("Group " + group + ": " + ecam.beca.equivRules[group][0] + " " + ecam.beca.equivRules[group][1] + " " + ecam.beca.equivRules[group][2] + " " + ecam.beca.equivRules[group][3]);
-            outstring += "\n" + (ecaSolutionTotals[ecam.beca.equivRules[group][0]] + " " + ecaSolutionTotals[ecam.beca.equivRules[group][1]] + " " + ecaSolutionTotals[ecam.beca.equivRules[group][2]] + " " + ecaSolutionTotals[ecam.beca.equivRules[group][3]]);
+            outstring += "\n" + ("Group " + group + ": " + ecam.beca.lrbwGroups[group][0] + " " + ecam.beca.lrbwGroups[group][1] + " " + ecam.beca.lrbwGroups[group][2] + " " + ecam.beca.lrbwGroups[group][3]);
+            outstring += "\n" + (ecaSolutionTotals[ecam.beca.lrbwGroups[group][0]] + " " + ecaSolutionTotals[ecam.beca.lrbwGroups[group][1]] + " " + ecaSolutionTotals[ecam.beca.lrbwGroups[group][2]] + " " + ecaSolutionTotals[ecam.beca.lrbwGroups[group][3]]);
             outstring += "\n";
         }
         outstring += "\n";

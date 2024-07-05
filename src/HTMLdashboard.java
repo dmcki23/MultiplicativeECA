@@ -18,7 +18,7 @@ public class HTMLdashboard {
         for (int row = 0; row < 88; row++) {
             out += "<tr>\n";
             for (int column = 0; column < 4; column++) {
-                out += "<td>" + "<a href=\"..\\ECA_" + beca.equivRules[row][column] + "\\ECA_" + beca.equivRules[row][column] + "_index.html\">" + beca.equivRules[row][column] + "</a>" + "</td>\n";
+                out += "<td>" + "<a href=\"..\\ECA_" + beca.lrbwGroups[row][column] + "\\ECA_" + beca.lrbwGroups[row][column] + "_index.html\">" + beca.lrbwGroups[row][column] + "</a>" + "</td>\n";
             }
             out += "</tr>\n";
         }
@@ -53,9 +53,9 @@ public class HTMLdashboard {
         for (int row = 0; row < 88; row++) {
             out += "<tr>\n";
             for (int column = 0; column < 4; column++) {
-                out += "<td>" + "<a href=\"ECA_" + beca.equivRules[row][column] + "\\ECA_" + beca.equivRules[row][column] + "_index.html\">" + beca.equivRules[row][column] + "</a>" + "</td>\n";
+                out += "<td>" + "<a href=\"ECA_" + beca.lrbwGroups[row][column] + "\\ECA_" + beca.lrbwGroups[row][column] + "_index.html\">" + beca.lrbwGroups[row][column] + "</a>" + "</td>\n";
             }
-            out += "<td> Class: " + beca.ruleClasses[beca.equivRules[row][0]] + "</td>";
+            out += "<td> Class: " + beca.ruleClasses[beca.lrbwGroups[row][0]] + "</td>";
             out += "</tr>\n";
         }
         out += "</table>\n";

@@ -212,14 +212,14 @@ public class ECAMpostProcessing {
                 //normalize factor-wise
                 for (int place = 0; place < places; place++) {
                     mults[numFactors][place] = geometricMean(mults[numFactors - 1][place], numFactors);
-                    if (ruleField[row][column] == 1) {
+                    if (ruleField[row][column] == 1 || !doAddititiveWolfram) {
                         vectorField[place][row][column] = mults[numFactors - 1][place];
                     } else {
                         vectorField[place][row][column] = 0;
                     }
                 }
                 //if the standard ECA calculation value at each cell is zero, the coefficient is zero
-                if (ruleField[row][column] == 1) {
+                if (ruleField[row][column] == 1 || !doAddititiveWolfram) {
                     //normalize neighborhood-wise
                     field[row][column] = localNormalize(mults[numFactors]);
                 }

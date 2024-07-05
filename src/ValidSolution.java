@@ -1,5 +1,5 @@
 /**
- * A solution from ECAasMultiplication is in this form
+ * A solution from ECAMspecific.generalWolframCode() is in this form
  */
 public class ValidSolution {
     /**

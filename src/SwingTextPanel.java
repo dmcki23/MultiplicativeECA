@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Arrays;
 /**
- * This panel replaces console output, it is text output in a form copyable to a clipboard, JARs don't have a default console to output text to
+ * Swing text output in a form copyable to a clipboard, JARs don't have a default console to output text to
  */
 public class SwingTextPanel extends JPanel {
     /**

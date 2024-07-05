@@ -9,14 +9,7 @@ public class CayleyDickson {
      * Initializes some binary arrays, otherwise empty
      */
     public CayleyDickson() {
-        for (int n = 0; n < 512; n++) {
-            int temp = n;
-            for (int power = 0; power < 9; power++) {
-                numasbin[n][power] = temp % 2;
-                temp = temp - (temp % 2);
-                temp = temp / 2;
-            }
-        }
+
         for (int power = 0; power < 16; power++) {
             binPowers[power] = (int) Math.pow(2, power);
         }
@@ -26,10 +19,7 @@ public class CayleyDickson {
      * General permutations and factoradic class
      */
     public PermutationsFactoradic pf = new PermutationsFactoradic();
-    /**
-     * Integers as a binary array
-     */
-    public int[][] numasbin = new int[512][9];
+
     /**
      * Powers of two in array form, for performance rather than a Math.pow library call
      */

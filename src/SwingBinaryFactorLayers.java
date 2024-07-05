@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 /**
- * Each cell in the output of the standard additive Wolfram code output has a value that is the weighted binary sum of its input neighborhood, if the Wolfam code is [1,1,1,1,0,0,0,0] the neighborhoods can be one of [0,1,2,3,4,5,6,7]. A Multiplications A ValidSolution from ECAMspecific permutes this neighborhood for each permutation in the set, becoming a set of binary hypercomplex factors for each cell. This class displays that information layer-by-layer
+ * Each cell's set of permuted neighborhoods as factors in Multiplications A, layer by layer, layer = numFactors is the result layer
  */
 public class SwingBinaryFactorLayers extends JPanel {
     /**

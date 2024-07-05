@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
 import java.util.Arrays;
 /**
- * Swing component used to display a specific solution from ECAasMultiplication
+ * Displays the standard additive binary Wolfram code output for single bit and random initial input, as well as non-negative real input
  */
 public class SwingOutputPanel extends JPanel {
     /**

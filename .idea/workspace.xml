@@ -4,21 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="the split off of the subsection() functions works, updated Javadoc comments, tweaked some formatting in the SwingTextPanel output, the buttons all work">
-      <change afterPath="$PROJECT_DIR$/src/SwingBinaryFactorLayers.java" afterDir="false" />
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="Another run through Javadoc, paper tweak, added SwingBinaryFactorLayers and the GUI routing, it has not been 100% tested yet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/BasicECA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BasicECA.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CayleyDickson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CayleyDickson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Complex.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Complex.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ConsoleDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ConsoleDashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECAMoutputSubsections.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMoutputSubsections.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ECAMdeep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMdeep.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ECAMpostProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMpostProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECAMspecific.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMspecific.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Fano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fano.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GaloisFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GaloisFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HTMLdashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HTMLdashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Paper/Paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/Paper.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PermutationsFactoradic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PermutationsFactoradic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SwingBinaryFactorLayers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingBinaryFactorLayers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SwingBinaryShadow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingBinaryShadow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SwingComplexLayers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingComplexLayers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SwingComplexOutput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingComplexOutput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SwingDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingDashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SwingOutputPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingOutputPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SwingPolyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingPolyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SwingTextPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingTextPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ValidSolution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ValidSolution.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -459,7 +465,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719983158117</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Another run through Javadoc, paper tweak, added SwingBinaryFactorLayers and the GUI routing, it has not been 100% tested yet">
+      <option name="closed" value="true" />
+      <created>1720071931056</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1720071931056</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -474,7 +488,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial commit" />
     <MESSAGE value="debugging image paths" />
     <MESSAGE value="changed the paper a little, got rid of two scratch paper classes" />
     <MESSAGE value="debugging the openjournal pdf compiler" />
@@ -499,6 +512,7 @@
     <MESSAGE value="went through Javadoc comments, went through inline main algorithm comments in all the ECAM classes, deleted some out of scope functions in Fano, deleted an out of scope scratchpaper class" />
     <MESSAGE value="added SwingPolyTest" />
     <MESSAGE value="the split off of the subsection() functions works, updated Javadoc comments, tweaked some formatting in the SwingTextPanel output, the buttons all work" />
-    <option name="LAST_COMMIT_MESSAGE" value="the split off of the subsection() functions works, updated Javadoc comments, tweaked some formatting in the SwingTextPanel output, the buttons all work" />
+    <MESSAGE value="Another run through Javadoc, paper tweak, added SwingBinaryFactorLayers and the GUI routing, it has not been 100% tested yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Another run through Javadoc, paper tweak, added SwingBinaryFactorLayers and the GUI routing, it has not been 100% tested yet" />
   </component>
 </project>

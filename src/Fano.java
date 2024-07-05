@@ -22,16 +22,16 @@ public class Fano {
      */
     public int[][][] fanoTriplets;
     /**
-     * The 480 Fano plane bitmask sets
+     * The 480 Fano plane bitmask sets that keep the associator of the triplet set equal to zero
      */
     public int[] fanoBitmasks;
     /**
-     * Used in fanoTest() and testUtil(), number octonion tables between different
-     * generation algorithms that are exactly equal.
+     * Used in fanoTest() and testUtil(), number of octonion tables exactly equal between different
+     * generation algorithms
      */
     public int exactSame = 0;
     /**
-     * Used in fanoTest() and testUtil(), number of exactly the same octonion tables between different
+     * Used in fanoTest() and testUtil(), number of partially equal octonion tables between different
      * generation algorithms. partialSame is if the unit vectors are the same, but the negative signs are different
      */
     public int partialSame = 0;

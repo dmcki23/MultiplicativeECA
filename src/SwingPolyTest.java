@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferInt;
 /**
- * Displays results of the non-negative real output processed with the polynomial from generatePolynomial() rather than multiplying out the whole numFactors-dim partial product table
+ * Multiplications B, displays results of the non-negative real output processed with the polynomial from generatePolynomial() rather than multiplying out the whole numFactors-dim partial product table, verifies generatePolynomial()
  */
 public class SwingPolyTest extends JPanel {
     /**

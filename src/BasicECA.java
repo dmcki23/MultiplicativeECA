@@ -4,27 +4,20 @@ import java.util.Random;
  * Utility class for elementary cellular automata (ECA), Wolfram codes 0-255
  */
 public class BasicECA {
-    /**
-     * General permutations and factoradic utility class
-     */
-    public PermutationsFactoradic pf = new PermutationsFactoradic();
-    /**
-     * numRowsOutput + 1 = the number of rows in the output grids
-     * 3*(numRowsOutput + 1) = the number of columns in the output grids
-     */
-    public int numRowsOutput = 1000;
+
+
     /**
      * ECA 0-255 symmetry groups
      */
-    public int[][] lrTableInDecimal = new int[256][4];
+    public int[][] lrbwByRule = new int[256][4];
     /**
      * ECA 0-255 symmetry groups arranged by 0-88 independent groups
      */
-    public int[][] equivRules = new int[88][4];
+    public int[][] lrbwGroups = new int[88][4];
     /**
      * ECA Wolfram Codes 0-255
      */
-    public int[][] ruleTruthTable = new int[256][8];
+    public int[][] ecaWolframCodes = new int[256][8];
     /**
      * True means use single bit init input, false means use random input
      */
@@ -34,38 +27,20 @@ public class BasicECA {
      */
     public int wolframLength;
     /**
-     * User generated initial input
+     * Numbers in binary array form
      */
     public int[][] initInput;
-    /**
-     * Single bit initial input ECA output
-     */
-    public int[][] basicOutput = new int[numRowsOutput + 1][3 * (numRowsOutput + 1)];
-    /**
-     * Random initial input ECA output;
-     */
-    public int[][] randomInitOutput = new int[numRowsOutput + 1][3 * (numRowsOutput + 1)];
+
     /**
      * Wolfram codes of ECA beyond row 1, by size of input neighborhood, includes even numbers as a 2-bit place number.
      * Contains data for the last extended ECA rule in ruleExtension()
      */
     public int[][] ruleExtensions = new int[10][1024];
-    /**
-     * Width of random input to generate, in columns
-     */
-    public int widthRandom = 50;
+
     /**
      * Wolfram complexity classification, by rule
      */
     public int[] ruleClasses;
-    /**
-     * Wolfram complexity classification, by class
-     */
-    public int[][] classesRules;
-    /**
-     * ECA with permuted index bits, the left-right symmetry is a specific case of this, reversing the order of bits
-     */
-    public int[][] cousins;
     /**
      * Init
      */
@@ -74,7 +49,7 @@ public class BasicECA {
         for (int n = 0; n < 256; n++) {
             int temp = n;
             for (int power = 0; power < 8; power++) {
-                ruleTruthTable[n][power] = temp % 2;
+                ecaWolframCodes[n][power] = temp % 2;
                 temp = temp - (temp % 2);
                 temp = temp / 2;
             }
@@ -100,7 +75,7 @@ public class BasicECA {
     public int[][] ruleExtension(int n) {
         int[][] out = new int[10][512];
         for (int spot = 0; spot < 8; spot++) {
-            out[3][spot] = ruleTruthTable[n][spot];
+            out[3][spot] = ecaWolframCodes[n][spot];
         }
         int[][] field;
         //odd numbered neighborhoods
@@ -166,18 +141,18 @@ public class BasicECA {
             int[][] out = new int[4][8];
             for (int power = 0; power < 8; power++) {
                 //identity
-                out[0][power] = ruleTruthTable[n][power];
+                out[0][power] = ecaWolframCodes[n][power];
                 //reverse code order and negate
-                out[1][power] = ruleTruthTable[n][7 - power];
+                out[1][power] = ecaWolframCodes[n][7 - power];
                 out[1][power] = (out[1][power] + 1) % 2;
                 //reverse bit order
                 int lr = 0;
                 for (int bit = 0; bit < 3; bit++) {
                     lr += (int) Math.pow(2, 2 - bit) * (power / (int) Math.pow(2, bit) % 2);
                 }
-                out[2][power] = ruleTruthTable[n][lr];
+                out[2][power] = ecaWolframCodes[n][lr];
                 //reverse code order and negate
-                out[3][7 - power] = ruleTruthTable[n][lr];
+                out[3][7 - power] = ecaWolframCodes[n][lr];
                 out[3][7 - power] = (out[3][7 - power] + 1) % 2;
             }
             //generate integer values of Wolfram codes
@@ -187,13 +162,13 @@ public class BasicECA {
                 }
             }
             for (int var = 0; var < 4; var++) {
-                lrTableInDecimal[n][var] = outDec[var];
+                lrbwByRule[n][var] = outDec[var];
             }
         }
         //This section groups the 256 elementary rules into the 88 independent symmetry groups
         for (int i = 0; i < 88; i++) {
             for (int j = 0; j < 4; j++) {
-                equivRules[i][j] = -1;
+                lrbwGroups[i][j] = -1;
             }
         }
         boolean spotFound = true;
@@ -201,24 +176,24 @@ public class BasicECA {
             spotFound = false;
             boolean alreadyEqual = false;
             int index = 0;
-            if (equivRules[index][0] == -1 || n == equivRules[index][0] || n == equivRules[index][1] || n == equivRules[index][2] || n == equivRules[index][3]) {
+            if (lrbwGroups[index][0] == -1 || n == lrbwGroups[index][0] || n == lrbwGroups[index][1] || n == lrbwGroups[index][2] || n == lrbwGroups[index][3]) {
                 spotFound = true;
-                if (equivRules[index][0] == n || equivRules[index][1] == n || equivRules[index][2] == n || equivRules[index][3] == n) {
+                if (lrbwGroups[index][0] == n || lrbwGroups[index][1] == n || lrbwGroups[index][2] == n || lrbwGroups[index][3] == n) {
                     alreadyEqual = true;
                 }
             }
             while (!spotFound) {
                 index++;
-                if (equivRules[index][0] == -1 || n == equivRules[index][0] || n == equivRules[index][1] || n == equivRules[index][2] || n == equivRules[index][3]) {
+                if (lrbwGroups[index][0] == -1 || n == lrbwGroups[index][0] || n == lrbwGroups[index][1] || n == lrbwGroups[index][2] || n == lrbwGroups[index][3]) {
                     spotFound = true;
                 }
-                if (equivRules[index][0] == n || equivRules[index][1] == n || equivRules[index][2] == n || equivRules[index][3] == n) {
+                if (lrbwGroups[index][0] == n || lrbwGroups[index][1] == n || lrbwGroups[index][2] == n || lrbwGroups[index][3] == n) {
                     alreadyEqual = true;
                 }
             }
             if (!alreadyEqual) {
                 for (int column = 0; column < 4; column++) {
-                    equivRules[index][column] = lrTableInDecimal[n][column];
+                    lrbwGroups[index][column] = lrbwByRule[n][column];
                 }
             }
             //System.out.println("n, " + n + " index, " + index);
@@ -230,12 +205,12 @@ public class BasicECA {
     public void display() {
         System.out.println("All elementary automata rules and their equivalents");
         for (int n = 0; n < 256; n++) {
-            System.out.println(Arrays.toString(lrTableInDecimal[n]));
+            System.out.println(Arrays.toString(lrbwByRule[n]));
         }
         System.out.println("Equivalent Rules sorted by group");
         for (int rule = 0; rule < 88; rule++) {
             //System.out.println("spot: " + rule + " \t" + equivRules[rule][0] + "\t" + equivRules[rule][1] + "\t" + equivRules[rule][2] + "\t" + equivRules[rule][3]);
-            System.out.println(Arrays.toString(equivRules[rule]));
+            System.out.println(Arrays.toString(lrbwGroups[rule]));
         }
     }
     /**
@@ -254,7 +229,7 @@ public class BasicECA {
         for (int row = 1; row <= rows; row++) {
             for (int column = 1; column < columns - 2; column++) {
                 out[row][column] = (out[row - 1][column - 1] + 2 * out[row - 1][column] + 4 * out[row - 1][column + 1]);
-                out[row][column] = ruleTruthTable[n][out[row][column]];
+                out[row][column] = ecaWolframCodes[n][out[row][column]];
             }
         }
         return out;
@@ -273,19 +248,16 @@ public class BasicECA {
         Random rand = new Random();
         //initialize neighborhood to random values
         for (int column = 0; column < widthRandom; column++) {
-            randOut[0][columns / 2 - widthRandom / 2 + column] = rand.nextInt(0,2);
+            randOut[0][columns / 2 - widthRandom / 2 + column] = rand.nextInt(0, 2);
         }
         for (int row = 1; row <= rows; row++) {
             for (int column = 1; column < columns - 2; column++) {
                 randOut[row][column] = (randOut[row - 1][column - 1] + 2 * randOut[row - 1][column] + 4 * randOut[row - 1][column + 1]);
-                randOut[row][column] = ruleTruthTable[n][randOut[row][column]];
+                randOut[row][column] = ecaWolframCodes[n][randOut[row][column]];
             }
         }
         return randOut;
     }
-
-
-
     /**
      * Behavior classes of the ECA
      *
@@ -301,15 +273,11 @@ public class BasicECA {
         for (int row = 0; row < 4; row++) {
             for (int spot = 0; spot < classes[row].length; spot++) {
                 for (int symm = 0; symm < 4; symm++) {
-                    ruleClasses[lrTableInDecimal[classes[row][spot]][symm]] = row + 1;
+                    ruleClasses[lrbwByRule[classes[row][spot]][symm]] = row + 1;
                 }
             }
         }
-
-
-        classesRules = classes;
         return ruleClasses;
     }
-
 }
 

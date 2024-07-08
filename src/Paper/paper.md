@@ -22,7 +22,7 @@ The code repository is at https://github.com/dmcki23/MultiplicativeECA.
 
 # Statement of Need
 
- The main algorithm produces several multiplicative versions of any given standard additive binary Wolfram code up to 32 bits and is written to support user supplied complex input at row 0 with choice of type of multiplication tables and partial product tables among other parameters. An algebraic polynomial of the automata that works with real and complex numbers is produced, and the hypercomplex 5-factor identity solution allows for the complex extension of any binary cellular automata. The GUI, though not required, allows for visual exploration of solutions with easy access to various parameters. The Java this is written in is designed to integrate well in other programs, such as Mathematica's JLink or Matlab, and is documented with Javadoc. The Cayley-Dickson and Fano construction libraries may be of value to the open source community as well. 
+ Very loosely analogous to DeMorgan's law in Boolean algebra, the main algorithm produces several multiplicative versions of any given standard additive binary Wolfram code up to 32 bits and is written to support user supplied complex input at row 0 with choice of type of multiplication tables and partial product tables among other parameters. An algebraic polynomial of the automata that works with real and complex numbers is produced, and the hypercomplex 5-factor identity solution allows for the complex extension of any binary cellular automata. The GUI, though not required, allows for visual exploration of solutions with easy access to various parameters. The Java this is written in is designed to integrate well in other programs, such as Mathematica's JLink or Matlab, and is documented with Javadoc. The Cayley-Dickson and Fano construction libraries may be of value to the open source community as well. 
 
 There are other cellular automata implementations, Mathematica [@Mathematica], CellPyLib [@Antunes2021], a JOSS Python project from three years ago, and books that cover related territory [@Ceccherini-Silberstein2023]. What sets this library apart is the conversion of any existing binary automata rule from additive to multiplicative and its extension to complex numbers without restrictions such as linearity of the rule. 
 
@@ -34,7 +34,15 @@ Hypercomplex unit vector implementation\
 The Cayley-Dickson (CD) and Fano support classes are discussed in greater detail in the readme and the documentation, they along with the Galois class provide sets of multiplication tables to be compared with cellular automata. The CD multiplication implementation permutes the steps of splitting and recombining hypercomplex numbers to increase the scope of the CD equation, $(a,b)x(c,d)=(ac-d*b,da+bc*)$, where * is the conjugate. It verifies itself by producing the symmetric group of its degree when interacting with other CD multiplications. The Fano library octonions produce a triplet that is a linear match to the CD octonions as triplets{0} when the up and down recursion factoradics are equal, and produce the triplet set of John Baez's Fano plane as triplets{10}. [@Baez].\
 
 The main algorithm uses a set of permutations operating on cellular automata input, each permutation permuting the neighborhood, becoming a factor, with four kinds of multiplications. The multiplication tables are input as 2D but used as N-D, where N=numFactors.\
-![The four kinds of multiplication used](MultiplicationsDiagram.jpg)
+![The four kinds of multiplication used](MultiplicationsDiagram.jpg)\
+
+Multiplications A, additive to multiplicative\
+r = specific Wolfram code\
+n = binary neighborhood = 1*columnZero + 2*columnOne+ 4*columnTwo, points to its value in r\
+h = hypercomplex unit vector from binary\
+H = inverse of h, binary value from hypercomplex unit vector\
+p = a permutation of the neighborhood\
+WolframCode(r, n) = WolframCode(r,  H(h(p(n)) * h(p(n)) * h(p(n)) ... numFactors) )\
 
 The first set of multiplications, column A, brute forces all possible sets of permutations on all possible binary neighborhoods of the Wolfram code. A permutation in the set rearranges the columns of the input neighborhood, these become a set of factors.  A valid set of permutations is one that, for all possible input neighborhoods, the set of constructed factors using the permuted neighborhoods always multiplies out to a value that points to an equal value within the Wolfram code. The set of multiplication results is a pointer array that reproduces the original Wolfram code for every possible binary neighborhood. 
 

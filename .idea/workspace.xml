@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="changed the braces to quotes in paper.bib because it was not displaying the references correctly, leaving out things" />
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="pushing the compiled paper, because the pdf compiler creates the artifact correctly but does not properly put it into the /src/Paper/ folder, so doing it manually">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/paper.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,14 +78,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719182477521</updated>
-    </task>
-    <task id="LOCAL-00027" summary="added the jar to git">
-      <option name="closed" value="true" />
-      <created>1719401416907</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1719401416907</updated>
     </task>
     <task id="LOCAL-00028" summary="tweaked the text output panel">
       <option name="closed" value="true" />
@@ -468,7 +463,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720464657422</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="pushing the compiled paper, because the pdf compiler creates the artifact correctly but does not properly put it into the /src/Paper/ folder, so doing it manually">
+      <option name="closed" value="true" />
+      <created>1720465281379</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1720465281380</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -483,7 +486,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="tweaking a paper screenshot, added the doAdditive boolean option to ECAM.post" />
     <MESSAGE value="added the OSI CC BY 4.0 LICENSE.txt file, renamed and moved the README" />
     <MESSAGE value="debugged and added GaloisFields.checkNumFactorIdentities(), made the readme a markdown file" />
     <MESSAGE value="changed some references" />
@@ -508,6 +510,7 @@
     <MESSAGE value="uploading the compiled pdf" />
     <MESSAGE value="changed the mathematica citation, had to remove braces that conflicted with bibtex" />
     <MESSAGE value="changed the braces to quotes in paper.bib because it was not displaying the references correctly, leaving out things" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed the braces to quotes in paper.bib because it was not displaying the references correctly, leaving out things" />
+    <MESSAGE value="pushing the compiled paper, because the pdf compiler creates the artifact correctly but does not properly put it into the /src/Paper/ folder, so doing it manually" />
+    <option name="LAST_COMMIT_MESSAGE" value="pushing the compiled paper, because the pdf compiler creates the artifact correctly but does not properly put it into the /src/Paper/ folder, so doing it manually" />
   </component>
 </project>

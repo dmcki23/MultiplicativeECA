@@ -42,6 +42,7 @@ n = binary neighborhood = 1*columnZero + 2*columnOne+ 4*columnTwo, points to its
 h = hypercomplex unit vector from binary\
 H = inverse of h, binary value from hypercomplex unit vector\
 p = a permutation of the neighborhood\
+using hypercomplex multiplication, a valid permutation set produces:\
 WolframCode(r, n) = WolframCode(r,  H(h(p(n)) * h(p(n)) * h(p(n)) ... numFactors) )\
 
 The first set of multiplications, column A, brute forces all possible sets of permutations on all possible binary neighborhoods of the Wolfram code. A permutation in the set rearranges the columns of the input neighborhood, these become a set of factors.  A valid set of permutations is one that, for all possible input neighborhoods, the set of constructed factors using the permuted neighborhoods always multiplies out to a value that points to an equal value within the Wolfram code. The set of multiplication results is a pointer array that reproduces the original Wolfram code for every possible binary neighborhood. 

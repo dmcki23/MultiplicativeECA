@@ -27,7 +27,7 @@ Option 2a. There is a zip file of the IntelliJ project available with everything
 
 Javadoc:
 Open the source code in your favorite editor and use the generate Javadoc tool
-Use a Javadoc command line tool on the source code directory
+Javadoc files are available in the .zip file in the Javadoc directory
 
 
 there is an easily browsable database of solution images at www.danielmckinley.com

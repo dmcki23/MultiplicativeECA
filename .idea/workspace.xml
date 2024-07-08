@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="tweaked paper's statement of need" />
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="uploading the compiled pdf" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,22 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719182477521</updated>
-    </task>
-    <task id="LOCAL-00020" summary="debugging the openjournal pdf compiler">
-      <option name="closed" value="true" />
-      <created>1719253295826</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1719253295827</updated>
-    </task>
-    <task id="LOCAL-00021" summary="debugging the openjournal pdf compiler">
-      <option name="closed" value="true" />
-      <created>1719253518167</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1719253518168</updated>
     </task>
     <task id="LOCAL-00022" summary="debugging the openjournal pdf compiler">
       <option name="closed" value="true" />
@@ -468,7 +452,23 @@
       <option name="project" value="LOCAL" />
       <updated>1720462549468</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="uploading the compiled pdf">
+      <option name="closed" value="true" />
+      <created>1720462703107</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1720462703107</updated>
+    </task>
+    <task id="LOCAL-00070" summary="uploading the compiled pdf">
+      <option name="closed" value="true" />
+      <created>1720462852929</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1720462852929</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -483,7 +483,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="the Mathematica notebook is working" />
     <MESSAGE value="added the option in post and the control panel whether to do the additive Wolfram code on the complex neighborhood or not. it's less interesting without it, just fuzz" />
     <MESSAGE value="tweaking a paper screenshot" />
     <MESSAGE value="tweaking a paper screenshot, added the doAdditive boolean option to ECAM.post" />
@@ -508,6 +507,7 @@
     <MESSAGE value="added a few references to the paper" />
     <MESSAGE value="updated Paper.md to paper.md" />
     <MESSAGE value="tweaked paper's statement of need" />
-    <option name="LAST_COMMIT_MESSAGE" value="tweaked paper's statement of need" />
+    <MESSAGE value="uploading the compiled pdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="uploading the compiled pdf" />
   </component>
 </project>

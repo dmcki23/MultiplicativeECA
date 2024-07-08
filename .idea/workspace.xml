@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="changed the mathematica citation, had to remove braces that conflicted with bibtex" />
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="changed the braces to quotes in paper.bib because it was not displaying the references correctly, leaving out things" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,30 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719182477521</updated>
-    </task>
-    <task id="LOCAL-00024" summary="adjusted some screenshots, did spell check on every class, renamed validSolutionCoefficientCalculation() to multiplicativeSolutionOutput()">
-      <option name="closed" value="true" />
-      <created>1719278154328</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1719278154328</updated>
-    </task>
-    <task id="LOCAL-00025" summary="updated some Swing component behavior, made sure it was compiling the jar correctly">
-      <option name="closed" value="true" />
-      <created>1719346949817</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1719346949817</updated>
-    </task>
-    <task id="LOCAL-00026" summary="added the jar to git">
-      <option name="closed" value="true" />
-      <created>1719400853314</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1719400853314</updated>
     </task>
     <task id="LOCAL-00027" summary="added the jar to git">
       <option name="closed" value="true" />
@@ -468,7 +444,31 @@
       <option name="project" value="LOCAL" />
       <updated>1720464188534</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="changed the mathematica citation, had to remove braces that conflicted with bibtex">
+      <option name="closed" value="true" />
+      <created>1720464543644</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1720464543644</updated>
+    </task>
+    <task id="LOCAL-00074" summary="changed the mathematica citation, had to remove braces that conflicted with bibtex">
+      <option name="closed" value="true" />
+      <created>1720464558930</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1720464558930</updated>
+    </task>
+    <task id="LOCAL-00075" summary="changed the braces to quotes in paper.bib because it was not displaying the references correctly, leaving out things">
+      <option name="closed" value="true" />
+      <created>1720464657422</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1720464657422</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -483,7 +483,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="tweaking a paper screenshot" />
     <MESSAGE value="tweaking a paper screenshot, added the doAdditive boolean option to ECAM.post" />
     <MESSAGE value="added the OSI CC BY 4.0 LICENSE.txt file, renamed and moved the README" />
     <MESSAGE value="debugged and added GaloisFields.checkNumFactorIdentities(), made the readme a markdown file" />
@@ -508,6 +507,7 @@
     <MESSAGE value="tweaked paper's statement of need" />
     <MESSAGE value="uploading the compiled pdf" />
     <MESSAGE value="changed the mathematica citation, had to remove braces that conflicted with bibtex" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed the mathematica citation, had to remove braces that conflicted with bibtex" />
+    <MESSAGE value="changed the braces to quotes in paper.bib because it was not displaying the references correctly, leaving out things" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the braces to quotes in paper.bib because it was not displaying the references correctly, leaving out things" />
   </component>
 </project>

@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="updated Paper.md to paper.md">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/paper.md" afterDir="false" />
-    </list>
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="tweaked paper's statement of need" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,14 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719182477521</updated>
-    </task>
-    <task id="LOCAL-00019" summary="debugging the openjournal pdf compiler">
-      <option name="closed" value="true" />
-      <created>1719253152808</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1719253152808</updated>
     </task>
     <task id="LOCAL-00020" summary="debugging the openjournal pdf compiler">
       <option name="closed" value="true" />
@@ -471,7 +460,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720451768443</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="tweaked paper's statement of need">
+      <option name="closed" value="true" />
+      <created>1720462549468</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1720462549468</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -486,7 +483,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="deleted the redundant jar" />
     <MESSAGE value="the Mathematica notebook is working" />
     <MESSAGE value="added the option in post and the control panel whether to do the additive Wolfram code on the complex neighborhood or not. it's less interesting without it, just fuzz" />
     <MESSAGE value="tweaking a paper screenshot" />
@@ -511,6 +507,7 @@
     <MESSAGE value="adding Javadoc to git, uploading these is discouraged in general, but this is a one person project and is a presentation to JOSS, so probably leave the Javadoc out of the final archive version but for now is ok" />
     <MESSAGE value="added a few references to the paper" />
     <MESSAGE value="updated Paper.md to paper.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated Paper.md to paper.md" />
+    <MESSAGE value="tweaked paper's statement of need" />
+    <option name="LAST_COMMIT_MESSAGE" value="tweaked paper's statement of need" />
   </component>
 </project>

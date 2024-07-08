@@ -18,7 +18,7 @@ bibliography: paper.bib
 
 Elementary cellular automata (ECA) are a set of simple binary programs in the form of truth tables called Wolfram codes that produce complex output when done repeatedly in parallel, and quaternions are frequently used to represent 3D space and its rotations in computer graphics. Both are well-studied subjects, this Java library puts them together in a new way. This project changes classical additive cellular automata into multiplicative automata [@Wolfram,p. 861] via permutations, hypercomplex numbers, and pointer arrays. Valid solutions extend the binary ECA to complex numbers, produce a vector field, make an algebraic polynomial, and generate some very interesting fractals. 
 
-The code repository is at https://github.com/dmcki23/MultiplicativeECA
+The code repository is at https://github.com/dmcki23/MultiplicativeECA. There is a paper on JOSS from 2 years ago, CellPyLib [@Antunes2021] that is a kind of swiss army knife of cellular automata, this project is a specialty tool. Cellular Automata and Groups [@Ceccherini-Silberstein2023] covers some related territory without some of the features of this project.
 
 # Statement of Need
 

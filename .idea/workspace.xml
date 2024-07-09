@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="pushing the compiled paper, because the pdf compiler creates the artifact correctly but does not properly put it into the /src/Paper/ folder, so doing it manually">
-      <change beforePath="$PROJECT_DIR$/MultiplicativeECA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/MultiplicativeECA.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/paper.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,22 +77,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719182477521</updated>
-    </task>
-    <task id="LOCAL-00033" summary="tweaking a paper screenshot">
-      <option name="closed" value="true" />
-      <created>1719451172690</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1719451172690</updated>
-    </task>
-    <task id="LOCAL-00034" summary="tweaking a paper screenshot, added the doAdditive boolean option to ECAM.post">
-      <option name="closed" value="true" />
-      <created>1719460958070</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1719460958070</updated>
     </task>
     <task id="LOCAL-00035" summary="added the OSI CC BY 4.0 LICENSE.txt file, renamed and moved the README">
       <option name="closed" value="true" />
@@ -472,7 +454,23 @@
       <option name="project" value="LOCAL" />
       <updated>1720497105069</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="pushing the compiled paper, because the pdf compiler creates the artifact correctly but does not properly put it into the /src/Paper/ folder, so doing it manually">
+      <option name="closed" value="true" />
+      <created>1720500462648</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1720500462648</updated>
+    </task>
+    <task id="LOCAL-00083" summary="pushing the compiled paper, because the pdf compiler creates the artifact correctly but does not properly put it into the /src/Paper/ folder, so doing it manually">
+      <option name="closed" value="true" />
+      <created>1720500895017</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1720500895017</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

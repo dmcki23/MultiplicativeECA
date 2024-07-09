@@ -14,7 +14,7 @@ authors:
     - affiliation: 1
 affiliations:
   - name: Independent Researcher, USA
-  - index: 1
+    index: 1
 date: 7 July 2024
 bibliography: paper.bib
 ---

@@ -5,6 +5,17 @@ https://github.com/dmcki23/MultiplicativeECA
 
 This program transforms additive elementary cellular automata into multiplicative automata via permutations and extends the standard binary operation to complex via four kinds of multiplication. It includes a GUI to explore solutions, support libraries to construct hypercomplex multiplication tables, a short paper, algorithm visualization diagrams, Javadoc documentation, allows for user input, and is designed to integrate well elsewhere. The paper is in /src/Paper/
 
+
+Installation instructions:
+Option 1. Run the available jar file in /out/production/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar
+Option 2. Open the source code in you favorite IDE and build and run
+Option 2a. There is a zip file of the IntelliJ project available with everything in it
+
+Javadoc:
+Open the source code in your favorite editor and use the generate Javadoc tool
+Javadoc files are available in the .zip file in the Javadoc directory
+
+To use the code directly:
 To use the GUI, call an instance of SwingDashboard.
 To use the search classes apart from the GUI:
     Create ECAasMultiplication class
@@ -19,20 +30,22 @@ To use the search classes apart from the GUI:
     Call multiplicativeSolutionOutput()
     The output is in the class fields, but the set of subsection() functions return a window of what was calculated
 
-
-Installation instructions:
-Option 1. Run the available jar file in /out/production/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar
-Option 2. Open the source code in you favorite IDE and build and run
-Option 2a. There is a zip file of the IntelliJ project available with everything in it
-
-Javadoc:
-Open the source code in your favorite editor and use the generate Javadoc tool
-Javadoc files are available in the .zip file in the Javadoc directory
+Out-of-scope issues:
+Making Bloch spheres out of 2 layers of output
+Gray code, k-cycle modifications of multiplication tables
+group theory integration
+Mathematica, Matlab, CellPyLib integration
+Multiple inputs/animated output
+Discrete Fourier transforms everywhere
+2D automata, like Conway's Game of Life, this program doesn't do the 2D output, but it will give you a solution for the Wolfram code and the output for the 1D version of the same code, i think this is feature creep and not feature complete
+i feel like some of these potential features are totally obvious next directions to go in, but that the project is solid enough to be at a crossroads where further developments would be application specific, and if you want to do 2D bloch spheres in Python with CellPyLib or Fourier transforms of Wolfram codes in Matlab or Gray codes of multiplication tables in Mathematica that's on you and out of scope
+rewriting the algorithm and support classes in Python or C++ is certainly doable, but out of scope,
+deeper analysis of results, and subsets of results, like solution totals by linear rules or non-trivial identities by XOR additive rules or deeper cross referencing of common solutions, is out of scope of this paper
 
 
 there is an easily browsable database of solution images at www.danielmckinley.com
 consistently little-endian, consistently zero indexed,
-uses Java 17 because Mathematica doesn't recognize over 61.0 and Matlab doesn't recognize over 51
+I use Java 17 because Mathematica doesn't recognize over 61.0 and Matlab doesn't recognize over 51
 error checking is mainly on user, Wolfram codes bigger than multiplication tables and multiplication tables bigger than Wolfram codes, search function calls with exponentially factorially long runtimes, grid output sizes, non-prime numbers in GaloisFields, etc. some throw errors, some produce gibberish
 it is not in package format, so it is easier to use classes seperated from the GUI elsewhere,
 everything is public, so you can call it from Mathematica, if it's not public, you can see it with Methods[] but not use it
@@ -40,7 +53,7 @@ Swing components use (column,row), the project uses (row,column)
 there is another markdown paper about the Cayley-Dickson algorithm in the /src/Paper/ folder with some helpful diagrams
 there are group theory implications here, but I come from a programming background before pure math, and speak better Java than groups atm
 the O(n) for both the Cayley-Dickson library, d!*d!*2^(d+1) for all the tables for each degree, and the ECAasMultiplication class, (places!)^numFactors, are spectacularly bad, but manageable with the recursive version of Cayley-Dickson multiplication and smaller numbers of neighborhoods and class sizes.
-some rules don't do much when extended to complex and non-negative real, however often times their complement does do something, XNOR doesn't do anything even though XOR does, Wolfram codes 30 and 225, etc
+some rules don't do much when extended to complex and non-negative real, however often times their complement does do something, XNOR doesn't do anything even though XOR does, ECA like 30 and 225, etc
 
 if you're curious about how this project got started, a while back i was playing around with extending Wolfram codes from 1 row operations to 2 row operations, and that the row 2 truth table could be looked at as a subsection of a cube, with each 3 bit sub-neighborhood being an axis, and noticed in some idle time that i could make a quaternion multiplication cube pretty easily and wondered if there was any overlap between that and the elementary automata, just because they were both cubes. It turns out that rule 102 has the zero permutation set as a solution with 3 factors. The initial stages of the project used sets of random combinations of columns of input neighborhoods to make the factors, but eventually through trial and error discovered the systematic permutation way of doing it.
 

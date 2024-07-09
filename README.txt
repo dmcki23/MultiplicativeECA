@@ -51,9 +51,12 @@ it is not in package format, so it is easier to use classes seperated from the G
 everything is public, so you can call it from Mathematica, if it's not public, you can see it with Methods[] but not use it
 Swing components use (column,row), the project uses (row,column)
 there is another markdown paper about the Cayley-Dickson algorithm in the /src/Paper/ folder with some helpful diagrams
-there are group theory implications here, but I come from a programming background before pure math, and speak better Java than groups atm
+there are group theory implications here, but I come from a programming background before pure math, and speak more fluent for-loops and arrays than groups atm, but working on it
 the O(n) for both the Cayley-Dickson library, d!*d!*2^(d+1) for all the tables for each degree, and the ECAasMultiplication class, (places!)^numFactors, are spectacularly bad, but manageable with the recursive version of Cayley-Dickson multiplication and smaller numbers of neighborhoods and class sizes.
 some rules don't do much when extended to complex and non-negative real, however often times their complement does do something, XNOR doesn't do anything even though XOR does, ECA like 30 and 225, etc
+some normalizations work better than others, the color NaN is white, so if it's going to all white its going to NaN
+brainstorming future features: Fourier analysis, applying it to the prime number cellular automata [@Wolfram, p. 640], modifying the multiplication tables by Gray code and k-cycles
+
 
 if you're curious about how this project got started, a while back i was playing around with extending Wolfram codes from 1 row operations to 2 row operations, and that the row 2 truth table could be looked at as a subsection of a cube, with each 3 bit sub-neighborhood being an axis, and noticed in some idle time that i could make a quaternion multiplication cube pretty easily and wondered if there was any overlap between that and the elementary automata, just because they were both cubes. It turns out that rule 102 has the zero permutation set as a solution with 3 factors. The initial stages of the project used sets of random combinations of columns of input neighborhoods to make the factors, but eventually through trial and error discovered the systematic permutation way of doing it.
 

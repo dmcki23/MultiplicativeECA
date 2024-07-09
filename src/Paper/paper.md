@@ -10,8 +10,11 @@ tags:
     - cellular automata
 authors:
     - name: Daniel W. McKinley
+    - orcid: 0009-0001-8089-6593
+    - index: 1
 affiliations:
   - name: Independent Researcher, USA
+  - index: 1
 date: 7 July 2024
 bibliography: paper.bib
 ---
@@ -26,7 +29,7 @@ The code repository is at https://github.com/dmcki23/MultiplicativeECA.
 
  Very loosely analogous to De Morgan's law in Boolean algebra, the main algorithm produces several multiplicative versions of any given standard additive binary Wolfram code up to 32 bits and is written to support user supplied complex 1-D input at row 0 with choice of type of multiplication tables and partial product tables among other parameters. It produces an algebraic polynomial and complex vector field output for any given Wolfram code, and the hypercomplex 5-factor identity solution allows for the complex extension of any binary cellular automata.  The Cayley-Dickson and Fano construction libraries may be of value to the open source community as well. 
 
-There are other cellular automata implementations, Mathematica [@Mathematica], CellPyLib [@Antunes2021], a JOSS Python project from three years ago, and others. This is not designed to replace those awesome general purpose utilities, it's focused on the new Wolfram code operation. The GUI is designed to show enough to conclude that the math works and give a rough idea of aggregate behavior over parameters and the algorithm code is designed to be able to split off and be plugged in somewhere else. There are useful things you can build on it directly or indirectly, like making Bloch spheres out of two layers of complex number output, Fourier analysis, and making N-D ellipses out of the paths through the multiplication tables, that are clear directions to go in but subject to a different set of decisions like application-specific tech debt and potential translation to C++ or Python and out of scope of this paper. 
+There are other cellular automata implementations, Mathematica [@Mathematica], CellPyLib [@Antunes2021], a JOSS Python project from three years ago, and others. This is not designed to replace those awesome general purpose utilities, it's focused on the new Wolfram code operation. The GUI is designed to show enough to conclude that the math works and give a rough idea of aggregate behavior over parameters and the algorithm code is designed to be able to split off and be plugged in somewhere else. There are useful things you can build on it directly or indirectly, like making Bloch spheres out layers of complex number output and translating complex Wolfram code output to quantum logic, Fourier analysis, 2D automata, a complex version of the prime number automata [@Wolfram,p. 640], Gray code and full group theory morphisms of multiplication tables and paths, and making N-D ellipses out of the paths through the multiplication tables, that are clear directions to go in but subject to a different set of decisions like application-specific tech debt and potential translation to C++ or Python and out of scope of this paper. 
 
 # Functions
 

@@ -10,7 +10,9 @@ tags:
     - cellular automata
 authors:
     - name: Daniel W. McKinley
-date: 17 June 2024
+affiliations:
+  - name: Independent Researcher, USA
+date: 7 July 2024
 bibliography: paper.bib
 ---
 
@@ -22,9 +24,9 @@ The code repository is at https://github.com/dmcki23/MultiplicativeECA.
 
 # Statement of Need
 
- Very loosely analogous to DeMorgan's law in Boolean algebra, the main algorithm produces several multiplicative versions of any given standard additive binary Wolfram code up to 32 bits and is written to support user supplied complex input at row 0 with choice of type of multiplication tables and partial product tables among other parameters. An algebraic polynomial of the automata that works with real and complex numbers is produced, and the hypercomplex 5-factor identity solution allows for the complex extension of any binary cellular automata. The GUI, though not required, allows for visual exploration of solutions with easy access to various parameters. The Java this is written in is designed to integrate well in other programs, such as Mathematica's JLink or Matlab, and is documented with Javadoc. The Cayley-Dickson and Fano construction libraries may be of value to the open source community as well. 
+ Very loosely analogous to De Morgan's law in Boolean algebra, the main algorithm produces several multiplicative versions of any given standard additive binary Wolfram code up to 32 bits and is written to support user supplied complex 1-D input at row 0 with choice of type of multiplication tables and partial product tables among other parameters. An algebraic polynomial of the automata that works with real and complex numbers is produced, and the hypercomplex 5-factor identity solution allows for the complex extension of any binary cellular automata.  The Cayley-Dickson and Fano construction libraries may be of value to the open source community as well. 
 
-There are other cellular automata implementations, Mathematica [@Mathematica], CellPyLib [@Antunes2021], a JOSS Python project from three years ago, and books that cover related territory [@Ceccherini-Silberstein2023]. What sets this library apart is its focus on the conversion of existing binary cellular automata from additive to multiplicitave and the extension to complex numbers. This is not intended to replace existing cellular automata utilities but to supplement them directly or indirectly by illustrating in open source a new kind of set of operations on a Wolfram code and its output. There are useful things you can build on this,  like making Bloch spheres out of two layers of complex number output, modifiying the multiplication tables by Gray code or k-cycle, and applying discrete Fourier transforms everywhere, that are out of scope and would be the subject of another paper. Some other scope issues are discussed in the readme.
+There are other cellular automata implementations, Mathematica [@Mathematica], CellPyLib [@Antunes2021], a JOSS Python project from three years ago, and others. This is not designed to replace those awesome general purpose utilities. The GUI is designed to show enough to conclude that the math works and give a rough idea of aggregate behavior over parameters and the algorithm code is designed to be able to split off and be plugged in somewhere else. There are useful things you can build on it, like making Bloch spheres out of two layers of complex number output, applying at least the identity solutions to John Conway's Game of Life [@Life], Stephen Wolfram's prime number cellular automata [@Wolfram, p. 640], and making N-D ellipses out of the paths through the multiplication tables, that are clear directions to go in but subject to a different set of decisions like application-specific tech debt and potential translation to C++ or Python, and out of scope of the current iteration. 
 
 # Functions
 
@@ -38,12 +40,14 @@ The main algorithm uses a set of permutations operating on cellular automata inp
 
 Multiplications A, additive to multiplicative\
 r = specific Wolfram code\
-n = binary neighborhood = 1*columnZero + 2*columnOne+ 4*columnTwo, points to its value in r\
+n = binary neighborhood = 1*columnZero + 2*columnOne+ 4*columnTwo...2^(column)*columnCol, points to its value in r\
 h = hypercomplex unit vector from binary\
 H = inverse of h, binary value from hypercomplex unit vector\
 p = a permutation of the neighborhood\
 using hypercomplex multiplication, a valid permutation set produces:\
-WolframCode(r, n) = WolframCode(r,  H(h(p(n)) * h(p(n)) * h(p(n)) ... numFactors) )\
+WolframCode(r, n) = WolframCode(r,  H(h(p(n)) * h(p(n)) * h(p(n)) ... numFactors), though n may or may not equal H(...)\
+WolframCode(r, H(h(p(n)) * h(p(n)) * h(p(n)) ... numFactors)) is a pointer array that always points to an equal value (0,1) within WolframCode(r, _)\
+each h(p(n)) in a valid solution is a factor template in the multiplication table for all values of its axis
 
 The first set of multiplications, column A, brute forces all possible sets of permutations on all possible binary neighborhoods of the Wolfram code. A permutation in the set rearranges the columns of the input neighborhood, these become a set of factors.  A valid set of permutations is one that, for all possible input neighborhoods, the set of constructed factors using the permuted neighborhoods always multiplies out to a value that points to an equal value within the Wolfram code. The set of multiplication results is a pointer array that reproduces the original Wolfram code for every possible binary neighborhood. 
 
@@ -56,7 +60,7 @@ Flattened path through a six dimensional multiplication table\
 Six factors, permutation set = {0,1,2,3,4,5}\
 ![](flattenedSixCube.jpg)\
 
-Multiplications B and C apply a valid solution from the first set of multiplications to any given individual neighborhood with binary, non-negative real, and complex values. Multiplication B is the Cartesian product of the permuted neighborhoods, using a closed partial product table to generate a polynomial. Multiplication C does the binary sum of complex neighborhood, then multiplies as complex. Both B and C take the n-th root of the result, with n = numColumns and n = numFactors, respectively. Multiplications B and C both include a binary weighted sum of the neighborhood, same as the construction of the factors from A, though B and C use complex. B, as part of the normalization and C as the construction. Multiplication C is the permutation composition product. B, just before the normalization is a neighborhood of multiplication results, with each column of it being a unit vector coefficient. This multiplication result neighborhood is permuted by the inverse of the permutation composition product to properly order the output vector.
+Multiplications B and C apply a valid solution from the first set of multiplications to any given individual neighborhood with binary, non-negative real, and complex values. Multiplication B is the Cartesian product of the permuted neighborhoods, using a closed partial product table to generate a polynomial. Multiplication C does the binary sum of complex neighborhood, then multiplies as complex. Both B and C take the n-th root of the result, with n = numColumns and n = numFactors, respectively. Multiplications B and C both include a binary weighted sum of the neighborhood, same as the construction of the factors from A, though B and C use complex. B, as part of the normalization and C as the construction. Multiplication C is the permutation composition product. B, just before the normalization is a neighborhood of multiplication results, with each column of it being a unit vector coefficient. This multiplication result neighborhood is permuted by the inverse of the permutation composition product to properly order the output vector. There are a couple of normalization parameters and a hybrid multiplicative-additive output option that are discussed more in the documentation.
 
 Control Panel\
 ![Control Panel](ControlPanel.jpg)\

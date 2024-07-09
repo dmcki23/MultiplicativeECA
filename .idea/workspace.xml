@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="pushing the compiled paper, because the pdf compiler creates the artifact correctly but does not properly put it into the /src/Paper/ folder, so doing it manually">
-      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="pushing the compiled paper&#10;&#10;or&#10;&#10;tweaking readme&#10;&#10;or &#10;&#10;tweaking paper">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/paper.bib" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/paper.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/paper.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,22 +79,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719182477521</updated>
-    </task>
-    <task id="LOCAL-00035" summary="added the OSI CC BY 4.0 LICENSE.txt file, renamed and moved the README">
-      <option name="closed" value="true" />
-      <created>1719504512136</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1719504512136</updated>
-    </task>
-    <task id="LOCAL-00036" summary="debugged and added GaloisFields.checkNumFactorIdentities(), made the readme a markdown file">
-      <option name="closed" value="true" />
-      <created>1719512042411</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1719512042411</updated>
     </task>
     <task id="LOCAL-00037" summary="changed some references">
       <option name="closed" value="true" />
@@ -470,7 +456,23 @@
       <option name="project" value="LOCAL" />
       <updated>1720500895017</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="pushing the compiled paper&#10;&#10;or&#10;&#10;tweaking readme&#10;&#10;or &#10;&#10;tweaking paper">
+      <option name="closed" value="true" />
+      <created>1720501072145</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1720501072145</updated>
+    </task>
+    <task id="LOCAL-00085" summary="pushing the compiled paper&#10;&#10;or&#10;&#10;tweaking readme&#10;&#10;or &#10;&#10;tweaking paper">
+      <option name="closed" value="true" />
+      <created>1720501206302</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1720501206302</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -485,7 +487,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added the OSI CC BY 4.0 LICENSE.txt file, renamed and moved the README" />
     <MESSAGE value="debugged and added GaloisFields.checkNumFactorIdentities(), made the readme a markdown file" />
     <MESSAGE value="changed some references" />
     <MESSAGE value="added the zip file to git" />
@@ -510,6 +511,7 @@
     <MESSAGE value="changed the mathematica citation, had to remove braces that conflicted with bibtex" />
     <MESSAGE value="changed the braces to quotes in paper.bib because it was not displaying the references correctly, leaving out things" />
     <MESSAGE value="pushing the compiled paper, because the pdf compiler creates the artifact correctly but does not properly put it into the /src/Paper/ folder, so doing it manually" />
-    <option name="LAST_COMMIT_MESSAGE" value="pushing the compiled paper, because the pdf compiler creates the artifact correctly but does not properly put it into the /src/Paper/ folder, so doing it manually" />
+    <MESSAGE value="pushing the compiled paper&#10;&#10;or&#10;&#10;tweaking readme&#10;&#10;or &#10;&#10;tweaking paper" />
+    <option name="LAST_COMMIT_MESSAGE" value="pushing the compiled paper&#10;&#10;or&#10;&#10;tweaking readme&#10;&#10;or &#10;&#10;tweaking paper" />
   </component>
 </project>

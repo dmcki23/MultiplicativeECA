@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="pushing the compiled paper&#10;&#10;or&#10;&#10;tweaking readme&#10;&#10;or &#10;&#10;tweaking paper">
-      <change beforePath="$PROJECT_DIR$/src/Paper/paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/paper.md" afterDir="false" />
-    </list>
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="pushing the compiled paper&#10;&#10;or&#10;&#10;tweaking readme&#10;&#10;or &#10;&#10;tweaking paper" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,22 +75,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719182477521</updated>
-    </task>
-    <task id="LOCAL-00044" summary="went through Javadoc comments, went through inline main algorithm comments in all the ECAM classes, deleted some out of scope functions in Fano, deleted an out of scope scratchpaper class">
-      <option name="closed" value="true" />
-      <created>1719809918532</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1719809918532</updated>
-    </task>
-    <task id="LOCAL-00045" summary="added SwingPolyTest">
-      <option name="closed" value="true" />
-      <created>1719896867221</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1719896867221</updated>
     </task>
     <task id="LOCAL-00046" summary="the split off of the subsection() functions works, updated Javadoc comments, tweaked some formatting in the SwingTextPanel output, the buttons all work">
       <option name="closed" value="true" />
@@ -470,7 +452,23 @@
       <option name="project" value="LOCAL" />
       <updated>1720554060445</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="pushing the compiled paper&#10;&#10;or&#10;&#10;tweaking readme&#10;&#10;or &#10;&#10;tweaking paper">
+      <option name="closed" value="true" />
+      <created>1720554252402</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1720554252402</updated>
+    </task>
+    <task id="LOCAL-00094" summary="pushing the compiled paper&#10;&#10;or&#10;&#10;tweaking readme&#10;&#10;or &#10;&#10;tweaking paper">
+      <option name="closed" value="true" />
+      <created>1720554498928</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1720554498928</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

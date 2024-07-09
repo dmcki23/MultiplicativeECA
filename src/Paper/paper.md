@@ -10,8 +10,8 @@ tags:
     - cellular automata
 authors:
     - name: Daniel W. McKinley
-    - orcid: 0009-0001-8089-6593
-    - affiliation: 1
+      orcid: 0009-0001-8089-6593
+      affiliation: 1
 affiliations:
   - name: Independent Researcher, USA
     index: 1

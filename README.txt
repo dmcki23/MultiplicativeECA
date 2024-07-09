@@ -38,7 +38,7 @@ Mathematica, Matlab, CellPyLib integration
 Multiple inputs/animated output
 Discrete Fourier transforms everywhere
 2D automata, like Conway's Game of Life, this program doesn't do the 2D output, but it will give you a solution for the Wolfram code and the output for the 1D version of the same code, i think this is feature creep and not feature complete
-i feel like some of these potential features are totally obvious next directions to go in, but that the project is solid enough to be at a crossroads where further developments would be application specific, and if you want to do 2D bloch spheres in Python with CellPyLib or Fourier transforms of Wolfram codes in Matlab or Gray codes of multiplication tables in Mathematica that's on you and out of scope
+i feel like some of these potential features are totally obvious next directions to go in, but that the project is solid enough to be at a crossroads where further developments would be application specific, and if you want to do 2D bloch spheres in Python or Fourier transforms of solutions in Matlab or Gray codes of multiplication tables in Mathematica that's on you and out of scope
 rewriting the algorithm and support classes in Python or C++ is certainly doable, but out of scope,
 deeper analysis of results, and subsets of results, like solution totals by linear rules or non-trivial identities by XOR additive rules or deeper cross referencing of common solutions, is out of scope of this paper
 

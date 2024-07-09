@@ -76,14 +76,6 @@
       <option name="presentableId" value="Default" />
       <updated>1719182477521</updated>
     </task>
-    <task id="LOCAL-00042" summary="tracked down a bug in SwingPolynomialTestOutput that was not showing the unit vector coefficient layers, turns out vectorField[][][] was reinitialized downstream in the complex overload of multiplicativeSolutionOutput()">
-      <option name="closed" value="true" />
-      <created>1719596302742</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1719596302742</updated>
-    </task>
     <task id="LOCAL-00043" summary="minor changes">
       <option name="closed" value="true" />
       <created>1719604886121</created>
@@ -468,7 +460,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720552312687</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="pushing the compiled paper&#10;&#10;or&#10;&#10;tweaking readme&#10;&#10;or &#10;&#10;tweaking paper">
+      <option name="closed" value="true" />
+      <created>1720553884216</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1720553884216</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

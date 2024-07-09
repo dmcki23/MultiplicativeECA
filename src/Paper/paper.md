@@ -11,7 +11,7 @@ tags:
 authors:
     - name: Daniel W. McKinley
     - orcid: 0009-0001-8089-6593
-    - index: 1
+    - afilliation: 1
 affiliations:
   - name: Independent Researcher, USA
   - index: 1

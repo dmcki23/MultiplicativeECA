@@ -55,7 +55,7 @@ the O(n) for both the Cayley-Dickson library, d!*d!*2^(d+1) for all the tables f
 some rules don't do much when extended to complex and non-negative real, however often times their complement does do something, XNOR doesn't do anything even though XOR does, ECA like 30 and 225, etc
 some normalizations work better than others, the color NaN is white, so if it's going to all white its going to NaN
 brainstorming future features: Fourier analysis, applying it to the prime number cellular automata [@Wolfram, p. 640], modifying the multiplication tables by Gray code and k-cycles
-
+to-do: my factorial implementation blows up at 10 or so, and maybe 11 or 12 with the specific version of the functions and any more I would outsource to another library anyway, address concurrency in the GUI, putting all the GUI panels in a tabbed format or something and make them optional so the algorithm doesn't have to do every single panel every single time
 
 
 if you're curious about how this project got started, a while back i was playing around with extending Wolfram codes from 1 row operations to 2 row operations, and that the row 2 truth table could be looked at as a subsection of a cube, with each 3 bit sub-neighborhood being an axis, and noticed in some idle time that i could make a quaternion multiplication cube pretty easily and wondered if there was any overlap between that and the elementary automata, just because they were both cubes. It turns out that rule 102 has the zero permutation set as a solution with 3 factors. The initial stages of the project used sets of random combinations of columns of input neighborhoods to make the factors, but eventually through trial and error discovered the systematic permutation way of doing it.

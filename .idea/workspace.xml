@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="pushing the compiled paper&#10;&#10;or&#10;&#10;tweaking readme&#10;&#10;or &#10;&#10;tweaking paper">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="added another numFactors identity checker for general tables, added a citation to paper.bib, removed a function from CD that was just scratchpaper, to do maybe add see or link tags to the javadoc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CayleyDickson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CayleyDickson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECAMspecific.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMspecific.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECAasMultiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAasMultiplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GaloisFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GaloisFields.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/paper.bib" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/paper.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/paper.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MultiplicativeECA.zip" beforeDir="false" afterPath="$PROJECT_DIR$/MultiplicativeECA.zip" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,14 +79,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719182477521</updated>
-    </task>
-    <task id="LOCAL-00048" summary="end of day commit">
-      <option name="closed" value="true" />
-      <created>1720154342166</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1720154342166</updated>
     </task>
     <task id="LOCAL-00049" summary="na">
       <option name="closed" value="true" />
@@ -481,7 +464,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720556671798</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="added another numFactors identity checker for general tables, added a citation to paper.bib, removed a function from CD that was just scratchpaper, to do maybe add see or link tags to the javadoc">
+      <option name="closed" value="true" />
+      <created>1721098319673</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1721098319674</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -496,7 +487,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="debugged and added GaloisFields.checkNumFactorIdentities(), made the readme a markdown file" />
     <MESSAGE value="changed some references" />
     <MESSAGE value="added the zip file to git" />
     <MESSAGE value="tweaked the readme, tweaked Javadoc on a few classes" />
@@ -521,6 +511,7 @@
     <MESSAGE value="changed the braces to quotes in paper.bib because it was not displaying the references correctly, leaving out things" />
     <MESSAGE value="pushing the compiled paper, because the pdf compiler creates the artifact correctly but does not properly put it into the /src/Paper/ folder, so doing it manually" />
     <MESSAGE value="pushing the compiled paper&#10;&#10;or&#10;&#10;tweaking readme&#10;&#10;or &#10;&#10;tweaking paper" />
-    <option name="LAST_COMMIT_MESSAGE" value="pushing the compiled paper&#10;&#10;or&#10;&#10;tweaking readme&#10;&#10;or &#10;&#10;tweaking paper" />
+    <MESSAGE value="added another numFactors identity checker for general tables, added a citation to paper.bib, removed a function from CD that was just scratchpaper, to do maybe add see or link tags to the javadoc" />
+    <option name="LAST_COMMIT_MESSAGE" value="added another numFactors identity checker for general tables, added a citation to paper.bib, removed a function from CD that was just scratchpaper, to do maybe add see or link tags to the javadoc" />
   </component>
 </project>

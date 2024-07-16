@@ -118,9 +118,9 @@ public class ECAMspecific {
             for (int table = 0; table < tables.length; table++) {
                 //multiplication using given parameters
                 for (int input = 0; input < wolframCode.length; input++) {
-                    multResult = factors[0][input];
+                    multResult = factors[0][input] % wolframLength;
                     for (int factor = 1; factor < numFactors; factor++) {
-                        multResult = tables[table][multResult][factors[factor][input]] % wolframLength;
+                        multResult = tables[table][multResult][factors[factor][input] % wolframLength] % wolframLength;
                     }
                     factors[numFactors][input] = multResult;
                     //trims the result to size, the table size and the binary input array size

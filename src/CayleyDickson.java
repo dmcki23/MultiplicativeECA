@@ -9,7 +9,6 @@ public class CayleyDickson {
      * Initializes some binary arrays, otherwise empty
      */
     public CayleyDickson() {
-
         for (int power = 0; power < 16; power++) {
             binPowers[power] = (int) Math.pow(2, power);
         }
@@ -19,7 +18,6 @@ public class CayleyDickson {
      * General permutations and factoradic class
      */
     public PermutationsFactoradic pf = new PermutationsFactoradic();
-
     /**
      * Powers of two in array form, for performance rather than a Math.pow library call
      */
@@ -35,13 +33,12 @@ public class CayleyDickson {
      * @return returns the result of multiplying two hypercomplex numbers row, column, with CD solution, cdz, cdo
      */
     public int multiplyUnitHyperComplex(int rootDegree, int row, int column, int cdz, int cdo) {
-
         int[][] startRemainders;
         int[] cdzRemainders;
         int[] cdoRemainders;
-        if (rootDegree > 8){
-            cdzRemainders = pf.specificFactoradic(rootDegree,cdz);
-            cdoRemainders = pf.specificFactoradic(rootDegree,cdo);
+        if (rootDegree > 8) {
+            cdzRemainders = pf.specificFactoradic(rootDegree, cdz);
+            cdoRemainders = pf.specificFactoradic(rootDegree, cdo);
         } else {
             startRemainders = pf.permRemainders(rootDegree);
             cdzRemainders = startRemainders[cdz].clone();
@@ -180,7 +177,6 @@ public class CayleyDickson {
         int place = 0;
         int power = 0;
         int tot = 0;
-
         int fperm = 0;
         int perm = 0;
         int pperm = 0;
@@ -309,7 +305,6 @@ public class CayleyDickson {
         int column = 0;
         int place = 0;
         int tot = 0;
-
         int fperm = 0;
         int perm = 0;
         int pperm = 0;
@@ -371,7 +366,6 @@ public class CayleyDickson {
                                 //if the permutations of permutations equation is correct, else print error message
                                 if (found) {
                                     out[fperm * degreeFactorial + perm][pperm * degreeFactorial + ppperm] = degreeFactorial * pppperm + ppppperm;
-
                                 } else {
                                     System.out.println("Error");
                                 }
@@ -460,7 +454,6 @@ public class CayleyDickson {
         int place = 0;
         int power = 0;
         int tot = 0;
-
         int fperm = 0;
         int perm = 0;
         int pperm = 0;
@@ -543,15 +536,13 @@ public class CayleyDickson {
         }
         System.out.println("numAttempts: " + numAttempts + " errors: " + errors);
         System.out.println("done");
-
         return out;
     }
-
     /**
      * Checks a 2D int array for Latin-ness, each row and column contains exactly one of each value. Used to help verify the integerity of the multiplication tables generated
      *
      * @param in 2D int array
-     * @return       boolean  true if in[][] is Latin and false if not
+     * @return boolean  true if in[][] is Latin and false if not
      */
     public boolean isLatin(int[][] in) {
         boolean isLatin = true;
@@ -590,6 +581,5 @@ public class CayleyDickson {
         }
         return out;
     }
-
 
 }

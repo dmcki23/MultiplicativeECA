@@ -160,6 +160,31 @@ public class GaloisFields {
             System.out.println(Arrays.toString(out));
         }
     }
+    /**
+     * Util class of numFactorsRequiredForIdentity()
+     * @param numFactors number of factors to consider
+     */
+    public void checkNumFactorIdentities(int[][] table, int numFactors){
+        int size = table.length;
+        int[] out = new int[size];
+        for (int neighborhood = 0; neighborhood < size; neighborhood++){
+            int mainFactor = neighborhood;
+            for (int factor = 1; factor <= numFactors; factor++){
+                mainFactor = table[mainFactor][neighborhood];
+            }
+            out[neighborhood] = mainFactor;
+        }
+        boolean isIdentity = true;
+        for (int spot = 0; spot < size; spot++){
+            if (out[spot] != spot){
+                isIdentity = false;
+            }
+        }
+        if (isIdentity) {
+            System.out.println("numFactors: " + numFactors);
+            System.out.println(Arrays.toString(out));
+        }
+    }
 }
 
 

@@ -37,9 +37,8 @@ group theory integration
 Mathematica, Matlab, CellPyLib integration
 Multiple inputs/animated output
 Discrete Fourier transforms everywhere
-2D automata, like Conway's Game of Life, this program doesn't do the 2D output, but it will give you a solution for the Wolfram code and the output for the 1D version of the same code, i think this is feature creep and not feature complete
+2D automata, like Conway's Game of Life, this program doesn't do the 2D output, but it will give you a solution for the Wolfram code (1+4+4=9 factors in a hypercomplex identity solution) and the output the 1D version of the same code. Rendering 2D animations is going to be resource intensive and maybe better suited for C++
 i feel like some of these potential features are totally obvious next directions to go in, but that the project is solid enough to be at a crossroads where further developments would be application specific, and if you want to do 2D bloch spheres in Python or Fourier transforms of solutions in Matlab or Gray codes of multiplication tables in Mathematica that's cool, but on you and out of scope
-rewriting the algorithm and support classes in Python or C++ is certainly doable, but out of scope,
 deeper analysis of results, and subsets of results, like solution totals by linear rules or non-trivial identities by XOR additive rules or deeper cross referencing of common solutions, is out of scope of this paper
 
 
@@ -58,7 +57,9 @@ some normalizations work better than others, the color NaN is white, so if it's 
 brainstorming future features: Fourier analysis, applying it to the prime number cellular automata [@Wolfram, p. 640], modifying the multiplication tables by Gray code and k-cycles
 
 
+
 if you're curious about how this project got started, a while back i was playing around with extending Wolfram codes from 1 row operations to 2 row operations, and that the row 2 truth table could be looked at as a subsection of a cube, with each 3 bit sub-neighborhood being an axis, and noticed in some idle time that i could make a quaternion multiplication cube pretty easily and wondered if there was any overlap between that and the elementary automata, just because they were both cubes. It turns out that rule 102 has the zero permutation set as a solution with 3 factors. The initial stages of the project used sets of random combinations of columns of input neighborhoods to make the factors, but eventually through trial and error discovered the systematic permutation way of doing it.
+
 
 
 

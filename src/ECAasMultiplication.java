@@ -162,7 +162,7 @@ public class ECAasMultiplication {
         //size of multiplication table
         int gridSize = 8;
         //output set of multiplication tables
-        int[][][] multTables = new int[1][8][8];
+        int[][][] multTables = new int[1][1][1];
         GaloisFields galois = new GaloisFields();
         if (whichMultTable == whichMultTableNames.PERMUTED_CAYLEY_DICKSON.ordinal()) {
             multTables = cds.preCalculateTables(degree);

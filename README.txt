@@ -39,7 +39,7 @@ Multiple inputs/animated output
 Discrete Fourier transforms everywhere
 2D automata, like Conway's Game of Life, this program doesn't do the 2D output, but it will give you a solution for the Wolfram code (1+4+4=9 factors in a hypercomplex identity solution) and the output the 1D version of the same code. Rendering 2D animations is going to be resource intensive and maybe better suited for C++
 i feel like some of these potential features are totally obvious next directions to go in, but that the project is solid enough to be at a crossroads where further developments would be application specific, and if you want to do 2D bloch spheres in Python or Fourier transforms of solutions in Matlab or Gray codes of multiplication tables in Mathematica that's cool, but on you and out of scope
-deeper analysis of results, and subsets of results, like solution totals by linear rules or non-trivial identities by XOR additive rules or deeper cross referencing of common solutions, is out of scope of this paper
+deeper analysis of results, and subsets of results, like solution totals by linear rules or non-trivial identities by XOR additive rules or deeper cross-referencing of common solutions, is out of scope of this paper
 
 
 there is an easily browsable database of solution images at www.danielmckinley.com

@@ -23,6 +23,18 @@ public class CayleyDickson {
      */
     public int[] binPowers = new int[16];
     /**
+     * Used in searches for Conway's Life solutions in Examples
+     * @param rootDegree hypercomplex degree, 2 = quaternions, 3 = octonions, 4 = sedonions, etc
+     * @param row first hypercomplex unit vector factor
+     * @param column second hypercomplex unit vector factor
+     * @param cdz
+     * @param cdo
+     * @return row times column
+     */
+    public int multiply(int rootDegree, int row, int column, int[] cdz, int[] cdo){
+        return multRecursive(rootDegree,0,row,column,cdz,cdo);
+    }
+    /**
      * Multiplies two permuted Cayley-Dickson nion unit vectors. Wrapper function used to initiate the recursion when multiplying hypercomplex numbers. Initializes the factoradics.
      *
      * @param rootDegree hypercomplex degree, 2 = quaternions, 3 = octonions, 4 = sedonions, etc

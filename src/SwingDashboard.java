@@ -255,7 +255,7 @@ public class SwingDashboard extends JPanel {
                     partialProductBox.removeAllItems();
                     partialProductBox.addItem("Galois addition, XOR, 3x3");
                     partialProductBox.addItem("GF(2,2) shifted to exclude zeros, 3x3");
-                    partialProductBox.addItem("Plain table, {{0,1,2},{0,1,2},{0,1,2}");
+                    partialProductBox.addItem("Plain table, {{0,1,2},{0,1,2},{0,1,2}}");
                 } else {
                     partialProductBox.removeAllItems();
                     partialProductBox.addItem("Galois addition, XOR, 5x5");

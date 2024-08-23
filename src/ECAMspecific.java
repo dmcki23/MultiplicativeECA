@@ -172,6 +172,7 @@ public class ECAMspecific {
                     validSolutions[sol].permGroupProductInverse = inverse;
                 }
             }
+            validSolutions[sol].polynomial = ecam.post.generatePolynomial(validSolutions[sol]);
 
             validSolutions[sol] = checkIdentities(validSolutions[sol]);
         }

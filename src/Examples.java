@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 /**
- * Contains a few examples of directions to go in with multiplicative conversion
+ * Contains a few examples using the algorithm, one with a class 4 focus, one with an additive rule focus, and a version of Conway's Life
  */
 public class Examples {
     Random rand = new Random();
@@ -73,7 +73,7 @@ public class Examples {
         swingPanel.repaint();
     }
     /**
-     * Generates the Life truth table
+     * Generates Conway's Life truth table
      *
      * @return
      */

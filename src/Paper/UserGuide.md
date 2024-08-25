@@ -1,6 +1,15 @@
-Daniel McKinley
-MultiplicativeECA User Guide
-August 8, 2024
+### Daniel McKinley
+MultiplicativeECA User Guide\
+August 8, 2024\
+
+# Contents
+
+The main algorithm is described in /Paper/paper.md\
+Section 1 - permuted Cayley-Dickson algorithm\
+Section 2 - Swing panel notes\
+Section 3 - Notes previously in the readme\
+
+# Section 1 - Permuted Cayley-Dickson algorithm
 
 ![](quaternionsSplitScreenshot.jpg)\
 ![](octonionSplitScreenshot.jpg)\
@@ -14,180 +23,238 @@ The Fano plane code brute forces all possible numberings of the Fano plane and a
 
 The permuted Cayley-Dickson octonions relate to Fano plane octonions as the lexicographically first set of triplets when the Cayley-Dickson numbers are equal, $cdz=cdo,cdzz=cdoo$. These two interactions are experimentally verified by Fano.fanoTest() and CayleyDickson.cdCompareAgainstPop(). The permuted CD octonion set of multiplication tables is a commonly used octonion using the initial triplet 1*2=4, when $cdz=cdzz,cdo=cdoo$, but loses some properties of octonions when $cdz!=cdzz$ or $cdo!=cdoo$. The negative signs stay the same but the unit vector bits of each individual element are permuted. The set of Fano triplets with index 10 in the code is the set that John Baez uses [@Baez].
 
-/////////////////////////////////////////
+# Section 2 - Swing panel notes
 
-SwingDashboard
+## SwingDashboard
+    Main control panel
 
-//////////////////////////////////////////
 
-**ECA rule**\
+### ECA rule
     0-255 elementary cellular automata Wolfram code to search
 
-**Multiplication table to use**\
+### Multiplication table to use
     Type of multiplication table
     Permuted Cayley-Dickson
     XOR
     Various size Galois fields
     Various size Galois fields, shifted to exclude zeros (move elements up 1 and left 1 and subtract 1)
 
-**Specific solution to use**\
+### Specific solution to use
     After the Wolfram code is analyzed with parameters via the Refresh button, this box holds all the solutions found, between 0 and neighborhoodSize^numFactors
 
 
-**Degree**\
+### Degree
     If using permuted Cayley-Dickson, selects the degree, 2 = quaternions, 3 = octonions, 4= sedonions, etc
 
-**Number of factors to use**\
+### Number of factors to use
     Dimension of the multiplication cube
 
-**Number of rows in ECA**\
+### Number of rows in ECA
     If 1, uses standard 8-bit Wolfram code 1 row at a time
     If 2, uses the 32 bit 5 cell neighborhood extended Wolfram code that goes 2 rows at a time
 
-**Partial product table**\
+### Partial product table
     Various types of partial product tables to use in computing the output of a solution
 
-**Timeout**\
+### Timeout
     Sets the value for a timeout, to prevent factorially-exponentially long search times
 
-**Refresh, button**\
+### Refresh, button
     Starts the search function with the parameters selected
 
-**Display specific solution, button**\
+### Display specific solution, button
     Takes the specific solution box from above as a parameter and outputs the result
 
-**Start deep search, button**\
+### Start deep search, button
     Using the multiplication table selected, searches all 0-255 ECA rules and does a brief overview of results
 
-**Width of random input, slider**\
+### Width of random input, slider
     Number of row 0 cells to initialize with random data as input
 
-////////////////////////////////////////////
 
-Logic gate Wolfram codes
+## Logic gate Wolfram codes
 
-**Number of factors in logic gate search**\
+### Number of factors in logic gate search
     Dimension of the multiplication table to use
 
-**Logic gate**\
+### Logic gate
     Which 0-15 logic gate to use as a Wolfram code
 
-**Logic gate solutions**\
+### Logic gate solutions
     Once a logic gate is searched, the solutions appear here, between 0 and 2^numFactors
 
-**Which multiplication table to use**\
+### Which multiplication table to use
     Various types of multiplication tables to use in the search, XOR, Fano, permuted Cayley-Dickson, Galois fields
 
-**Partial product table**\
+### Partial product table
     Various types of partial product tables to use in computing the output of a solution
 
-**Refresh, button**\
+### Refresh, button
     Searches the logic gate with the multiplication table selected
 
-**Display specific solution, button**\
+### Display specific solution, button
     Displays the output of the specific solution selected from the Logic gate solutions box from above
 
-**Deep logic gate search, button**\
+### Deep logic gate search, button
     Searches all 16 logic gates using the multiplication table selected and produces a brief analysis of the results
 
-////////////////////////////////////////////////////////////
 
-General table display
+## General Table Display
 
-**Table display degree**\
+### Table display degree
     Degree of permuted Cayley-Dickson to display, 2 = quaternions, 3 = octonions, 4 = sedonions, etc
 
-**Cayley-Dickson recursion number, down**\
+### Cayley-Dickson recursion number, down
     D! possiblilities
 
-**Cayley-DIckson recursion number, up**\
+### Cayley-DIckson recursion number, up
     D! possibilities
 
-**Fano plane octonions**\
+### Fano plane octonions
     Which of 480 Fano plane/associator bitmask octonions to display, each of 30 sets of triplets has 16 valid negative sign associator bitmasks
 
-**Galois field, prime**\
+### Galois field, prime
     Prime number of the Galois field to display
 
-**Galois field, power**\
+### Galois field, power
     Power of the prime number of the Galois field to display
 
-**Length of permutations**\
+### Length of permutations
     Displays all permutations of this length, 3!, 4!, etc
 
-**Refresh, button**\
+### Refresh, button
     Refreshes the permuted Cayley-Dickson options
 
-**Display specific tables, button**\
+### Display specific tables, button
     Displays the tables with the selected parameters
 
-///////////////////////////////////////////////////////////
 
-General comparison functions
 
-**Fano/CD compare, button**\
+## General comparison functions
+
+### Fano/CD compare, button
     Runs a function that compares the Fano plane octonions with the permuted Cayley-Dickson octonions
 
-**CD v CD, button**\
+### CD v CD, button
     Runs a function that compares permuted Cayley-Dickson octonions with other Cayley-Dickson octonions
     Results in permutations of the unit vector bits, the negative sign bits are unaffected,
 
-**Random Wolfram code, button**\
+### Random Wolfram code, button
     Picks a random Wolfram code of length 4 to length 32 bits, uses the identity solution and outputs the results
 
-/////////////////////////////////////////////////////////
 
-Normalization options
+## Normalization options
 
-**Whether to normalize the cell to the unit complex circle**\
+### Whether to normalize the cell to the unit complex circle
     If true, it normalizes the complex output to the unit circle by dividing the components by its norm
 
-**Do the additive Wolfram code call on the complex neighborhood**\
+### Do the additive Wolfram code call on the complex neighborhood
     If true, after the output multiplications, 
 
-**How to treat a 0 in the Wolfram code, (0,-1)**\
+### How to treat a 0 in the Wolfram code, (0,-1)
     If using the hybrid Wolfram code option from above, this selects whether a 0 in the Wolfram code zeroes out that cell or negates it
 
-**Whether to avoid divisions by zero in the normalization**\
+### Whether to avoid divisions by zero in the normalization
     If true and the unit circle normalization option is selected, the output algorithm sidesteps normalization of cells of norm 0
     If false, normalizations of length 0 result in NaN
 
-**Refresh normalization parameters, button**\
+### Refresh normalization parameters, button
     Sets the selected parameters, if you change options without clicking this the options are not registered
 
-/////////////////////////////////////////////////////////////
 
-Panels
+## Panels
 
-/////////////////////////////////////////////////////////////
 
-**Text output**\
+### Text output
     Displays specific tables
     Displays solution details
 
-**Multiplications B, partial product multiplication as polynomial**\
+### Multiplications B, partial product multiplication as polynomial
     Displays Multiplications B, using the generated polynomial rather than the entire partial product multiplication. Verifies the integrity of the polynomial.
 
-**Multiplications B, vector output**\
+### Multiplications B, vector output
     Displays the solution output results after multiplication, just prior to normalization. Each layer is the relative column of its neighborhood.
 
-**Multiplications B with non-neg real, but using the polynomial instead of the enbtire numFactors-dim partial product method**\
+### Multiplications B with non-neg real, but using the polynomial instead of the enbtire numFactors-dim partial product method
     Displays Multiplications B, using the entire multiplication with the partial product table.
 
-**Additive Wolfram output into constituent permuted neighborhood factors, as layers**\
+### Additive Wolfram output into constituent permuted neighborhood factors, as layers
     Displays the original binary Wolfram code output, with the solution applied to the binary, each cell of each layer is a constituent factor.
 
-**Output panel (basic ECA out, retitle panel)**\
+### Output panel (basic ECA out, retitle panel)
     Displays the original Wolfram code binary output, with single-cell initial input and random initial input. Also displays multiplicative solutions applied with non-negative real floating point values.
 
-**Multiplications C, construction from A; like B but normalization first**\
+### Multiplications C, construction from A; like B but normalization first
     Displays Multiplications C.
 
-**Multiplications C, complex neighborhood just prior to normalization**\
+### Multiplications C, complex neighborhood just prior to normalization
     Displays the solution output after multiplication, just prior to normalization    
 
-**Binary shadow of Multiplications B**\
+### Binary shadow of Multiplications B
     Output for each cell is 0 if positive, and 1 if negative. This panel shows a negative, that the complex output is not another cellular automata. The code attempts to define a Wolfram code from this rounded output, and there are conflicts between cells for any attempted Wolfram code. 
+
+
+
+# Section 3 - Miscellaneous
+
+
+
+## Installation instructions:
+Option 1. Run the available jar file in /out/production/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar\
+Option 2. Open the source code in you favorite IDE and build and run\
+Option 2a. There is a zip file of the IntelliJ project available with everything in it\
+
+## Javadoc:
+Open the source code in your favorite editor and use the generate Javadoc tool\
+Javadoc files are available in the .zip file in the Javadoc directory\
+
+## To use the code directly:
+To use the GUI, call an instance of SwingDashboard.\
+To use the search classes apart from the GUI:\
+Create ECAasMultiplication class\
+Create the multiplication tables\
+Set number of factors\
+Call generalWolframCode()\
+The set of ValidSolutions is in the fields of ECAMspecific\
+Use the extract functions of ValidSolutions if you want arrays of the solutions' fields\
+Set the partial product table\
+Set your normalization parameters, if not default\
+Set your input, or call the random input function\
+Call multiplicativeSolutionOutput()\
+The output is in the class fields, but the set of subsection() functions return a window of what was calculated\
+
+## Out-of-scope issues:
+Making Bloch spheres out of 2 layers of output\
+Gray code, k-cycle modifications of multiplication tables\
+group theory integration\
+Mathematica, Matlab, CellPyLib integration\
+Multiple inputs/animated output\
+Discrete Fourier transforms everywhere\
+2D automata, like Conway's Game of Life, this program doesn't do the 2D output, but it will give you a solution for the Wolfram code (1+4+4=9 factors in a hypercomplex identity solution) and the output the 1D version of the same code. Rendering 2D animations is going to be resource intensive and maybe better suited for C++\
+i feel like some of these potential features are totally obvious next directions to go in, but that the project is solid enough to be at a crossroads where further developments would be application specific, and if you want to do 2D bloch spheres in Python or Fourier transforms of solutions in Matlab or Gray codes of multiplication tables in Mathematica that's cool, but on you and out of scope\
+deeper analysis of results, and subsets of results, like solution totals by linear rules or non-trivial identities by XOR additive rules or deeper cross-referencing of common solutions, is out of scope of this paper\
+
+## Odds and ends
+
+there is an easily browsable database of solution images at www.danielmckinley.com\
+consistently little-endian, consistently zero indexed,\
+I use Java 17 because Mathematica doesn't recognize over 61.0 and Matlab doesn't recognize over 51\
+error checking is mainly on user, Wolfram codes bigger than multiplication tables and multiplication tables bigger than Wolfram codes, search function calls with exponentially factorially long runtimes, grid output sizes, non-prime numbers in GaloisFields, etc. some throw errors, some produce gibberish
+it is not in package format, so it is easier to use classes seperated from the GUI elsewhere,\
+everything is public, so you can call it from Mathematica, if it's not public, you can see it with Methods[] but not use it\
+Swing components use (column,row), the project uses (row,column)\
+there is another markdown paper about the Cayley-Dickson algorithm in the /src/Paper/ folder with some helpful diagrams\
+there are group theory implications here, but I come from a programming background before pure math, and speak more fluent for-loops and arrays than groups atm, but working on it\
+the O(n) for both the Cayley-Dickson library, d!*d!*2^(d+1) for all the tables for each degree, and the ECAasMultiplication class, (places!)^numFactors, are spectacularly bad, but manageable with the recursive version of Cayley-Dickson multiplication and smaller numbers of neighborhoods and class sizes.\
+some rules don't do much when extended to complex and non-negative real, however often times their complement does do something, XNOR doesn't do anything even though XOR does, ECA like 30 and 225, etc\
+some normalizations work better than others, the color NaN is white, so if it's going to all white its going to NaN\
+brainstorming future features: Fourier analysis, applying it to the prime number cellular automata [@Wolfram, p. 640], modifying the multiplication tables by Gray code and k-cycles\
+to-do: my factorial implementation blows up at 10 or so, and maybe 11 or 12 with the specific version of the functions and any more I would outsource to another library anyway, address concurrency in the GUI, putting all the GUI panels in a tabbed format or something and make them optional so the algorithm doesn't have to do every single panel every single time\
+
+## Project origin
+
+if you're curious about how this project got started, a while back i was playing around with extending Wolfram codes from 1 row operations to 2 row operations, and that the row 2 truth table could be looked at as a subsection of a cube, with each 3 bit sub-neighborhood being an axis, and noticed in some idle time that i could make a quaternion multiplication cube pretty easily and wondered if there was any overlap between that and the elementary automata, just because they were both cubes. It turns out that rule 102 has the zero permutation set as a solution with 3 factors. The initial stages of the project used sets of random combinations of columns of input neighborhoods to make the factors, but eventually through trial and error discovered the systematic permutation way of doing it.\
+
 
 
 

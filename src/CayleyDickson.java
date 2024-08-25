@@ -27,8 +27,8 @@ public class CayleyDickson {
      * @param rootDegree hypercomplex degree, 2 = quaternions, 3 = octonions, 4 = sedonions, etc
      * @param row first hypercomplex unit vector factor
      * @param column second hypercomplex unit vector factor
-     * @param cdz
-     * @param cdo
+     * @param cdz down recursion factoradic
+     * @param cdo up recursion factoradic
      * @return row times column
      */
     public int multiply(int rootDegree, int row, int column, int[] cdz, int[] cdo){

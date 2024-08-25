@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="Working on the User Guide">
-      <change afterPath="$PROJECT_DIR$/src/Examples.java" afterDir="false" />
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="added the User Guide, added the polynomial for every solution in ECAMspecific">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CayleyDickson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CayleyDickson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Examples.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Examples.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/CayleyDicksonPaper.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Paper/UserGuide.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/UserGuide.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/paper.bib" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/paper.bib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Paper/paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/paper.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SwingDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingDashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SwingOutputPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingOutputPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,14 +83,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719182477521</updated>
-    </task>
-    <task id="LOCAL-00055" summary="triggering the paper redo push">
-      <option name="closed" value="true" />
-      <created>1720401730125</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1720401730125</updated>
     </task>
     <task id="LOCAL-00056" summary="adding Javadoc to git, uploading these is discouraged in general, but this is a one person project and is a presentation to JOSS, so probably leave the Javadoc out of the final archive version but for now is ok">
       <option name="closed" value="true" />
@@ -480,7 +468,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723265564561</updated>
     </task>
-    <option name="localTasksCounter" value="104" />
+    <task id="LOCAL-00104" summary="added the User Guide, added the polynomial for every solution in ECAMspecific">
+      <option name="closed" value="true" />
+      <created>1724391389442</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1724391389443</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -495,7 +491,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated the zip" />
     <MESSAGE value="tracked down a bug in SwingPolynomialTestOutput that was not showing the unit vector coefficient layers, turns out vectorField[][][] was reinitialized downstream in the complex overload of multiplicativeSolutionOutput()" />
     <MESSAGE value="minor changes" />
     <MESSAGE value="went through Javadoc comments, went through inline main algorithm comments in all the ECAM classes, deleted some out of scope functions in Fano, deleted an out of scope scratchpaper class" />
@@ -520,6 +515,7 @@
     <MESSAGE value="added the Javadoc files" />
     <MESSAGE value="changed license to MIT license" />
     <MESSAGE value="Working on the User Guide" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on the User Guide" />
+    <MESSAGE value="added the User Guide, added the polynomial for every solution in ECAMspecific" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the User Guide, added the polynomial for every solution in ECAMspecific" />
   </component>
 </project>

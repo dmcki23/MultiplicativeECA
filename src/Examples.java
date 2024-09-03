@@ -75,7 +75,7 @@ public class Examples {
     /**
      * Generates Conway's Life truth table
      *
-     * @return
+     * @return a non-totalistic, power additive Wolfram code of Conway's Life
      */
     public int[] generateConwayWolfram() {
         int[] conway = new int[512];
@@ -109,8 +109,8 @@ public class Examples {
     }
     /**
      * Generates a random bit selection array for the Cayley-Dickson automorphisms, a factoradic
-     * @param degree
-     * @return
+     * @param degree degree of Cayley-Dickson table being used, 2=quaternions, 3=octonions, etc
+     * @return a random factoradic of length degree
      */
     public int[] randomCDZremainder(int degree) {
         int[] out = new int[degree];
@@ -122,8 +122,8 @@ public class Examples {
     }
     /**
      * Randomizes the factors from generalWolframCode(), normally handled through permutations and factoriadics, but the degree factorial algorithm, higher than 16! is instead randomized
-     * @param in
-     * @return
+     * @param in factor to be randomized, in binary array form
+     * @return randomized factor, in place of permutations in ECAasMultiplications
      */
     public int[] shuffleFactor(int[] in) {
         for (int shuffle = 0; shuffle < 2 * in.length; shuffle++) {

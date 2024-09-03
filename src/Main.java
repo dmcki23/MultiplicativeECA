@@ -11,11 +11,10 @@ public class Main {
      */
     public static void main(String[] args)  {
 
-        //SwingDashboard swingDashboard = new SwingDashboard();
-        Examples examples = new Examples();
-        //examples.complexWolframCode(examples.complexifyWolfram(examples.generateConwayWolfram()),0);
-        examples.classFourFocus();
-        examples.additiveFocus();
+        SwingDashboard swingDashboard = new SwingDashboard();
+        //Examples examples = new Examples();
+        //examples.classFourFocus();
+        //examples.additiveFocus();
 
     }
 

@@ -162,6 +162,7 @@ public class GaloisFields {
     }
     /**
      * Util class of numFactorsRequiredForIdentity()
+     * @param table table you want to check
      * @param numFactors number of factors to consider
      */
     public void checkNumFactorIdentities(int[][] table, int numFactors){

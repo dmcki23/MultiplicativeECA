@@ -4,72 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="changed heading format of UserGuide.md, deleted CayleyDicksonPaper.md after moving it to the UserGuide, updated some Javadoc comments">
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="adding a couple files to git">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/BasicECA.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/BasicECA.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/CayleyDickson.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/CayleyDickson.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/Complex.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/Complex.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/ConsoleDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/ConsoleDashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/ECAMdeep.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/ECAMdeep.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/ECAMoutputSubsections.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/ECAMoutputSubsections.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/ECAMpostProcessing.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/ECAMpostProcessing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/ECAMspecific.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/ECAMspecific.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/ECAasMultiplication.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/ECAasMultiplication.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/ECAasMultiplication.whichMultTableNames.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/ECAasMultiplication.whichMultTableNames.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/Fano.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/Fano.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/GaloisFields.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/GaloisFields.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/HTMLdashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/HTMLdashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/Main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/Main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/PermutationsFactoradic.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/PermutationsFactoradic.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/RuleImageCollection.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/RuleImageCollection.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/SwingBinaryFactorLayers.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/SwingBinaryFactorLayers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/SwingBinaryShadow.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/SwingBinaryShadow.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/SwingComplexLayers.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/SwingComplexLayers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/SwingComplexOutput.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/SwingComplexOutput.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/SwingDashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/SwingDashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/SwingLayers.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/SwingLayers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/SwingOutputPanel.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/SwingOutputPanel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/SwingPolyTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/SwingPolyTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/SwingTextPanel.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/SwingTextPanel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/ValidSolution.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/ValidSolution.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/allclasses-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/allclasses-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/allpackages-index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/allpackages-index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/help-doc.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/help-doc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-10.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-10.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-11.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-12.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-12.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-13.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-13.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-14.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-14.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-15.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-15.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-16.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-16.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-17.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-17.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-18.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-18.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-19.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-19.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-20.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-20.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-21.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-21.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-3.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-6.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-6.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-7.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-7.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-8.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-8.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index-files/index-9.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index-files/index-9.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/member-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/member-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/overview-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/overview-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/package-summary.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/package-summary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/package-tree.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/package-tree.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/serialized-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/serialized-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javadoc/type-search-index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javadoc/type-search-index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Examples.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Examples.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GaloisFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GaloisFields.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/UserGuide.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/UserGuide.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/paper.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,30 +78,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719182477521</updated>
-    </task>
-    <task id="LOCAL-00057" summary="adding Javadoc to git, uploading these is discouraged in general, but this is a one person project and is a presentation to JOSS, so probably leave the Javadoc out of the final archive version but for now is ok">
-      <option name="closed" value="true" />
-      <created>1720402615667</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1720402615667</updated>
-    </task>
-    <task id="LOCAL-00058" summary="adding Javadoc to git, uploading these is discouraged in general, but this is a one person project and is a presentation to JOSS, so probably leave the Javadoc out of the final archive version but for now is ok">
-      <option name="closed" value="true" />
-      <created>1720402626525</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1720402626525</updated>
-    </task>
-    <task id="LOCAL-00059" summary="adding Javadoc to git, uploading these is discouraged in general, but this is a one person project and is a presentation to JOSS, so probably leave the Javadoc out of the final archive version but for now is ok">
-      <option name="closed" value="true" />
-      <created>1720402639957</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1720402639958</updated>
     </task>
     <task id="LOCAL-00060" summary="adding Javadoc to git, uploading these is discouraged in general, but this is a one person project and is a presentation to JOSS, so probably leave the Javadoc out of the final archive version but for now is ok">
       <option name="closed" value="true" />
@@ -535,7 +447,31 @@
       <option name="project" value="LOCAL" />
       <updated>1724604919050</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="tweaking UserGuide.md, paper.md">
+      <option name="closed" value="true" />
+      <created>1725382714615</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1725382714615</updated>
+    </task>
+    <task id="LOCAL-00107" summary="adding a couple files to git">
+      <option name="closed" value="true" />
+      <created>1725382760334</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1725382760334</updated>
+    </task>
+    <task id="LOCAL-00108" summary="adding a couple files to git">
+      <option name="closed" value="true" />
+      <created>1725382915781</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1725382915781</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -550,8 +486,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="minor changes" />
-    <MESSAGE value="went through Javadoc comments, went through inline main algorithm comments in all the ECAM classes, deleted some out of scope functions in Fano, deleted an out of scope scratchpaper class" />
     <MESSAGE value="added SwingPolyTest" />
     <MESSAGE value="the split off of the subsection() functions works, updated Javadoc comments, tweaked some formatting in the SwingTextPanel output, the buttons all work" />
     <MESSAGE value="Another run through Javadoc, paper tweak, added SwingBinaryFactorLayers and the GUI routing, it has not been 100% tested yet" />
@@ -575,6 +509,8 @@
     <MESSAGE value="Working on the User Guide" />
     <MESSAGE value="added the User Guide, added the polynomial for every solution in ECAMspecific" />
     <MESSAGE value="changed heading format of UserGuide.md, deleted CayleyDicksonPaper.md after moving it to the UserGuide, updated some Javadoc comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed heading format of UserGuide.md, deleted CayleyDicksonPaper.md after moving it to the UserGuide, updated some Javadoc comments" />
+    <MESSAGE value="tweaking UserGuide.md, paper.md" />
+    <MESSAGE value="adding a couple files to git" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding a couple files to git" />
   </component>
 </project>

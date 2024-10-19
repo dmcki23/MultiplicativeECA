@@ -764,6 +764,17 @@ public class ECAMpostProcessing {
         }
         return out;
     }
+    public Complex[] sinWaveInput(){
+        double amplitude = 4;
+        double frequency = 2;
+        double imaginaryFrequency = 2;
+        Random rand = new Random();
+        Complex[] out = new Complex[widthOfRandomInput];
+        for (int spot = 0; spot < widthOfRandomInput; spot++){
+            out[spot] = new Complex(amplitude*Math.cos(spot*2*Math.PI*frequency),amplitude*Math.sin(spot*2*Math.PI*imaginaryFrequency));
+        }
+        return out;
+    }
     /**
      * Generates random double data for multiplicativeSolutionOutput, non-negative real
      *

@@ -64,6 +64,48 @@ public class Fano {
         }
         return isLatinn;
     }
+    /**
+     * generates all 240 even roots of the E8 Lattice, the remaining 16 roots are the positive and negative unit vectors
+     * and applications of unit vector roots transform the E8 lattice into odd parity
+     * <p>
+     * Semi brute forces all length 8 integer arrays of 0's, 1's and -1's. A valid root is a vector with length of an even number.
+     *
+     * @return the set of 240 even roots of the E8 lattice
+     */
+    public int[][] fanoRoots() {
+        int index = 0;
+        int length = 2;
+        int[][] combinations;
+        int rootIndex = 0;
+        int[][] roots = new int[240][8];
+        roots[rootIndex] = new int[]{1, 1, 1, 1, 1, 1, 1, 1};
+        rootIndex++;
+        combinations = pf.combinations(8, 2);
+        for (int comb = 0; comb < combinations.length; comb++) {
+            for (int negs = 0; negs < 4; negs++) {
+                for (int l = 0; l < 2; l++) {
+                    roots[rootIndex][combinations[comb][l]] = 1;
+                    if (negs / (int) Math.pow(2, l) % 2 == 1) {
+                        roots[rootIndex][combinations[comb][l]] = -1;
+                    }
+                }
+                rootIndex++;
+            }
+        }
+        for (length = 2; length < 8; length += 2) {
+            combinations = pf.combinations(8, length);
+            for (int comb = 0; comb < combinations.length; comb++) {
+                roots[rootIndex] = new int[]{1, 1, 1, 1, 1, 1, 1, 1};
+                for (int l = 0; l < length; l++) {
+                    roots[rootIndex][combinations[comb][l]] = -1;
+                }
+                rootIndex++;
+            }
+        }
+        roots[rootIndex] = new int[]{-1, -1, -1, -1, -1, -1, -1, -1};
+        rootIndex++;
+        return roots;
+    }
 
     /**
      * 35 choose 7, whose alphabet is 7 choose 3, that don't have more than one in common

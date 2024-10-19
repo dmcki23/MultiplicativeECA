@@ -119,9 +119,15 @@ public class SwingTextPanel extends JPanel {
             jTextArea.append (Arrays.toString(solution.multTable[row])+"\n");
         }
         jTextArea.append ("\nnumFactors: " + solution.numFactors + " numBits: " + solution.numBits + "\n"+"\n");
+        int polySum = 0;
+        for (int row = 0; row< solution.numBits; row++) {
+            for (int spot = 0; spot < solution.polynomial.length; spot++) {
+                    polySum += solution.polynomial[solution.numBits][spot][row];
 
+            }
+        }
         for (int row  = 0; row < solution.numBits; row++){
-            jTextArea.append (solution.polynomialString[row]+"\n");
+            jTextArea.append (solution.polynomialString[row]+"\n"+"Coefficient sums = " + polySum);
             jTextArea.append( "\n");
 
         }

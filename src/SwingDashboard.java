@@ -291,7 +291,9 @@ public class SwingDashboard extends JPanel {
                 }
                 //beca.widthRandom = slider.getValue();
                 ecam.post.widthOfRandomInput = slider.getValue();
+                //ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution], ecam.post.randomBinaryInput(), ecam.post.randomDoubleInput(0, componentRandRangeMax), 400, 1000);
                 ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution], ecam.post.randomBinaryInput(), ecam.post.randomDoubleInput(0, componentRandRangeMax), 400, 1000);
+
                 ecam.specific.validSolutions[activeSolution].polynomial = ecam.post.generatePolynomial(ecam.specific.validSolutions[activeSolution]);
                 ecam.specific.validSolutions[activeSolution].polynomialString = ecam.post.polynomialAsStrings(ecam.specific.validSolutions[activeSolution].polynomial);
                 outputPanel.solutionNumber = activeSolution;
@@ -306,7 +308,9 @@ public class SwingDashboard extends JPanel {
                 stp.displayValidSolution(ecam.specific.validSolutions[activeSolution]);
                 stp.repaint();
                 swingComplexOutput.currentSolution = ecam.specific.validSolutions[activeSolution];
-                swingComplexOutput.complexField = ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution], ecam.post.randomComplexInput(componentRandRange, componentRandRangeMax), 400, 1000);
+                //swingComplexOutput.complexField = ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution], ecam.post.randomComplexInput(componentRandRange, componentRandRangeMax), 400, 1000);
+                swingComplexOutput.complexField = ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution], ecam.post.sinWaveInput(), 400, 1000);
+
                 swingComplexOutput.repaint();
                 neighborhoodFirstOut.currentSolution = ecam.specific.validSolutions[activeSolution];
                 neighborhoodFirstOut.complexField = ecam.post.subsection.subsectionNeighborhoodFirst(ecam.specific.validSolutions[activeSolution], 400, 1000);

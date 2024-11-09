@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="updated some doi numbers in paper.bib">
-      <change afterPath="$PROJECT_DIR$/src/Paper/SwingWindowAppendix" afterDir="false" />
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="moved the window part of UserGuide to its own md file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECAMpostProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMpostProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Fano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Fano.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/UserGuide.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/UserGuide.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/paper.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/paper.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SwingDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingDashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SwingTextPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingTextPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,14 +80,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719182477521</updated>
-    </task>
-    <task id="LOCAL-00061" summary="adding Javadoc to git, uploading these is discouraged in general, but this is a one person project and is a presentation to JOSS, so probably leave the Javadoc out of the final archive version but for now is ok">
-      <option name="closed" value="true" />
-      <created>1720402661142</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1720402661142</updated>
     </task>
     <task id="LOCAL-00062" summary="adding Javadoc to git, uploading these is discouraged in general, but this is a one person project and is a presentation to JOSS, so probably leave the Javadoc out of the final archive version but for now is ok">
       <option name="closed" value="true" />
@@ -481,7 +465,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725552510128</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="moved the window part of UserGuide to its own md file">
+      <option name="closed" value="true" />
+      <created>1729313194560</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1729313194560</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -507,7 +499,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="the split off of the subsection() functions works, updated Javadoc comments, tweaked some formatting in the SwingTextPanel output, the buttons all work" />
     <MESSAGE value="Another run through Javadoc, paper tweak, added SwingBinaryFactorLayers and the GUI routing, it has not been 100% tested yet" />
     <MESSAGE value="end of day commit" />
     <MESSAGE value="na" />
@@ -532,6 +523,7 @@
     <MESSAGE value="tweaking UserGuide.md, paper.md" />
     <MESSAGE value="adding a couple files to git" />
     <MESSAGE value="updated some doi numbers in paper.bib" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated some doi numbers in paper.bib" />
+    <MESSAGE value="moved the window part of UserGuide to its own md file" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved the window part of UserGuide to its own md file" />
   </component>
 </project>

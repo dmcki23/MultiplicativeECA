@@ -230,4 +230,83 @@ public class GaloisScratchPaper {
         }
         return true;
     }
+    public int manageCheckDepth(int[][] in, int degree){
+        CustomArray.plusArrayDisplay(in, false, false, "in[][]");
+        int[] flattened = new int[in.length*in.length];
+        for (int row = 0; row < in.length; row++) {
+            for (int column = 0; column < in.length; column++) {
+                flattened[in.length*row+column] = in[row][column];
+            }
+        }
+        System.out.println("in.length: " + in.length);
+        int nonMutableDegree = degree;
+        int out = 2;
+        for (int d = 3; d <= 12; d++) {
+            int tempTwo = nonMutableDegree;
+            System.out.println("  depth: " + d);
+            int temp = d;
+            if (isLatinFlattenedTwo(flattened, degree, d)) {
+                out = d;
+                // System.out.println("  depth: " + d);
+            } else {
+                System.out.println("no");
+                break;
+            }
+        }
+        System.out.println();
+        return out;
+    }
+    /**
+     * Probes the depth of GF(), to see at what dimension the MOLS-ishness of it ends. I don't know if this version works, there IS a working version somewhere, where ???, maybe this?
+     * @param in
+     * @param size
+     * @param depth
+     * @return
+     */
+    public boolean isLatinFlattenedTwo(int[] in, int size, int depth) {
+        boolean out = true;
+        int l = (int) Math.pow(size, depth);
+        int[] lv;
+        lvLoop:
+        for (int spot = 0; spot < l; spot++) {
+            lv = new int[depth];
+            for (int power = 0; power < depth; power++) {
+                lv[power] = (spot / (int) Math.pow(size, power)) % size;
+                //if (lv[power] == 0) {continue lvLoop;}
+            }
+            int b = in[lv[0]*size+lv[1]];
+            for (int location = 2; location < depth; location++ ) {
+                b = in[b*size+lv[location]];
+            }
+            System.out.println("spot: " + spot + " b: " + b);
+            for (int place = 0; place < depth; place++) {
+                phaseLoop:
+                for (int phase = 1; phase < size; phase++) {
+                    //if (phase == place) continue phaseLoop;
+                    int tot = 0;
+                    int[] localLV = new int[depth];
+                    for (int power = 0; power < depth; power++) {
+                        localLV[power] = lv[power];
+                    }
+                    localLV[place] = (localLV[place] + phase) % size;
+                    //System.out.println("lv: " + Arrays.toString(lv) + " local LV: " + Arrays.toString(localLV));
+                    //if (localLV[place] == 0) {continue phaseLoop;}
+                    for (int power = 0; power < depth; power++) {
+                        tot += (int) Math.pow(size, power) * localLV[power];
+                    }
+                    int a = in[localLV[0]*size+localLV[1]];
+                    for (int location = 2; location < depth; location++ ) {
+                        //System.out.println("a: " + a + " location: " + location);
+
+                        a = in[a*size+localLV[location]];
+                    }
+                    //System.out.println(Arrays.toString(localLV));
+                    if (a == b) {
+                        return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
 }

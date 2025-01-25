@@ -1,6 +1,7 @@
 import java.util.Arrays;
 /**
  * Generates discrete Galois multiplication and addition tables
+ * This class is going to be replaced by GaloisStaging, but is not fully integrated yet
  */
 public class GaloisFields {
     /**

@@ -9,6 +9,11 @@ public class GaloisFields {
      */
     GaloisFields() {
     }
+
+    /**
+     * To-be-finalized GF() update
+     */
+    GaloisStaging galois = new GaloisStaging();
     /**
      * Galois fields of base p, power m
      *
@@ -17,51 +22,52 @@ public class GaloisFields {
      * @return discrete Galois Field (p,m)
      */
     public int[][] galoisFieldMultiplication(int p, int m) {
-        int gridSize = (int) Math.pow(p, m);
-        int[][] outMultiplication = new int[gridSize][gridSize];
-        int[] outPoly = new int[m];
-        int[] rowPoly = new int[m];
-        int[] columnPoly = new int[m];
-        int[] subPoly = new int[2];
-        for (int row = 0; row < gridSize; row++) {
-            for (int spot = 0; spot < m; spot++) {
-                rowPoly[spot] = row / (int) Math.pow(p, spot) % p;
-            }
-            for (int column = 0; column < gridSize; column++) {
-                for (int spot = 0; spot < m; spot++) {
-                    columnPoly[spot] = column / (int) Math.pow(p, spot) % p;
-                }
-                outPoly = new int[m];
-                int[][] convolution = new int[m][m];
-                for (int spot = 0; spot < m; spot++) {
-                    for (int sspot = 0; sspot < m; sspot++) {
-                        convolution[spot][sspot] = rowPoly[spot] * columnPoly[sspot];
-                    }
-                }
-                for (int spot = 0; spot < m; spot++) {
-                    for (int sspot = 0; sspot < m; sspot++) {
-                        if (spot + sspot > m - 1) {
-                            subPoly = new int[]{0, 1};
-                            for (int sssspot = 0; sssspot < (spot + sspot) - (m) - 1; sssspot++) {
-                                subPoly[0]++;
-                                subPoly[1]++;
-                            }
-                            outPoly[subPoly[0]] += convolution[spot][sspot];
-                            outPoly[subPoly[1]] += convolution[spot][sspot];
-                        } else {
-                            outPoly[spot + sspot] += convolution[spot][sspot];
-                        }
-                    }
-                }
-                int out = 0;
-                for (int spot = 0; spot < m; spot++) {
-                    outPoly[spot] = outPoly[spot] % p;
-                    out += (int) Math.pow(p, spot) * outPoly[spot];
-                }
-                outMultiplication[row][column] = out % gridSize;
-            }
-        }
-        return outMultiplication;
+//        int gridSize = (int) Math.pow(p, m);
+//        int[][] outMultiplication = new int[gridSize][gridSize];
+//        int[] outPoly = new int[m];
+//        int[] rowPoly = new int[m];
+//        int[] columnPoly = new int[m];
+//        int[] subPoly = new int[2];
+//        for (int row = 0; row < gridSize; row++) {
+//            for (int spot = 0; spot < m; spot++) {
+//                rowPoly[spot] = row / (int) Math.pow(p, spot) % p;
+//            }
+//            for (int column = 0; column < gridSize; column++) {
+//                for (int spot = 0; spot < m; spot++) {
+//                    columnPoly[spot] = column / (int) Math.pow(p, spot) % p;
+//                }
+//                outPoly = new int[m];
+//                int[][] convolution = new int[m][m];
+//                for (int spot = 0; spot < m; spot++) {
+//                    for (int sspot = 0; sspot < m; sspot++) {
+//                        convolution[spot][sspot] = rowPoly[spot] * columnPoly[sspot];
+//                    }
+//                }
+//                for (int spot = 0; spot < m; spot++) {
+//                    for (int sspot = 0; sspot < m; sspot++) {
+//                        if (spot + sspot > m - 1) {
+//                            subPoly = new int[]{0, 1};
+//                            for (int sssspot = 0; sssspot < (spot + sspot) - (m) - 1; sssspot++) {
+//                                subPoly[0]++;
+//                                subPoly[1]++;
+//                            }
+//                            outPoly[subPoly[0]] += convolution[spot][sspot];
+//                            outPoly[subPoly[1]] += convolution[spot][sspot];
+//                        } else {
+//                            outPoly[spot + sspot] += convolution[spot][sspot];
+//                        }
+//                    }
+//                }
+//                int out = 0;
+//                for (int spot = 0; spot < m; spot++) {
+//                    outPoly[spot] = outPoly[spot] % p;
+//                    out += (int) Math.pow(p, spot) * outPoly[spot];
+//                }
+//                outMultiplication[row][column] = out % gridSize;
+//            }
+//        }
+        //return outMultiplication;
+        return galois.galoisFieldMultiplication(p, m);
     }
 
     /**
@@ -78,6 +84,10 @@ public class GaloisFields {
             }
         }
         return outAddition;
+        //return galoisFieldAddition(gridSize);
+    }
+    public int[][] galoisAddition(int p, int m){
+        return galois.galoisAddition(p, m);
     }
     /**
      * Wrapper function that produces a table used to sum the multiplications of the coefficients of a solution from ECApathPermutations

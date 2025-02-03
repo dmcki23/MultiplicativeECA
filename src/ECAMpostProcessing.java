@@ -187,6 +187,7 @@ public class ECAMpostProcessing {
         double[] nextMult = new double[places];
         //running tally of multiplications
         double[][] mults = new double[numFactors][places];
+        System.out.println("test " + Arrays.deepToString(partialProductTable));
         //main loops
         for (int row = 1; row <= rows; row++) {
             for (int column = places; column < gridSize - 1 - places; column++) {
@@ -549,6 +550,7 @@ public class ECAMpostProcessing {
         for (int place = 0; place < places; place++) {
             intermediate[0][place][0][perms[permutationGroup[0]][place]] = 1;
         }
+        //System.out.println("test generatePolynomial() " + Arrays.deepToString(partialProductTable));
         //calculates each neighborhood column's terms and integer coefficients
         //the 2D partial product table becomes an N-D cube, N=numFactors with each axis being a permuted neighborhood
         //a 0 in the partial product table places the results of row*column*zee...numFactors into column 0 of the output, a 1 in the partial product table places the results of row*column*zee...numFactors into column 1 of the output, etc
@@ -559,6 +561,9 @@ public class ECAMpostProcessing {
                 nextTerm[place] = perms[permutationGroup[factor]][place];
             }
             int[] existingCounter = new int[places];
+            System.out.println("intermediate " + Arrays.deepToString(intermediate));
+            System.out.println("existingCounter " + Arrays.toString(existingCounter));
+            System.out.println("partialProductTable " + Arrays.deepToString(partialProductTable));
             for (int row = 0; row < places; row++) {
                 for (int column = 0; column < places; column++) {
                     for (int existing = 0; existing < lengthExisting; existing++) {
@@ -764,14 +769,23 @@ public class ECAMpostProcessing {
         }
         return out;
     }
-    public Complex[] sinWaveInput(){
-        double amplitude = 4;
-        double frequency = 2;
-        double imaginaryFrequency = 2;
+    public Complex[] sinWaveInput(double frequency, double imaginaryFrequency, double amplitude){
+        //double amplitude = 4;
+        //double frequency = 2;
+        //double imaginaryFrequency = 2;
         Random rand = new Random();
         Complex[] out = new Complex[widthOfRandomInput];
         for (int spot = 0; spot < widthOfRandomInput; spot++){
-            out[spot] = new Complex(amplitude*Math.cos(spot*2*Math.PI*frequency),amplitude*Math.sin(spot*2*Math.PI*imaginaryFrequency));
+            out[spot] = new Complex(amplitude*Math.cos(spot*2*Math.PI/frequency),amplitude*Math.sin(spot*2*Math.PI/frequency));
+        }
+        return out;
+    }
+    public double[][] sinWaveComponents(double frequency, double amplitude){
+        Complex[] sinWave = sinWaveInput(frequency, 1, amplitude);
+        double[][] out = new double[widthOfRandomInput][widthOfRandomInput];
+        for (int spot = 0; spot < widthOfRandomInput; spot++) {
+            out[0][spot] = sinWave[spot].real;
+            out[1][spot] = sinWave[spot].imaginary;
         }
         return out;
     }

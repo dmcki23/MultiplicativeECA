@@ -59,9 +59,11 @@ public class ECAMdeep {
         //setup
         int[][][] tables = new int[1][4][4];
         GaloisFields galois = new GaloisFields();
+        GaloisStaging galoisStaging = new GaloisStaging();
         if (whichTable == 0) {
             tables = new int[1][4][4];
-            tables[0] = galois.galoisFieldAddition(4);
+            //tables[0] = galois.galoisFieldAddition(4);
+            tables[0] = galoisStaging.galoisAddition(3,1);
         } else if (whichTable == 1) {
             tables = new int[1][4][4];
             tables[0] = galois.generateTable(5, 1, true);

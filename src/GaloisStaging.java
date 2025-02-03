@@ -302,4 +302,43 @@ public class GaloisStaging {
         }
         return table;
     }
+
+    public void verify(){
+        pLoop:
+        for (int p = 2; p < 7; p++){
+            for (int f = 2; f < p; f++) {
+                if (p%f==0) continue pLoop;
+            }
+            for (int m = 0; m < 2; m++){
+                int size = (int)Math.pow(p,m);
+                int[][] factors = factor(p,m);
+
+                System.out.println("p: " + p + " m: " + m);
+                int[][] addition = galoisAddition(p, m);
+                for (int factor = 0; factor < factors.length; factor++) {
+                    int[][] multiplication = galoisFieldMultiplication(p, m, factors[factor]);
+                    int[][][] cube = new int[size][size][size];
+                    for (int zee = 0; zee < size; zee++) {
+                        for (int row = 0; row < size; row++) {
+                            for (int col = 0; col < size; col++) {
+                                cube[row][col][zee] = addition[multiplication[row][zee]][col];
+                            }
+                        }
+                    }
+                    System.out.println(mols(cube));
+                }
+
+            }
+        }
+    }
+    public int[][] trim(int[][] in){
+        int size = in.length-1;
+        int[][] out = new int[size][size];
+        for (int row = 0; row < size; row++) {
+            for (int col = 0; col < size; col++) {
+                out[row][col] = in[row+1][col+1]-1;
+            }
+        }
+        return out;
+    }
 }

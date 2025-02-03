@@ -19,7 +19,9 @@ public class Examples {
         List<List<ValidSolution>> validSolutions = new ArrayList<>();
 
         ECAasMultiplication ecam = new ECAasMultiplication();
-        ecam.post.partialProductTable = gf.galoisFieldAddition(3);
+        //ecam.post.partialProductTable = gf.galoisFieldAddition(3);
+        GaloisStaging galoisStaging = new GaloisStaging();
+        ecam.post.partialProductTable = galoisStaging.galoisAddition(3,1);
 
         int[] wolframCode = new int[8];
         for (int n = 0; n < 256; n++) {
@@ -46,12 +48,15 @@ public class Examples {
         List<List<ValidSolution>> validSolutions = new ArrayList<>();
         BasicECA basicECA = new BasicECA();
         GaloisFields gf = new GaloisFields();
+        GaloisStaging galois = new GaloisStaging();
+        GaloisStaging galoisStaging = new GaloisStaging();
         int[][][] tables = new int[1][8][8];
         int numFactors = 5;
         int[][] multiplicationTable = gf.galoisFieldMultiplication(2, 3);
         tables[0] = multiplicationTable;
         ECAasMultiplication ecam = new ECAasMultiplication();
-        ecam.post.partialProductTable = gf.galoisFieldAddition(3);
+        //ecam.post.partialProductTable = gf.galoisFieldAddition(3);
+        ecam.post.partialProductTable = galoisStaging.galoisAddition(3,1);
 
         int[] wolframCode = new int[8];
         for (int n = 0; n < additiveList.length; n++) {

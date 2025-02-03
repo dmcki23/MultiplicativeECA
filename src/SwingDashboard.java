@@ -109,6 +109,11 @@ public class SwingDashboard extends JPanel {
      * Multiplications A, each layer is a factor for that cell
      */
     SwingBinaryFactorLayers swingBinaryFactorLayers;
+    /**
+     * Replacing GaloisFields, not fully integrated yet
+     */
+    GaloisStaging galoisStaging = new GaloisStaging();
+
 
     /**
      * Contains all the Java Swing component initialization and function-calling logic
@@ -168,7 +173,7 @@ public class SwingDashboard extends JPanel {
         whichMultTable.addItem("Galois Field (2,6)");
         whichMultTable.addItem("Fano plane octonions");
         JComboBox whichConvoTable = new JComboBox();
-        whichConvoTable.addItem("XOR, n x n , n = numBit");
+        whichConvoTable.addItem("(row + column) % numBits");
         whichConvoTable.addItem("GF(2,2) shifted, 3x3 bits excluding zeros");
         JComboBox degreeBox = new JComboBox();
         degreeBox.addItem(2);
@@ -246,6 +251,8 @@ public class SwingDashboard extends JPanel {
                 multTables = ecam.generateMultTable(whichMultTable.getSelectedIndex(), degree, numBit);
                 int[] wolframCode = Arrays.copyOfRange(beca.ruleExtension(activeRule)[numBit], 0, (int) Math.pow(2, numBit));
                 ecam.post.partialProductTable = ecam.galoisFields.galoisFieldAddition(numBit);
+                System.out.println("test " + numBit + " " + Arrays.deepToString(ecam.post.partialProductTable));
+                //ecam.post.partialProductTable = galoisStaging.galoisAddition(2,5);
                 ecam.specific.generalWolframCode(wolframCode, numFactors, multTables, whichMultTable.getSelectedIndex());
                 whichSolutionBox.removeAllItems();
                 for (int spot = 0; spot < ecam.specific.numSolutions; spot++) {
@@ -253,12 +260,12 @@ public class SwingDashboard extends JPanel {
                 }
                 if ((int) numberRows.getSelectedItem() == 1) {
                     partialProductBox.removeAllItems();
-                    partialProductBox.addItem("Galois addition, XOR, 3x3");
+                    partialProductBox.addItem("(row + column) % numBits, 3x3");
                     partialProductBox.addItem("GF(2,2) shifted to exclude zeros, 3x3");
                     partialProductBox.addItem("Plain table, {{0,1,2},{0,1,2},{0,1,2}}");
                 } else {
                     partialProductBox.removeAllItems();
-                    partialProductBox.addItem("Galois addition, XOR, 5x5");
+                    partialProductBox.addItem("(row + column) % numBits, 5x5");
                     partialProductBox.addItem("Plain table, {{0,1,2,3,4},{0,1,2,3,4}..}");
                 }
             }
@@ -272,14 +279,18 @@ public class SwingDashboard extends JPanel {
                 if (numRows == 1) {
                     if (partialProductBox.getSelectedIndex() == 0) {
                         ecam.post.partialProductTable = ecam.galoisFields.galoisFieldAddition(numBit);
+                        //ecam.post.partialProductTable = galoisStaging.galoisAddition(2,(int)(Math.log(numBit)/Math.log(2)));
+
                     } else if (partialProductBox.getSelectedIndex() == 1) {
                         ecam.post.partialProductTable = ecam.galoisFields.generateTable(2, 2, true);
                     } else {
                         ecam.post.partialProductTable = new int[][]{{0, 1, 2}, {0, 1, 2}, {0, 1, 2}};
                     }
                 } else {
-                    if (partialProductBox.getSelectedIndex() == 0)
-                        ecam.post.partialProductTable = ecam.galoisFields.galoisFieldAddition(numBit);
+                    if (partialProductBox.getSelectedIndex() == 0) {
+                                            ecam.post.partialProductTable = ecam.galoisFields.galoisFieldAddition(numBit);
+                        //ecam.post.partialProductTable = galoisStaging.galoisAddition(2, (int) (Math.log(numBit) / Math.log(2)));
+                    }
                     else if (partialProductBox.getSelectedIndex() == 1) {
                         ecam.post.partialProductTable = new int[5][5];
                         for (int row = 0; row < 5; row++) {
@@ -292,8 +303,9 @@ public class SwingDashboard extends JPanel {
                 //beca.widthRandom = slider.getValue();
                 ecam.post.widthOfRandomInput = slider.getValue();
                 //ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution], ecam.post.randomBinaryInput(), ecam.post.randomDoubleInput(0, componentRandRangeMax), 400, 1000);
+                double[][] componentsSinWave = ecam.post.sinWaveComponents(2,2);
                 ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution], ecam.post.randomBinaryInput(), ecam.post.randomDoubleInput(0, componentRandRangeMax), 400, 1000);
-
+                //ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution],ecam.post.sinWaveInput(2,2),400,1000);
                 ecam.specific.validSolutions[activeSolution].polynomial = ecam.post.generatePolynomial(ecam.specific.validSolutions[activeSolution]);
                 ecam.specific.validSolutions[activeSolution].polynomialString = ecam.post.polynomialAsStrings(ecam.specific.validSolutions[activeSolution].polynomial);
                 outputPanel.solutionNumber = activeSolution;
@@ -308,8 +320,14 @@ public class SwingDashboard extends JPanel {
                 stp.displayValidSolution(ecam.specific.validSolutions[activeSolution]);
                 stp.repaint();
                 swingComplexOutput.currentSolution = ecam.specific.validSolutions[activeSolution];
-                //swingComplexOutput.complexField = ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution], ecam.post.randomComplexInput(componentRandRange, componentRandRangeMax), 400, 1000);
-                swingComplexOutput.complexField = ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution], ecam.post.sinWaveInput(), 400, 1000);
+                swingComplexOutput.complexField = ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution], ecam.post.sinWaveInput(4,2,4), 400, 1000);
+//                Complex[] sin = ecam.post.sinWaveInput(2,2);
+//                double[][] sinComponents = new double[2][sin.length];
+//                for (int spot = 0; spot < sinComponents[0].length; spot++){
+//                    sinComponents[0][spot] = sin[spot].real;
+//                    sinComponents[1][spot] = sin[spot].imaginary;
+//                }
+                //swingComplexOutput.complexField = ecam.post.multiplicativeSolutionOutput(ecam.specific.validSolutions[activeSolution], sinComponents[0],sinComponents[1], 400, 1000);
 
                 swingComplexOutput.repaint();
                 neighborhoodFirstOut.currentSolution = ecam.specific.validSolutions[activeSolution];
@@ -431,7 +449,8 @@ public class SwingDashboard extends JPanel {
                 int[][][] tables = new int[1][4][4];
                 if (logicTableBox.getSelectedIndex() == 0) {
                     tables = new int[1][4][4];
-                    tables[0] = ecam.galoisFields.galoisFieldAddition(4);
+                    //tables[0] = ecam.galoisFields.galoisFieldAddition(4);
+                    tables[0] = galoisStaging.galoisAddition(2,2);
                 } else if (logicTableBox.getSelectedIndex() == 1) {
                     tables = new int[1][4][4];
                     tables[0] = ecam.galoisFields.generateTable(5, 1, true);
@@ -443,7 +462,8 @@ public class SwingDashboard extends JPanel {
                 for (int power = 0; power < 4; power++) {
                     gate[power] = activeGate / (int) Math.pow(2, power) % 2;
                 }
-                ecam.post.partialProductTable = ecam.galoisFields.galoisFieldAddition(2);
+                //ecam.post.partialProductTable = ecam.galoisFields.galoisFieldAddition(2);
+                ecam.post.partialProductTable = galoisStaging.galoisAddition(2,1);
                 ecam.specific.generalWolframCode(gate, numLogicFactors, tables, logicTableBox.getSelectedIndex());
                 gateSolutionBox.removeAllItems();
                 for (int spot = 0; spot < ecam.specific.numSolutions; spot++) {
@@ -458,6 +478,7 @@ public class SwingDashboard extends JPanel {
                 System.out.println("\n\n\n\n\n\n\n\n\n\n----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
                 int activeSolution = gateSolutionBox.getSelectedIndex();
                 ecam.post.partialProductTable = ecam.galoisFields.galoisFieldAddition(2);
+                //ecam.post.partialProductTable = galoisStaging.galoisAddition(2,1);
                 if (partialProductBox.getSelectedIndex() == 1) {
                     for (int row = 0; row < 2; row++) {
                         for (int column = 0; column < 2; column++) {

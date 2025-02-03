@@ -128,8 +128,12 @@ public class ECAasMultiplication {
         }
         GaloisFields galois = new GaloisFields();
         int[][][] tables = new int[1][length][length];
-        tables[0] = galois.galoisFieldAddition(length);
-        post.partialProductTable = galoisFields.galoisFieldAddition(numBits);
+        //tables[0] = galois.galoisFieldAddition(length);
+        //post.partialProductTable = galoisFields.galoisFieldAddition(numBits);
+
+        GaloisStaging galoisStaging = new GaloisStaging();
+        tables[0] = galoisStaging.galoisAddition(2,(int)(Math.log(length)/Math.log(2)));
+        post.partialProductTable = galoisStaging.galoisAddition(2,(int)(Math.log(length)/Math.log(2)));
         int[][] boringTable = new int[numBits][numBits];
         for (int row = 0; row < numBits; row++){
             for (int column =  0; column < numBits; column++){
@@ -164,6 +168,7 @@ public class ECAasMultiplication {
         //output set of multiplication tables
         int[][][] multTables = new int[1][1][1];
         GaloisFields galois = new GaloisFields();
+        GaloisStaging galoisStaging = new GaloisStaging();
         if (whichMultTable == whichMultTableNames.PERMUTED_CAYLEY_DICKSON.ordinal()) {
             multTables = cds.preCalculateTables(degree);
 

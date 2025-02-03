@@ -4,13 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="updated the LaTexPaper.tex">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="Removed a redundant scratchpaper class and trimmed some mols() code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GaloisScratchPaper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GaloisScratchPaper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ECAMdeep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMdeep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ECAMpostProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMpostProcessing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ECAasMultiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAasMultiplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Examples.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Examples.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GaloisFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GaloisFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GaloisStaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GaloisStaging.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/LaTexPaper.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/LaTexPaper.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/LaTexPaper.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/LaTexPaper.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Paper/LaTexPaper.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/LaTexPaper.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SwingDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingDashboard.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +82,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -121,8 +128,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.117" />
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.117" />
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.153" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.153" />
       </set>
     </attachedChunks>
   </component>
@@ -142,31 +149,8 @@
       <workItem from="1734806475530" duration="608000" />
       <workItem from="1736636535551" duration="659000" />
       <workItem from="1737058352875" duration="2592000" />
-      <workItem from="1737771803981" duration="1233000" />
-    </task>
-    <task id="LOCAL-00066" summary="updated Paper.md to paper.md">
-      <option name="closed" value="true" />
-      <created>1720451637089</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1720451637089</updated>
-    </task>
-    <task id="LOCAL-00067" summary="updated Paper.md to paper.md">
-      <option name="closed" value="true" />
-      <created>1720451768443</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1720451768443</updated>
-    </task>
-    <task id="LOCAL-00068" summary="tweaked paper's statement of need">
-      <option name="closed" value="true" />
-      <created>1720462549468</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1720462549468</updated>
+      <workItem from="1737771803981" duration="6419000" />
+      <workItem from="1738373163989" duration="8026000" />
     </task>
     <task id="LOCAL-00069" summary="uploading the compiled pdf">
       <option name="closed" value="true" />
@@ -536,7 +520,31 @@
       <option name="project" value="LOCAL" />
       <updated>1733585728464</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="Redid the Galois multiplication and addition, the new version is in GaloisStaging, haven't integrated it fully into the GUI yet">
+      <option name="closed" value="true" />
+      <created>1737773658127</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1737773658128</updated>
+    </task>
+    <task id="LOCAL-00116" summary="Removed a redundant scratchpaper class and trimmed some mols() code">
+      <option name="closed" value="true" />
+      <created>1737775793712</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1737775793712</updated>
+    </task>
+    <task id="LOCAL-00117" summary="Removed a redundant scratchpaper class and trimmed some mols() code">
+      <option name="closed" value="true" />
+      <created>1737777227632</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1737777227632</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,8 +576,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="na" />
-    <MESSAGE value="added the repository link to the references in paper" />
     <MESSAGE value="triggering the paper redo push" />
     <MESSAGE value="adding Javadoc to git, uploading these is discouraged in general, but this is a one person project and is a presentation to JOSS, so probably leave the Javadoc out of the final archive version but for now is ok" />
     <MESSAGE value="added a few references to the paper" />
@@ -593,6 +599,12 @@
     <MESSAGE value="moved the window part of UserGuide to its own md file" />
     <MESSAGE value="tweaked some paper wording" />
     <MESSAGE value="updated the LaTexPaper.tex" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated the LaTexPaper.tex" />
+    <MESSAGE value="Redid the Galois multiplication and addition, the new version is in GaloisStaging, haven't integrated it fully into the GUI yet" />
+    <MESSAGE value="Removed a redundant scratchpaper class and trimmed some mols() code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed a redundant scratchpaper class and trimmed some mols() code" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

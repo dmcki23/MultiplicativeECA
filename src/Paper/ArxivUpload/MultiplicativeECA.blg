@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: MultiplicativeECA.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: plain.bst
+Reallocating 'name_of_file' (item size: 1) to 10 items.
+Database file #1: paper.bib
+Warning--I'm ignoring Antunes2021's extra "key" field
+--line 45 of file paper.bib
+Warning--I'm ignoring Antunes2021's extra "key" field
+--line 47 of file paper.bib
+You've used 5 entries,
+            2118 wiz_defined-function locations,
+            525 strings with 4432 characters,
+and the built_in function-call counts, 1090 in all, are:
+= -- 96
+> -- 35
+< -- 0
++ -- 16
+- -- 10
+* -- 45
+:= -- 189
+add.period$ -- 13
+call.type$ -- 5
+change.case$ -- 19
+chr.to.int$ -- 0
+cite$ -- 5
+duplicate$ -- 44
+empty$ -- 113
+format.name$ -- 10
+if$ -- 230
+int.to.chr$ -- 0
+int.to.str$ -- 5
+missing$ -- 3
+newline$ -- 26
+num.names$ -- 10
+pop$ -- 39
+preamble$ -- 1
+purify$ -- 15
+quote$ -- 0
+skip$ -- 35
+stack$ -- 0
+substring$ -- 38
+swap$ -- 5
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 18
+warning$ -- 0
+while$ -- 11
+width$ -- 6
+write$ -- 48
+(There were 2 warnings)

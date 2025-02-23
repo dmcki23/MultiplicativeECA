@@ -1,0 +1,26 @@
+\begin{thebibliography}{1}
+
+\bibitem{Antunes2021}
+Luis~M. Antunes.
+\newblock Cellpylib: A python library for working with cellular automata.
+\newblock {\em Journal of Open Source Software}, 6(67):3608, 2021.
+
+\bibitem{Mathematica}
+Wolfram~Research Inc.
+\newblock Mathematica, version 14.0.
+\newblock Champaign, IL, 2024.
+
+\bibitem{mygit}
+Daniel McKinley.
+\newblock github.com/dmcki23/multiplicativeeca/, 2024.
+
+\bibitem{dmwebsite}
+Daniel McKinley.
+\newblock http://www.danielmckinley.com, 2024.
+
+\bibitem{Wolfram}
+Stephen Wolfram.
+\newblock {\em A New Kind of Science}.
+\newblock Wolfram Media, 2002.
+
+\end{thebibliography}

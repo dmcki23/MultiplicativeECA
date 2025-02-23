@@ -1,0 +1,344 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.12) (preloaded format=pdflatex 2025.2.18)  18 FEB 2025 14:29
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./MultiplicativeECA.tex
+(MultiplicativeECA.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(/home/daniel/.miktex/texmfs/install/tex/latex/base/article.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+(/home/daniel/.miktex/texmfs/install/tex/latex/base/size11.clo
+File: size11.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count196
+\c@section=\count197
+\c@subsection=\count198
+\c@subsubsection=\count199
+\c@paragraph=\count266
+\c@subparagraph=\count267
+\c@figure=\count268
+\c@table=\count269
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+)
+(/home/daniel/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/home/daniel/.miktex/texmfs/install/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(/home/daniel/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(/home/daniel/.miktex/texmfs/install/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(/home/daniel/.miktex/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(/home/daniel/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen142
+\Gin@req@width=\dimen143
+)
+(/home/daniel/.miktex/texmfs/install/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/home/daniel/.miktex/texmfs/install/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/home/daniel/.miktex/texmfs/install/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count270
+\Gm@cntv=\count271
+\c@Gm@tempcnt=\count272
+\Gm@bindingoffset=\dimen144
+\Gm@wd@mp=\dimen145
+\Gm@odd@mp=\dimen146
+\Gm@even@mp=\dimen147
+\Gm@layoutwidth=\dimen148
+\Gm@layoutheight=\dimen149
+\Gm@layouthoffset=\dimen150
+\Gm@layoutvoffset=\dimen151
+\Gm@dimlist=\toks18
+
+(/home/daniel/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg))
+(/home/daniel/.miktex/texmfs/install/tex/latex/base/makeidx.sty
+Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
+)
+(/home/daniel/.miktex/texmfs/install/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+)
+(/home/daniel/.miktex/texmfs/install/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/home/daniel/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count273
+\l__pdf_internal_box=\box52
+)
+(MultiplicativeECA.aux)
+\openout1 = `MultiplicativeECA.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+
+(/home/daniel/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count274
+\scratchdimen=\dimen152
+\scratchbox=\box53
+\nofMPsegments=\count275
+\nofMParguments=\count276
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count277
+\MPscratchDim=\dimen153
+\MPnumerator=\count278
+\makeMPintoPDFobject=\count279
+\everyMPtoPDFconversion=\toks20
+) (/home/daniel/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+(/home/daniel/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 19.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 19.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 19.
+
+LaTeX Warning: Citation `Wolfram' on page 1 undefined on input line 24.
+
+
+LaTeX Warning: Citation `mygit' on page 1 undefined on input line 24.
+
+
+LaTeX Warning: Citation `dmwebsite' on page 1 undefined on input line 24.
+
+
+LaTeX Warning: Citation `Mathematica' on page 1 undefined on input line 28.
+
+
+LaTeX Warning: Citation `Antunes2021' on page 1 undefined on input line 28.
+
+
+LaTeX Warning: Citation `Wolfram' on page 1 undefined on input line 28.
+
+<unitVectorChart.jpg, id=1, 457.71pt x 92.59593pt>
+File: unitVectorChart.jpg Graphic file (type jpg)
+<use unitVectorChart.jpg>
+Package pdftex.def Info: unitVectorChart.jpg  used on input line 33.
+(pdftex.def)             Requested size: 457.7089pt x 92.59569pt.
+
+
+[1
+
+{/home/daniel/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 36.
+
+Overfull \hbox (26.5677pt too wide) in paragraph at lines 46--47
+[]\OT1/cmr/m/n/10.95 n = neigh-bor-hood sum = $1 \OMS/cmsy/m/n/10.95 ^^C \OML/c
+mm/m/it/10.95 columnZero \OT1/cmr/m/n/10.95 + 2 \OMS/cmsy/m/n/10.95 ^^C \OML/cm
+m/m/it/10.95 columnOne \OT1/cmr/m/n/10.95 + 4 \OMS/cmsy/m/n/10.95 ^^C \OML/cmm/
+m/it/10.95 columnTwo:::\OT1/cmr/m/n/10.95 2[]\OML/cmm/m/it/10.95 columnN\OT1/cm
+r/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^C
+ []
+
+
+Overfull \hbox (16.22733pt too wide) in paragraph at lines 51--52
+[]$\OML/cmm/m/it/10.95 WolframCode\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 r; n\
+OT1/cmr/m/n/10.95 ) = \OML/cmm/m/it/10.95 WolframCode\OT1/cmr/m/n/10.95 (\OML/c
+mm/m/it/10.95 r; H\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 h\OT1/cmr/m/n/10.95 (
+\OML/cmm/m/it/10.95 p\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 n\OT1/cmr/m/n/10.9
+5 )) \OMS/cmsy/m/n/10.95 ^^C \OML/cmm/m/it/10.95 h\OT1/cmr/m/n/10.95 (\OML/cmm/
+m/it/10.95 p\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 n\OT1/cmr/m/n/10.95 )) \OMS
+/cmsy/m/n/10.95 ^^C \OML/cmm/m/it/10.95 h\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.9
+5 p\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 n\OT1/cmr/m/n/10.95 ))\OML/cmm/m/it/
+10.95 :::numFactors\OT1/cmr/m/n/10.95 )$,
+ []
+
+<MultiplicationsDiagram.jpg, id=11, 475.7775pt x 593.21625pt>
+File: MultiplicationsDiagram.jpg Graphic file (type jpg)
+<use MultiplicationsDiagram.jpg>
+Package pdftex.def Info: MultiplicationsDiagram.jpg  used on input line 57.
+(pdftex.def)             Requested size: 475.77632pt x 593.2148pt.
+
+Overfull \hbox (6.0213pt too wide) in paragraph at lines 57--58
+ [] 
+ []
+
+
+
+[2 <./unitVectorChart.jpg>]
+
+[3 <./MultiplicationsDiagram.jpg>]
+<bitPermutations.jpg, id=22, 170.13562pt x 84.315pt>
+File: bitPermutations.jpg Graphic file (type jpg)
+<use bitPermutations.jpg>
+Package pdftex.def Info: bitPermutations.jpg  used on input line 68.
+(pdftex.def)             Requested size: 170.1352pt x 84.31477pt.
+<flattenedSixCube.jpg, id=23, 444.91219pt x 271.0125pt>
+File: flattenedSixCube.jpg Graphic file (type jpg)
+<use flattenedSixCube.jpg>
+Package pdftex.def Info: flattenedSixCube.jpg  used on input line 72.
+(pdftex.def)             Requested size: 444.91109pt x 271.01183pt.
+
+
+[4 <./bitPermutations.jpg> <./flattenedSixCube.jpg>]
+Overfull \hbox (16.64586pt too wide) in paragraph at lines 79--80
+\OT1/cmr/m/n/10.95 tion pro-duce two lay-ers of the sym-met-ric group $((\OML/c
+mm/m/it/10.95 cdz; cdo; cdzz; cdoo\OT1/cmr/m/n/10.95 ))) = (\OML/cmm/m/it/10.95
+ row\OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 ; row\OT1/cmr/m/n/10.95 1)\OML/cmm/
+m/it/10.95 ; \OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 row\OT1/cmr/m/n/10.95 1\OM
+L/cmm/m/it/10.95 ; row\OT1/cmr/m/n/10.95 0) =
+ []
+
+<ControlPanelSmall.jpg, id=27, 522.43373pt x 454.51735pt>
+File: ControlPanelSmall.jpg Graphic file (type jpg)
+<use ControlPanelSmall.jpg>
+Package pdftex.def Info: ControlPanelSmall.jpg  used on input line 82.
+(pdftex.def)             Requested size: 522.43245pt x 454.51624pt.
+
+Overfull \hbox (52.67743pt too wide) in paragraph at lines 82--84
+ [] 
+ []
+
+
+
+[5]
+<FiftyFourSmall.jpg, id=32, 489.32813pt x 632.3625pt>
+File: FiftyFourSmall.jpg Graphic file (type jpg)
+<use FiftyFourSmall.jpg>
+Package pdftex.def Info: FiftyFourSmall.jpg  used on input line 85.
+(pdftex.def)             Requested size: 489.32692pt x 632.36096pt.
+
+Overfull \hbox (19.5719pt too wide) in paragraph at lines 85--87
+ [][] 
+ []
+
+
+
+[6 <./ControlPanelSmall.jpg>]
+<FiftyFourText.jpg, id=36, 516.42938pt x 501.37312pt>
+File: FiftyFourText.jpg Graphic file (type jpg)
+<use FiftyFourText.jpg>
+Package pdftex.def Info: FiftyFourText.jpg  used on input line 88.
+(pdftex.def)             Requested size: 516.42812pt x 501.37189pt.
+
+Overfull \hbox (46.6731pt too wide) in paragraph at lines 88--90
+ [][] 
+ []
+
+
+
+[7 <./FiftyFourSmall.jpg>]
+<FiftyFourComplexSmall.jpg, id=41, 489.32813pt x 389.95688pt>
+File: FiftyFourComplexSmall.jpg Graphic file (type jpg)
+<use FiftyFourComplexSmall.jpg>
+Package pdftex.def Info: FiftyFourComplexSmall.jpg  used on input line 91.
+(pdftex.def)             Requested size: 489.32692pt x 389.95592pt.
+
+Overfull \hbox (19.5719pt too wide) in paragraph at lines 91--93
+ [][] 
+ []
+
+
+
+[8 <./FiftyFourText.jpg>] (MultiplicativeECA.bbl)
+
+[9 <./FiftyFourComplexSmall.jpg>] (MultiplicativeECA.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2072 strings out of 473531
+ 34431 string characters out of 5719187
+ 433546 words of memory out of 5000000
+ 25308 multiletter control sequences out of 15000+600000
+ 564695 words of font info for 55 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,6n,65p,1238b,199s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/daniel/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm109
+5.pk></home/daniel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10
+.pfb></home/daniel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12
+.pfb></home/daniel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10
+.pfb></home/daniel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.
+pfb></home/daniel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.p
+fb></home/daniel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pf
+b></home/daniel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb
+></home/daniel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+/home/daniel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+/home/daniel/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on MultiplicativeECA.pdf (9 pages, 835228 bytes).
+PDF statistics:
+ 95 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+

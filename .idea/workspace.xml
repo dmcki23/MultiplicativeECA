@@ -4,20 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="Removed a redundant scratchpaper class and trimmed some mols() code">
+    <list default="true" id="7ed6c7b9-12e1-47b0-a4ac-91187ce0fe97" name="Changes" comment="Some of the partial product table options were labeled incorrectly as XOR, relabeled them properly as (row + column) % numBits&#10;&#10;Did a partial integration of GaloisStaging, the original Galois class galoisMultiplication() now calls through to the GaloisStaging version, addition is still only partially integrated&#10;&#10;Reworded some things in LaTexPaper.tex and moved a blurb about error checking automorphisms to the section on it">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/MultiplicativeECA_jar/MultiplicativeECA.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECAMdeep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMdeep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECAMpostProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAMpostProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECAasMultiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECAasMultiplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Examples.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Examples.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GaloisFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GaloisFields.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GaloisStaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GaloisStaging.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/LaTexPaper.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/LaTexPaper.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/LaTexPaper.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/LaTexPaper.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Paper/LaTexPaper.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/LaTexPaper.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SwingDashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SwingDashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/LaTexPaper.aux" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/LaTexPaper.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/LaTexPaper.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/LaTexPaper.synctex(busy)" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/LaTexPaper.synctex.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Paper/LaTexPaper.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/Paper/MultiplicativeECA.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,8 +123,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.153" />
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.153" />
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
       </set>
     </attachedChunks>
   </component>
@@ -150,15 +145,8 @@
       <workItem from="1736636535551" duration="659000" />
       <workItem from="1737058352875" duration="2592000" />
       <workItem from="1737771803981" duration="6419000" />
-      <workItem from="1738373163989" duration="8026000" />
-    </task>
-    <task id="LOCAL-00069" summary="uploading the compiled pdf">
-      <option name="closed" value="true" />
-      <created>1720462703107</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1720462703107</updated>
+      <workItem from="1738373163989" duration="11547000" />
+      <workItem from="1739850349499" duration="1387000" />
     </task>
     <task id="LOCAL-00070" summary="uploading the compiled pdf">
       <option name="closed" value="true" />
@@ -544,7 +532,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737777227632</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="Some of the partial product table options were labeled incorrectly as XOR, relabeled them properly as (row + column) % numBits&#10;&#10;Did a partial integration of GaloisStaging, the original Galois class galoisMultiplication() now calls through to the GaloisStaging version, addition is still only partially integrated&#10;&#10;Reworded some things in LaTexPaper.tex and moved a blurb about error checking automorphisms to the section on it">
+      <option name="closed" value="true" />
+      <created>1738601250169</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1738601250171</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -576,7 +572,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="triggering the paper redo push" />
     <MESSAGE value="adding Javadoc to git, uploading these is discouraged in general, but this is a one person project and is a presentation to JOSS, so probably leave the Javadoc out of the final archive version but for now is ok" />
     <MESSAGE value="added a few references to the paper" />
     <MESSAGE value="updated Paper.md to paper.md" />
@@ -601,7 +596,8 @@
     <MESSAGE value="updated the LaTexPaper.tex" />
     <MESSAGE value="Redid the Galois multiplication and addition, the new version is in GaloisStaging, haven't integrated it fully into the GUI yet" />
     <MESSAGE value="Removed a redundant scratchpaper class and trimmed some mols() code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed a redundant scratchpaper class and trimmed some mols() code" />
+    <MESSAGE value="Some of the partial product table options were labeled incorrectly as XOR, relabeled them properly as (row + column) % numBits&#10;&#10;Did a partial integration of GaloisStaging, the original Galois class galoisMultiplication() now calls through to the GaloisStaging version, addition is still only partially integrated&#10;&#10;Reworded some things in LaTexPaper.tex and moved a blurb about error checking automorphisms to the section on it" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some of the partial product table options were labeled incorrectly as XOR, relabeled them properly as (row + column) % numBits&#10;&#10;Did a partial integration of GaloisStaging, the original Galois class galoisMultiplication() now calls through to the GaloisStaging version, addition is still only partially integrated&#10;&#10;Reworded some things in LaTexPaper.tex and moved a blurb about error checking automorphisms to the section on it" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
